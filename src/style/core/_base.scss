@@ -35,39 +35,32 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
-  font-weight: 400;
+h6 {
+  font-weight: 700;
   margin: 0 0 10px 0;
 }
 h1 {
-  font-family: $font-bold;
   font-size: 36px;
 }
 h2 {
-  font-family: $font-bold;
   font-size: 32px;
 }
 h3 {
-  font-family: $font-bold;
   font-size: 28px;
 }
 h4 {
-  font-family: $font-bold;
   font-size: 24px;
 }
 h5 {
-  font-family: $font-bold;
   font-size: 22px;
 }
 h6 {
-  font-family: $font-bold;
   font-size: 20px;
 }
 p {
-  font-size: 16px;
+  margin: 0 0 10px 0;
   strong {
-    font-family: $font-bold;
+    font-weight: 700;
   }
 }
 a {
@@ -140,12 +133,9 @@ svg {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 30px;
-
-  @include max(768) {
+  padding: 15px 30px;@include max(768) {
     padding: 10px 20px;
-  }
-  @include max(425) {
+  }@include max(425) {
     padding: 10px;
   }
 }
