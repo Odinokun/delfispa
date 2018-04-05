@@ -1,0 +1,45 @@
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title #{title}
+
+    meta(name="description" content="odinokun`s start template")
+    meta(name="keywords"    content="odinokun`s start template")
+    meta(name="author"      content="odinokun")
+
+    // begin responsive
+    meta(name="viewport"              content="width=device-width, initial-scale=1")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    // end responsive
+
+    // begin social content&image
+    meta(property='og:title'  content='odinokun`s start template')
+    meta(property='og:url'    content='http://odinokun.com/')
+    meta(property="og:image"  content="assets/img/social.jpg")
+    // end social content&image
+
+    // begin favicon block start
+    link(rel='shortcut icon'    type='image/x-icon' href='assets/img/favicon/favicon.png')
+    link(rel='apple-touch-icon' sizes='180x180'     href='img/favicon/apple-touch-icon-180x180')
+    // end favicon block end
+
+    link(rel='stylesheet' href='assets/css/foundation.css')
+    link(rel='stylesheet' href='assets/css/app.css')
+    link(rel='stylesheet' href='assets/css/uncompressed.css')
+
+    // begin custom browsers color
+    //meta(name='theme-color', content='#000')
+    // end custom browsers color
+
+    //[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]
+
+  body
+    block content
+
+
+    script(src='assets/js/foundation.js')
+    script(src='assets/js/app.js')
+    script(src='assets/js/uncompressed.js')
