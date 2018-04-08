@@ -1,5 +1,6 @@
 .top-slider {
   margin-top: -90px;
+  margin-bottom: 0 !important;
   .slick-dots {
     position: absolute;
     right: 0;
@@ -105,6 +106,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   @include max(470) {
     width: 80%;
   }
@@ -125,6 +127,7 @@
   justify-content: center;
   width: 90px;
   background-color: #fff;
+
   @include max(470) {
     width: 20%;
   }
