@@ -1,0 +1,245 @@
+.aside-left {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 90px;
+
+  @include max(425) {
+    width: 60px;
+  }
+}
+.aside-left-logo {
+  display: flex;
+  align-items: center;
+  flex: none;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  background-image: $gradient;
+
+  @include max(425) {
+    width: 60px;
+    height: 60px;
+  }
+  img {
+    display: block;
+    flex: none;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+// begin left-menu-burger
+.left-menu-burger {
+  position: absolute;
+  top: 65vh;
+  left: 32px;
+  cursor: pointer;
+  transform: rotate(-90deg);
+  @include max(425) {
+    left: 19px;
+  }
+}
+.left-menu-burger--open,
+.left-menu-burger--close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100px;
+  svg {
+    flex: none;
+    width: 24px;
+    height: 24px;
+    margin-right: 25px;
+    transition: fill .5s;;
+  }
+}
+.left-menu-burger--open {
+  svg {
+    fill: $text;
+  }
+  &.active {
+    pointer-events: none;
+    opacity: 0;
+  }
+  &:hover {
+    svg {
+      fill: $highlight;
+    }
+    .left-menu-burger__text {
+      color: $highlight;
+    }
+  }
+}
+.left-menu-burger--close {
+  pointer-events: none;
+  opacity: 0;
+  &.active {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  .left-menu-burger__text {
+    color: #fff;
+  }
+  svg {
+    fill: #fff;
+  }
+  &:hover {
+    .left-menu-burger__text {
+      color: $text;
+    }
+    svg {
+      fill: $text;
+    }
+  }
+}
+.left-menu-burger__text {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  transition: color .5s;
+  text-transform: uppercase;
+}
+// end left-menu-burger
+
+
+// begin left-menu
+.left-menu {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: calc(100vh - 90px);
+  background-color: #fff;
+  @include max(425) {
+
+  height: calc(100vh - 60px);
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    transition: opacity .5s;
+    opacity: 0;
+    background-image: $gradient;
+  }
+  &.active {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+.left-menu__wrap {
+  position: absolute;
+  top: -90px;
+  left: 100%;
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+  justify-content: center;
+  width: 768px;
+  height: 100vh;
+  transition: transform .5s;
+  transform: translateY(-100vh);
+  background-color: #fff;
+  @include max(1000) {
+    width: 600px;
+  }
+  @include max(700) {
+    width: 380px;
+  }
+  @include max(470) {
+    width: 340px;
+  }
+  @include max(425) {
+    top: -60px;
+    width: 280px;
+  }
+  &.active {
+    transform: translateY(0);
+  }
+}
+.left-menu__list {
+  margin: 0;
+  padding: 0 20px 0 70px;
+  list-style: none;
+  @include max(700) {
+  padding: 0 20px;
+
+  }
+}
+.left-menu__item--parent {
+  position: relative;
+  background-color: #fff;
+}
+.left-menu__dot-dot-dot {
+  position: absolute;
+  top: 30px;
+  right: 28px;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  cursor: pointer;
+  background-image: url('../img/dot-grey.png');
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: contain;
+  @include max(1000) {
+    top: 15px;
+  }
+  @include max(700) {
+    right: 10px;
+  }
+  @include max(425) {
+    top: 8px;
+  }
+}
+.left-menu__link {
+  font-size: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  color: $text;
+  @include max(1000) {
+    font-size: 30px;
+  }
+  @include max(700) {
+    font-size: 24px;
+  }
+  @include max(425) {
+    font-size: 20px;
+  }
+}
+
+.left-menu__sublist {
+  display: none;
+  margin: 0;
+  padding: 0 0 0 30px;
+  list-style: none;
+}
+.left-menu__sublink {
+  font-size: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  color: $text;
+  @include max(1000) {
+    font-size: 26px;
+  }
+  @include max(700) {
+    font-size: 20px;
+  }
+  @include max(425) {
+    font-size: 16px;
+  }
+}
+.left-menu__item--top-menu {
+  display: none;
+  @include max(1000) {
+    display: block;
+  }
+}
+// end left-menu

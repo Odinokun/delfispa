@@ -4,10 +4,13 @@ block variables
   - var title = 'Delfi Spa'
 
 block content
-  include ../sections/header
-  
+  include ../sections/aside-left
+  include ../sections/header-main
+
   //begin content
-  section.main(style='background-color:#ccc;')
+  section.main.index(style='background-color:#ccc;')
+    include ../sections/top-section
+
   //end content
 
   include ../sections/footer

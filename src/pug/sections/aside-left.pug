@@ -1,0 +1,46 @@
+//begin aside-left
+aside.aside-left
+  a(href="#").aside-left-logo
+    img(src="assets/img/logo.png" alt="Delfi Spa")
+  nav.left-menu#left-menu
+    .left-menu-burger
+      .left-menu-burger--open
+        svg
+          use(xlink:href="assets/img/sprite.svg#left-menu")
+        span.left-menu-burger__text Menu
+      .left-menu-burger--close
+        svg
+          use(xlink:href="assets/img/sprite.svg#left-menu-close")
+        span.left-menu-burger__text Close
+    
+    .left-menu__wrap#left-menu__wrap
+      ul.left-menu__list
+        //begin duplicated top menu
+        li.left-menu__item.left-menu__item--parent.left-menu__item--top-menu
+          a(href="#").left-menu__link Unternehmen
+          .left-menu__dot-dot-dot
+          ul.left-menu__sublist
+            li.left-menu__sublink
+              a(href="#").left-menu__sublink Alle Modelle
+            li.left-menu__sublink
+              a(href="#").left-menu__sublink Arctic Spas
+            li.left-menu__sublink
+              a(href="#").left-menu__sublink Delfi SPA
+        li.left-menu__item.left-menu__item--top-menu
+          a(href="#").left-menu__link Unsere Fachgeschäfte
+        li.left-menu__item.left-menu__item--top-menu
+          a(href="#").left-menu__link Kontakt
+        //end duplicated top menu
+
+        li.left-menu__item
+          a(href="#").left-menu__link About us
+        li.left-menu__item
+          a(href="#").left-menu__link History
+        li.left-menu__item
+          a(href="#").left-menu__link Delivery
+        li.left-menu__item
+          a(href="#").left-menu__link Item
+        li.left-menu__item
+          a(href="#").left-menu__link Item 2
+
+//end aside-left

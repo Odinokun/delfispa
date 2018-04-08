@@ -126,16 +126,28 @@ svg {
 }
 .main {
   position: relative;
+  //display: flex;
   flex: 1 0 auto;
+  padding-left: 90px;
+
+  @include max(425) {
+    padding-left: 60px;
+  }
+}
+.main-inn {
+  width: 100%;
 }
 .container {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 30px;@include max(768) {
+  padding: 15px 30px;
+
+  @include max(768) {
     padding: 10px 20px;
-  }@include max(425) {
+  }
+  @include max(425) {
     padding: 10px;
   }
 }
@@ -143,4 +155,31 @@ svg {
 .page-header,
 .footer {
   flex: 0 0 auto;
+}
+.btn-lg {
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: $text;
+  border: 2px solid transparent;
+  border-image: linear-gradient(165deg, #50adf7 0%, #00f3fc 100%);
+  border-image-slice: 1;
+}
+.btn-sm {
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  padding: 10px 45px 10px 0;
+  text-decoration: none;
+  color: $text;
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-image: $gradient;
+  }
 }
