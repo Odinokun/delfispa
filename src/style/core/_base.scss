@@ -150,6 +150,19 @@ svg {
     padding-left: 10px;
   }
 }
+.container-lg {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @include max(425) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
 .header,
 .page-header,
 .footer {
