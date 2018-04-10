@@ -1,0 +1,25 @@
+mixin reviews-slider__item(title)
+  .reviews-slider__item
+    .reviews-slider__left
+    .reviews-slider__middle
+      a(data-fancybox="gallery" href="assets/img/review-pdf.jpg")
+        img(src="assets/img/review-pdf-thumb.jpg" alt="pdf")
+    .reviews-slider__right
+      h3.reviews-slider__title #{title}
+      p Hallo Herr Pilz, unseren Whirlpool nutzen wir jetzt schon 10 Monate. Wir baden fast täglich. Was ich noch loswerden wollte: Qualität, Preis, Abwicklung: Alles sehr gut! Danke.
+      span.reviews-slider__signature H. Heinze, Bocholt
+
+
+//begin index-reviews
+section.index-reviews
+  .reviews-slider#reviews-slider
+    +reviews-slider__item('Referenzen ')
+    +reviews-slider__item('Referenzen 2')
+    +reviews-slider__item('Referenzen 3')
+    +reviews-slider__item('Referenzen 4')
+  .reviews-more
+    a(href="#") Alle Referenzen ansehen
+      br
+      svg
+        use(xlink:href="assets/img/sprite.svg#arrow")
+//end   index-reviews

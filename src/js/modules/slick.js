@@ -47,6 +47,18 @@ module.exports = function() {
   });
   // end catalog-slider in index.html
 
+  // begin catalog-slider in index.html
+  $('#reviews-slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    arrows: false,
+    autoplay: true,
+    cssEase: 'linear'
+  });
+  // end catalog-slider in index.html
+
   // end Slick slider
 
 };
