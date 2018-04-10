@@ -1,0 +1,37 @@
+mixin catalog-slider__item()
+  .catalog-slider__item
+    h3.catalog-slider__title Delfi Spa - Nerida
+    .catalog-slider__img
+      img(src="assets/img/catalog-slider/slide-01.jpg" alt="delfi-spa")
+    .catalog-slider__param
+      span.catalog-slider__param--sizes 217 x 217 x 104 cm
+      span.catalog-slider__param--persons 4-6 people
+    .catalog-slider__footer
+      .catalog-slider__action
+        span Aktion 5.999,- &#8364;
+      a(href="#").catalog-slider__link
+        svg
+          use(xlink:href="assets/img/sprite.svg#plus")
+        
+
+
+
+//begin catalog-slider
+section.catalog-slider-section
+  .catalog-slider#catalog-slider
+    +catalog-slider__item()
+    +catalog-slider__item()
+    +catalog-slider__item()
+    +catalog-slider__item()
+    +catalog-slider__item()
+    +catalog-slider__item()
+
+  .catalog-slider__more
+    span
+      |Catalogue
+      br
+      |SPA
+      br
+      svg
+        use(xlink:href="assets/img/sprite.svg#arrow")
+//end   catalog-slider

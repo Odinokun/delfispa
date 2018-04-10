@@ -1,0 +1,137 @@
+.catalog-slider-section {
+  display: flex;
+}
+.catalog-slider {
+  width: 80%;
+
+  @include max(1400) {
+    width: 75%;
+  }
+  @include max(1000) {
+    width: 70%;
+  }
+  @include max(550) {
+    width: 75%;
+  }
+}
+.catalog-slider__item {
+  padding: 50px 40px 0 40px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  border-left: 1px solid #d9d9d9;
+
+  @include max(1300) {
+    padding: 50px 20px 0 20px;
+  }
+}
+.catalog-slider__title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.catalog-slider__img {
+  margin-bottom: 40px;
+  img {
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+.catalog-slider__param {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  span {
+    font-size: 16px;
+    color: #919494;
+  }
+}
+
+.catalog-slider__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-top: 1px solid #d9d9d9;
+}
+.catalog-slider__action {
+  span {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    color: $text;
+    @include max(425) {
+      font-size: 20px;
+    }
+    @include max(375) {
+      font-size: 17px;
+    }
+  }
+}
+.catalog-slider__link {
+  display: block;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  &:hover {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    transition: transform .5s;
+
+    fill: $highlight;
+  }
+}
+
+.catalog-slider__more {
+  display: flex;
+  align-items: center;
+  flex: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%;
+  background-color: $highlight;
+
+  @include max(1400) {
+    width: 25%;
+  }
+  @include max(1000) {
+    width: 30%;
+  }
+  @include max(550) {
+    width: 25%;
+  }
+  span {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+
+    @include max(768) {
+      font-size: 24px;
+    }
+    @include max(550) {
+      position: relative;
+      transform: rotate(-90deg);
+    }
+    @include max(425) {
+      font-size: 20px;
+    }
+  }
+  svg {
+    width: 15px;
+    height: 20px;
+    margin-top: 20px;
+
+    fill: #fff;
+    @include max(550) {
+      display: none;
+    }
+  }
+}
