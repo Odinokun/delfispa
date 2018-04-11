@@ -5,12 +5,11 @@
 @import 'core/base';
 
 //elements
- @import 'elements/header-menu';
-// @import 'elements/breadcrumbs';
-// @import 'elements/burger';
+@import 'elements/breadcrumbs';
+@import 'elements/header-menu';
+@import 'elements/slickBase';
 // @import 'elements/pagination';
 // @import 'elements/popup';
- @import 'elements/slickBase';
 
 //section
 @import 'sections/footer';
@@ -25,4 +24,4 @@
 @import 'sections/tips-slider';
 
 //pages
-@import 'pages/index';
+@import 'pages/article-01';
