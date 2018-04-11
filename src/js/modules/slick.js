@@ -14,18 +14,6 @@ module.exports = function() {
   });
   // end top-slider in index.html
 
-  // begin reviews-slider in index.html
-  $('#reviews-slider').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    arrows: false,
-    autoplay: true,
-    cssEase: 'linear'
-  });
-  // end reviews-slider in index.html
-
   // begin catalog-slider in index.html
   $('#catalog-slider').slick({
     dots: false,
@@ -59,38 +47,17 @@ module.exports = function() {
   });
   // end catalog-slider in index.html
 
-  // begin tips-slider in index.html
-  $('#tips-slider').slick({
-    dots: false,
+  // begin catalog-slider in index.html
+  $('#reviews-slider').slick({
+    dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
+    fade: true,
     arrows: false,
     autoplay: true,
-    cssEase: 'linear',
-    responsive: [
-      {
-        breakpoint: 1401,
-        settings: {
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 1001,
-        settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 701,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
+    cssEase: 'linear'
   });
-  // end tips-slider in index.html
+  // end catalog-slider in index.html
 
   // end Slick slider
 

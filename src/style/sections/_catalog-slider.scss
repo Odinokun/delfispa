@@ -113,7 +113,6 @@
   a {
     font-size: 30px;
     font-weight: 700;
-    transition: color .5s;
     text-decoration: none;
     color: #fff;
 
@@ -127,18 +126,11 @@
     @include max(425) {
       font-size: 20px;
     }
-    &:hover {
-      color: $text;
-      svg {
-        fill: $text;
-      }
-    }
   }
   svg {
     width: 15px;
     height: 20px;
     margin-top: 20px;
-    transition: fill .5s;
 
     fill: #fff;
     @include max(550) {

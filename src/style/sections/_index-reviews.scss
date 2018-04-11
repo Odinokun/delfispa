@@ -7,9 +7,6 @@
   margin-bottom: 0 !important;
   background-image: linear-gradient(135deg, #fffefe 0%, #fffeff 0%, #d7fffe 100%);
 
-  @include max(1400) {
-    width: 75%;
-  }
   @include max(1000) {
     width: 70%;
   }
@@ -30,7 +27,6 @@
       justify-content: center;
       width: 100%;
     }
-
     li {
       width: 10px;
       height: 10px;
@@ -53,7 +49,7 @@
   flex: none;
   width: 20%;
 
-  @include max(1400) {
+  @include max(1300) {
     display: none;
   }
 }
@@ -64,16 +60,14 @@
   justify-content: center;
   width: 20%;
 
-  @include max(1400) {
+  @include max(1300) {
     width: 30%;
   }
   @include max(1000) {
     width: 100%;
     padding: 50px 10px 30px 10px;
   }
-
   a {
-    outline: none;
     img {
       display: block;
       max-width: 100%;
@@ -86,7 +80,7 @@
   width: 60%;
   padding: 0 20px 100px 50px;
 
-  @include max(1400) {
+  @include max(1300) {
     width: 70%;
   }
   @include max(1000) {
@@ -94,7 +88,6 @@
     padding: 0 20px 80px 20px;
     text-align: center;
   }
-
   p {
     font-size: 16px;
     font-weight: 300;
@@ -132,9 +125,6 @@
   width: 20%;
   background-color: $highlight;
 
-  @include max(1400) {
-    width: 25%;
-  }
   @include max(1000) {
     width: 30%;
   }
@@ -145,7 +135,6 @@
     font-size: 30px;
     font-weight: 700;
     max-width: 140px;
-    transition: color .5s;
     text-decoration: none;
     color: #fff;
 
@@ -161,19 +150,11 @@
     @include max(425) {
       font-size: 20px;
     }
-
-    &:hover {
-      color: $text;
-      svg {
-        fill: $text;
-      }
-    }
   }
   svg {
     width: 15px;
     height: 20px;
     margin-top: 20px;
-    transition: fill .5s;
 
     fill: #fff;
     @include max(700) {

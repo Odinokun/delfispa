@@ -6,8 +6,7 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
-    'article-01',
-    'article-02'
+    'inner'
     ]);
 });
 
@@ -42,9 +41,5 @@ $('.left-menu__dot-dot-dot').on('click', function () {
 });
 // end mobile submenu
 
-$('.tips-slider__link').on('hover', function () {
-  // $(this).parents('.tips-slider__img').addClass('active');
-  $(this).hide();
-});
 
 //====== Begin Programmer code ======
