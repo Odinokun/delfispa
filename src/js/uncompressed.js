@@ -6,7 +6,7 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
-    'inner'
+    'article-01'
     ]);
 });
 
