@@ -1,0 +1,163 @@
+.tips-slider-section {
+  display: flex;
+  padding-bottom: 50px;
+}
+.tips-slider {
+  width: calc(80% + 10px);
+  position: relative;
+  margin-left: -10px;
+  //&::before {
+  //  content: '';
+  //  width: 10px;
+  //  background-color: #ff0;
+  //  z-index: 5;
+  //  position: absolute;
+  //  left: 0;
+  //  top: 0;
+  //  bottom: 0;
+  //}
+  //
+    @include max(1400) {
+      width: calc(75% + 10px);
+    }
+    @include max(1000) {
+      width: calc(70% + 10px);
+    }
+    @include max(700) {
+      width: calc(80% + 10px);
+    }
+}
+.tips-slider__item {
+  position: relative;
+  padding: 10px 0 0 10px;
+}
+
+.tips-slider__img {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    transition: opacity .5s;
+    pointer-events: none;
+    opacity: 0;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  }
+  &.active {
+    &::before {
+      opacity: .8;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.tips-slider__footer {
+  position: absolute;
+  right: 5px;
+  bottom: 50px;
+  left: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+.tips-slider__title {
+  width: 100%;
+  span {
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    max-width: 215px;
+    color: #fff;
+  }
+}
+.tips-slider__link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 5px 0 0 auto;
+  cursor: pointer;
+  &:hover {
+    svg {
+      transform: rotate(180deg);
+
+      fill: #fff;
+    }
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    transition: .5s;
+
+    fill: $highlight;
+  }
+}
+//
+.tips-slider__more {
+  display: flex;
+  align-items: center;
+  flex: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%;
+  background-color: #fff;
+
+  @include max(1400) {
+    width: 25%;
+  }
+  @include max(1000) {
+    width: 30%;
+  }
+  @include max(700) {
+    width: 20%;
+  }
+  a {
+    font-size: 30px;
+    font-weight: 700;
+    max-width: 200px;
+    transition: color .5s;
+    text-decoration: none;
+    color: $text;
+    @include max(1100) {
+      font-size: 24px;
+      max-width: 70%;
+    }
+    @include max(700) {
+      position: relative;
+      white-space: nowrap;
+      max-width: 1000px;
+      transform: rotate(-90deg);
+      font-size: 20px;
+    }
+    @include max(550) {
+      font-size: 18px;
+    }
+    @include max(470) {
+      font-size: 16px;
+    }
+    @include max(375) {
+      font-size: 14px;
+    }
+    &:hover {
+      color: $highlight;
+      svg {
+        fill: $highlight;
+      }
+    }
+  }
+  svg {
+    width: 15px;
+    height: 20px;
+    margin-top: 20px;
+    transition: fill .5s;
+
+    fill: $text;
+    @include max(700) {
+      display: none;
+    }
+  }
+}
