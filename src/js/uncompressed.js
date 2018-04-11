@@ -6,7 +6,8 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
-    'article-01'
+    'article-01',
+    'article-02'
     ]);
 });
 
