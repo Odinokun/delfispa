@@ -2,35 +2,30 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1670px;
-
-  @include max(1100) {
+  max-width: 1670px;@include max(1100) {
     flex-direction: column-reverse;
   }
 }
 .review__left {
-  width: 50%;
-
-  @include max(1100) {
+  width: 50%;@include max(1100) {
     width: 100%;
   }
 }
+// begin review__left--video
 .review__left--video {
   display: flex;
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-
-  @include max(1100) {
+  background-size: cover;@include max(1100) {
     width: 100%;
     max-width: 600px;
     min-height: 550px;
     margin: 0 auto;
-  }
-  @include max(600) {
+  }@include max(600) {
     min-height: 300px;
   }
+
   &.active {
     background-image: none !important;
     iframe {
@@ -45,16 +40,33 @@
     opacity: 0;
   }
 }
+// end review__left--video
+
+// begin review__left--pdf
+.review__left--pdf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  a {
+    outline: none;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    border: 20px solid #e6fffe;
+  }
+}
+// end review__left--pdf
+
 .review__right {
   width: 50%;
-  padding: 0 70px 30px 100px;
-
-  @include max(1440) {
+  padding: 0 70px 30px 100px;@include max(1440) {
     padding: 0 40px 30px 40px;
-  }
-  @include max(1100) {
+  }@include max(1100) {
     width: 100%;
   }
+
   p {
     font-size: 16px;
     font-weight: 300;
@@ -64,9 +76,7 @@
 .review__title {
   font-size: 60px;
   margin-bottom: 60px;
-  padding-top: 10px;
-
-  @include max(768) {
+  padding-top: 10px;@include max(768) {
     font-size: 40px;
     margin-bottom: 20px;
     padding-top: 0;
@@ -89,24 +99,19 @@
   align-items: center;
   width: 50%;
   min-height: 160px;
-  text-decoration: none;
-
-  @include max(1100) {
+  text-decoration: none;@include max(1100) {
     width: 100%;
-  }
-  @include max(768) {
+  }@include max(768) {
     width: 100%;
-  }
-  @include max(600) {
+  }@include max(600) {
     min-height: 100px;
   }
+
   span {
     font-size: 30px;
     font-weight: 700;
     transition: color .5s;
-    color: #fff;
-
-    @include max(600) {
+    color: #fff;@include max(600) {
       font-size: 20px;
     }
   }
@@ -118,18 +123,15 @@
 }
 .review-footer__left {
   padding: 0 20px 0 70px;
-  background-color: #1c1e1e;
-
-  @include max(1440) {
+  background-color: #1c1e1e;@include max(1440) {
     justify-content: space-between;
     padding: 0 40px;
-  }
-  @include max(1100) {
+  }@include max(1100) {
     padding: 0 100px;
-  }
-  @include max(768) {
+  }@include max(768) {
     padding: 0 40px;
   }
+
   &:hover {
     span {
       color: $highlight;
@@ -141,27 +143,22 @@
   svg {
     width: 24px;
     height: 24px;
-    margin-right: 130px;
-
-    @include max(1440) {
+    margin-right: 130px;@include max(1440) {
       margin-right: 20px;
     }
   }
 }
 .review-footer__right {
   padding: 0 70px 0 100px;
-  background-color: $highlight;
-
-  @include max(1440) {
+  background-color: $highlight;@include max(1440) {
     justify-content: space-between;
     padding: 0 40px;
-  }
-  @include max(1100) {
+  }@include max(1100) {
     padding: 0 100px;
-  }
-  @include max(768) {
+  }@include max(768) {
     padding: 0 40px;
   }
+
   svg {
     width: 16px;
     height: 16px;

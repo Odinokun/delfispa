@@ -9,7 +9,8 @@ $(document).ready(function ($) {
     'article-01',
     'article-02',
     'reviews',
-    'review'
+    'review',
+    'review-pdf'
   ]);
 });
 
