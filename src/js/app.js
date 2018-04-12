@@ -25,4 +25,7 @@ $(function() {
   // begin start video
   require('./modules/startVideo')();
 
+  // begin accordion
+  require('./modules/accordion')();
+
 });

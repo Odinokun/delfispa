@@ -10,7 +10,8 @@ $(document).ready(function ($) {
     'article-02',
     'reviews',
     'review',
-    'review-pdf'
+    'review-pdf',
+    'faq'
   ]);
 });
 
@@ -44,6 +45,7 @@ $('.left-menu__dot-dot-dot').on('click', function () {
   $(this).siblings('.left-menu__sublist').slideToggle();
 });
 // end mobile submenu
+
 
 
 
