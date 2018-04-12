@@ -15,8 +15,14 @@
   list-style: none;
   &::after {
     font-size: 12px;
-    margin: 0 3px 0 4px;
+    margin: 0 18px 0 16px;
     content: '/';
+    color: $text;
+
+    @include max(470) {
+      font-size: 10px;
+      margin: 0 8px 0 6px;
+    }
   }
   &:last-child {
     &::after {
@@ -26,9 +32,36 @@
 }
 .breadcrumbs__link {
   font-size: 12px;
+  font-weight: 900;
   white-space: nowrap;
-  color: #403549;
+  text-decoration: none;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: $text;
+
+  @include max(470) {
+    font-size: 10px;
+  }
+
   &:hover {
-    text-decoration: none;
+    color: $highlight;
+  }
+}
+.article-01 {
+  .breadcrumbs__item::after,
+  .breadcrumbs__link {
+    color: #fff;
+  }
+}
+.article-02 {
+  .breadcrumbs__item::after,
+  .breadcrumbs__link {
+    color: $text;
+  }
+}
+.reviews {
+  .breadcrumbs__item::after,
+  .breadcrumbs__link {
+    color: #c5e2e7;
   }
 }

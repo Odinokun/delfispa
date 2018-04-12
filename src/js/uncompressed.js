@@ -6,8 +6,10 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
-    'inner'
-    ]);
+    'article-01',
+    'article-02',
+    'reviews'
+  ]);
 });
 
 function pageWidget(pages) {
@@ -40,6 +42,5 @@ $('.left-menu__dot-dot-dot').on('click', function () {
   $(this).siblings('.left-menu__sublist').slideToggle();
 });
 // end mobile submenu
-
 
 //====== Begin Programmer code ======

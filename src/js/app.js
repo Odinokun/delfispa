@@ -12,8 +12,8 @@ $(function() {
   // begin Popup
   // require('./modules/popup')();
 
-  // begin Sticky header
-  // require('./modules/stickyHeader')();
+  // begin hover on the link in slider
+  require('./modules/hoverOnTheLink')();
 
   // begin Animate.css
   // require('./modules/waypoints')();
