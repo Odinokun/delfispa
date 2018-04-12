@@ -1,0 +1,179 @@
+.review__inn {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1670px;
+
+  @include max(1100) {
+    flex-direction: column-reverse;
+  }
+}
+.review__left {
+  width: 50%;
+
+  @include max(1100) {
+    width: 100%;
+  }
+}
+.review__left--video {
+  display: flex;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include max(1100) {
+    width: 100%;
+    max-width: 600px;
+    min-height: 550px;
+    margin: 0 auto;
+  }
+  @include max(600) {
+    min-height: 300px;
+  }
+  &.active {
+    background-image: none !important;
+    iframe {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+.review__right {
+  width: 50%;
+  padding: 0 70px 30px 100px;
+
+  @include max(1440) {
+    padding: 0 40px 30px 40px;
+  }
+  @include max(1100) {
+    width: 100%;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+}
+.review__title {
+  font-size: 60px;
+  margin-bottom: 60px;
+  padding-top: 10px;
+
+  @include max(768) {
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-top: 0;
+  }
+}
+.review__signature {
+  font-weight: 700;
+}
+
+// begin review-footer
+.review-footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1670px;
+}
+.review-footer__left,
+.review-footer__right {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  min-height: 160px;
+  text-decoration: none;
+
+  @include max(1100) {
+    width: 100%;
+  }
+  @include max(768) {
+    width: 100%;
+  }
+  @include max(600) {
+    min-height: 100px;
+  }
+  span {
+    font-size: 30px;
+    font-weight: 700;
+    transition: color .5s;
+    color: #fff;
+
+    @include max(600) {
+      font-size: 20px;
+    }
+  }
+  svg {
+    transition: fill .5s;
+
+    fill: #fff;
+  }
+}
+.review-footer__left {
+  padding: 0 20px 0 70px;
+  background-color: #1c1e1e;
+
+  @include max(1440) {
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+  @include max(1100) {
+    padding: 0 100px;
+  }
+  @include max(768) {
+    padding: 0 40px;
+  }
+  &:hover {
+    span {
+      color: $highlight;
+    }
+    svg {
+      fill: $highlight;
+    }
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 130px;
+
+    @include max(1440) {
+      margin-right: 20px;
+    }
+  }
+}
+.review-footer__right {
+  padding: 0 70px 0 100px;
+  background-color: $highlight;
+
+  @include max(1440) {
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+  @include max(1100) {
+    padding: 0 100px;
+  }
+  @include max(768) {
+    padding: 0 40px;
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+  }
+  &:hover {
+    span {
+      color: $text;
+    }
+    svg {
+      fill: $text;
+    }
+  }
+}
+// end review-footer

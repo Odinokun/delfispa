@@ -22,4 +22,7 @@ $(function() {
   // begin Fancybox3
   // require('./modules/fancybox')();
 
+  // begin start video
+  require('./modules/startVideo')();
+
 });

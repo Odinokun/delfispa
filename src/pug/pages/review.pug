@@ -1,0 +1,39 @@
+extends ../_template
+
+block variables
+  - var title = 'Review | Delfi Spa'
+  - var pageHeaderTitle = 'Referenzen Nerida'
+
+block content
+  include ../sections/aside-left
+  include ../sections/header
+
+  //begin content
+  section.main.review
+    //begin review__inn
+    .review__inn
+      .review__left.review__left--video(style="background-image:url('assets/img/review-video.jpg')")
+        iframe(src="https://www.youtube.com/embed/0RF9ZDm8n5I?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+      .review__right
+        include ../elements/breadcrumbs
+        h2.review__title Referenzen Nerida
+        p "Gestern wurde unser Whirlpool angeliefert. Wie schnell der große schwere Gartenwhirlpool bei uns auf67 der Terrasse stand, dank der eingesetzten Anlieferungstechnik. Sehr professionell. Wir empfehlen Sie gerne weiter!“
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+        span.review__signature M. Hölscher, Ampfing
+    //end review__inn
+
+    //begin review-footer
+    .review-footer
+      a(href="reviews.html").review-footer__left
+        svg
+          use(xlink:href="assets/img/sprite.svg#review-burger")
+        span Alle Referenzen ansehen
+      a(href="#").review-footer__right
+        span Next Referenzen ansehen
+        svg
+          use(xlink:href="assets/img/sprite.svg#arrow")
+    //end review-footer
+  //end content
+
+  include ../sections/footer

@@ -8,7 +8,8 @@ $(document).ready(function ($) {
     'index',
     'article-01',
     'article-02',
-    'reviews'
+    'reviews',
+    'review'
   ]);
 });
 
@@ -42,5 +43,7 @@ $('.left-menu__dot-dot-dot').on('click', function () {
   $(this).siblings('.left-menu__sublist').slideToggle();
 });
 // end mobile submenu
+
+
 
 //====== Begin Programmer code ======
