@@ -7,6 +7,9 @@ module.exports = [
   // include Slick slider
   './node_modules/slick-carousel/slick/slick.min.js',
 
+  // include jQuery UI
+  './src/vendors/jquery-ui-1.12.1.custom/jquery-ui.min.js',
+
   // include fancybox3
   './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'
 ];

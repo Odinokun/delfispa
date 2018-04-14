@@ -170,9 +170,9 @@ svg {
 }
 .btn-lg {
   font-size: 20px;
+  font-weight: 700;
   display: inline-block;
   padding: 10px 33px;
-  font-weight: 700;
   text-decoration: none;
   color: $text;
   border: 2px solid transparent;
@@ -181,6 +181,7 @@ svg {
 }
 .btn-sm {
   font-size: 20px;
+  font-weight: 700;
   position: relative;
   display: inline-block;
   padding: 10px 45px 10px 0;
@@ -196,3 +197,92 @@ svg {
     background-image: $gradient;
   }
 }
+
+// begin custom-select
+.custom-select__wrap {
+  .ui-selectmenu-button {
+    font-weight: 700;
+    position: relative;
+    display: block;
+    padding: 10px 40px;
+    text-align: center;
+    border-radius: $radius;
+    outline: none;
+    &.ui-corner-top {
+      border-radius: $radius $radius 0 0;
+    }
+  }
+  .ui-selectmenu-icon {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    &::before,
+    &::after {
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      content: '';
+      background-color: $highlight;
+    }
+    &::before {
+      top: 4px;
+      left: 0;
+    }
+    &::after {
+      top: 4px;
+      left: 0;
+      transform: rotate(90deg);
+    }
+  }
+  .ui-menu-item-wrapper {
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    border: none;
+  }
+  .ui-state-active {
+    font-weight: 700;
+  }
+  .ui-menu {
+    padding: 0 0 10px 0;
+    border-radius: 0 0 $radius $radius;
+    outline: none;
+  }
+}
+.custom-select__wrap--dark {
+  .ui-button,
+  .ui-button:active {
+    border-color: #1c1e1e;
+  }
+  .ui-selectmenu-button {
+    color: #fff;
+    background-color: #1c1e1e;
+  }
+  .ui-selectmenu-menu {
+    color: #fff;
+    ul {
+      border: 1px solid #1c1e1e;
+      background-color: #1c1e1e;
+    }
+  }
+  .ui-menu-item-wrapper {
+    //border-color: #1c1e1e;
+    //  margin: 0;
+    color: #fff;
+    //border: none;
+    background-color: #1c1e1e;
+  }
+  .ui-state-active {
+    color: $highlight;
+    background-color: #1c1e1e;
+  }
+}
+.ui-widget.ui-widget-content {
+  border-top: none;
+}
+
+// end .custom-select

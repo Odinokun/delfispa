@@ -3,8 +3,8 @@ $(function() {
   // begin SVG for IE
   require('./modules/svg4everybody')();
 
-  // begin Scroll2Ancor
-  // require('./modules/scroll2ancor')();
+  // begin jqueryUI
+  require('./modules/jqueryUI')();
 
   // begin Slick slider
   require('./modules/slick')();

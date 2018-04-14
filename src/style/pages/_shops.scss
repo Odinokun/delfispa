@@ -1,0 +1,154 @@
+.shops-top-section {
+  position: relative;
+}
+.shops-map {
+  position: relative;
+  height: 600px;
+  @include max(550) {
+    height: 400px;
+  }
+}
+
+
+// begin shops-header
+.shops-header {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  padding: 60px;
+
+  @include max(700) {
+    padding: 30px ;
+  }
+}
+.shops-header__title {
+  font-size: 60px;
+  font-weight: 700;
+
+  @include max(1024) {
+    font-size: 40px;
+  }
+  @include max(700) {
+    font-size: 36px;
+  }
+  @include max(550) {
+    font-size: 30px;
+  }
+}
+// end shops-header
+
+
+// begin shops-footer
+.shops-map__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+
+  @include max(700) {
+    padding: 30px ;
+    flex-wrap: wrap;
+  }
+}
+.shops-map__footer-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 0;
+  padding-right: 40px;
+
+  @include max(1024) {
+    font-size: 30px;
+  }
+  @include max(700) {
+    margin-bottom: 20px;
+  }
+  @include max(550) {
+    font-size: 20px;
+  }
+}
+.shops-map__city-select-wrap {
+  position: relative;
+  height: 44px;
+  @include max(700) {
+    width: 100%;
+  }
+  @include max(350) {
+    margin-left: -20px;
+  }
+  .ui-selectmenu-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+// end shops-footer
+
+
+//begin shops-adress
+.shops-adress {
+  padding: 50px 0;
+  @include max(550) {
+    padding:  0;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.shops-adress__item {
+  width: 25%;
+  padding: 40px 10px 40px 0;
+  transition: .5s;
+  @include max(1000) {
+    width: 33.33%;
+  }
+  @include max(700) {
+    width: 50%;
+  }
+  @include max(550) {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+}
+.shops-adress__title {
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.shops-adress__contact {
+  display: flex;
+  margin-bottom: 15px;
+  svg {
+    flex: none;
+    width: 16px;
+    height: 19px;
+    margin-right: 10px;
+
+    fill: $highlight;
+  }
+  a {
+    font-weight: 700;
+    line-height: 1.45;
+    text-decoration: none;
+    color: $text;
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
+.shops-adress__schedule {
+  padding: 10px 0 ;
+  span {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.45;
+    display: block;
+    color: #919494;
+  }
+}
+//end shops-adress
