@@ -117,20 +117,37 @@ $(document).ready(function ($) {
   // });
   //end отслеживание выбранного города и смена карты/адресов в стандартном селекте
 
-  //begin отслеживание выбранного города и смена карты/адресов в кастомном селекте
+  //begin отслеживание выбранного города
+  // и смена карты/адресов
+  // в кастомном селекте
   $(function () {
     $(".shops-map__city-select").selectmenu({
-      change: function (event, data) {
+      change: function () {
         var city = $(".custom-select").val();
-        // console.log(city);
         goToCity(city);
         filterShopAdressBlock(city);
         return false;
       }
     });
   });
+  //end отслеживание выбранного города
+  // и смена карты/адресов
+  // в кастомном селекте
 
-  //end отслеживание выбранного города и смена карты/адресов в кастомном селекте
+
+
+  // begin отслеживание выбранного города
+  // в кастомном селекте и смена карты
+  // при загрузке страницы
+  $(window).on("load", function() {
+    var city = $('.shops-map__city-select').val();
+    goToCity(city);
+  });
+  // end отслеживание выбранного города
+  // в кастомном селекте и смена карты
+  // при загрузке страницы
+
+
 
   function goToCity(city) {
     switch (city) {
@@ -165,6 +182,8 @@ $(document).ready(function ($) {
     }
   }
 
+  //begin фильтр адресов салонов
+  //по выбранному селекту
   function filterShopAdressBlock(city) {
     var block = $('.shops-adress__item');
 
@@ -175,4 +194,7 @@ $(document).ready(function ($) {
       $('.shops-adress__item--' + city).fadeIn();
     }
   }
+  //end фильтр адресов салонов
+  //по выбранному селекту
+
 });

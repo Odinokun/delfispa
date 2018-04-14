@@ -25,7 +25,7 @@ mixin shops-adress__item(id, title)
       span Mo – Fr von 10:00-18:00 Uhr
       span Samstag von 10:00-14:30 Uhr
 
-    a(href="#").btn-sm Mehr erfahren
+    a(href="shop-one.html").btn-sm Mehr erfahren
   //end shops-adress__item
 
 
@@ -58,7 +58,7 @@ block content
 
         .shops-map__city-select-wrap.custom-select__wrap.custom-select__wrap--dark
           select.shops-map__city-select.custom-select#city-select(name='address')
-            option(value='all') Germany
+            option(value='all' selected) Germany
             option(value='berlin') Berlin
             option(value='dusseldorf') Düsseldorf
             option(value='frankfurt') Frankfurt-Heusenstamm

@@ -102,7 +102,6 @@
 .shops-adress__item {
   width: 25%;
   padding: 40px 10px 40px 0;
-  transition: .5s;
   @include max(1000) {
     width: 33.33%;
   }

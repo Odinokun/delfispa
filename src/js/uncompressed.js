@@ -12,7 +12,8 @@ $(document).ready(function ($) {
     'review',
     'review-pdf',
     'faq',
-    'shops'
+    'shops',
+    'shop-one'
   ]);
 });
 
