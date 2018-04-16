@@ -126,7 +126,7 @@ function resetSlider() {
 }
 
 
-// begin tabs
+// begin productcard-tab
 $('.productcard-tab__tab').on('click', function () {
   var tab = $(this).data('tab');
   $('.productcard-tab__tab').removeClass('active');
@@ -137,6 +137,7 @@ $('.productcard-tab__tab').on('click', function () {
   $('.productcard-tab__card--' + tab).addClass('active');
   $('.productcard-top__' + tab).addClass('active');
 });
+// end productcard-tab
 
 // begin specifications-tabs
 $('.specifications-tab__tab').on('click', function () {
@@ -147,3 +148,18 @@ $('.specifications-tab__tab').on('click', function () {
   $('.specifications-tab__cards--' + tab).addClass('active');
 });
 // end specifications-tabs
+
+// begin aside-tabs
+$('.aside-tab__item').on('click', function () {
+  var tab = $(this).data('tab');
+  // $('.aside-tab__item').removeClass('active');
+  // $('.aside-tab__card').removeClass('active');
+  $(this).addClass('active');
+  $('.aside-tab__card--' + tab).addClass('active');
+});
+$('.aside-tab__card-close').on('click', function () {
+  $('.aside-tab__item').removeClass('active');
+  $('.aside-tab__card').removeClass('active');
+});
+
+// end aside-tabs

@@ -1,0 +1,76 @@
+mixin aside-tab__item(tab, svg, title)
+  .aside-tab__item(data-tab='' + tab + '')
+    svg
+      use(xlink:href='assets/img/sprite.svg#tab-' + svg + '')
+    span #{title}
+
+
+
+//begin aside-tab
+section.aside-tab
+  .container
+    .aside-tab__wrap
+      +aside-tab__item('01', '01', 'Höchste Energieeffizienz')
+      +aside-tab__item('02', '02', 'Wirksame Wasserdesinfektion')
+      +aside-tab__item('03', '03', 'Acrylwanne mit Bio-Lok ®')
+      +aside-tab__item('04', '04', 'Polaris 4-fach Isolierung')
+      +aside-tab__item('05', '05', 'Titan Heizung 3 kW')
+      +aside-tab__item('06', '06', 'Strenge Qualitätssicherung')
+//end   aside-tab
+
+//begin aside-tab__body
+section.aside-tab__body
+  .aside-tab__card.aside-tab__card--01
+    .aside-tab__card-close
+      svg
+        use(xlink:href="assets/img/sprite.svg#close")
+    svg
+      use(xlink:href="assets/img/sprite.svg#tab-01")
+    h4.aside-tab__card-title Höchste Energieeffizienz
+    p Die Polaris 4-fach Isolierung nutzt die Pumpenabwärme, die High-Flow Zirkulationspumpe, die Stromspar-Modi der Steuerung, und die extra starke Isolierabdeckung und reduziert den Stromverbrauch und den Geräuschpegel auf ein Minimum. Stromsparende LED Beleuchtung runden die Energieeffizienz ab.
+
+  .aside-tab__card.aside-tab__card--02
+    .aside-tab__card-close
+      svg
+        use(xlink:href="assets/img/sprite.svg#close")
+    svg
+      use(xlink:href="assets/img/sprite.svg#tab-02")
+    h4.aside-tab__card-title Wirksame Wasserdesinfektion
+    p Die Polaris 4-fach Isolierung nutzt die Pumpenabwärme, die High-Flow Zirkulationspumpe, die Stromspar-Modi der Steuerung, und die extra starke Isolierabdeckung und reduziert den Stromverbrauch und den Geräuschpegel auf ein Minimum. Stromsparende LED Beleuchtung runden die Energieeffizienz ab.
+
+  .aside-tab__card.aside-tab__card--03
+    .aside-tab__card-close
+      svg
+        use(xlink:href="assets/img/sprite.svg#close")
+    svg
+      use(xlink:href="assets/img/sprite.svg#tab-03")
+    h4.aside-tab__card-title Acrylwanne mit Bio-Lok ®
+    p Die Polaris 4-fach Isolierung nutzt die Pumpenabwärme, die High-Flow Zirkulationspumpe, die Stromspar-Modi der Steuerung, und die extra starke Isolierabdeckung und reduziert den Stromverbrauch und den Geräuschpegel auf ein Minimum. Stromsparende LED Beleuchtung runden die Energieeffizienz ab.
+
+  .aside-tab__card.aside-tab__card--04
+    .aside-tab__card-close
+      svg
+        use(xlink:href="assets/img/sprite.svg#close")
+    svg
+      use(xlink:href="assets/img/sprite.svg#tab-04")
+    h4.aside-tab__card-title Polaris 4-fach Isolierung
+    p Die Polaris 4-fach Isolierung nutzt die Pumpenabwärme, die High-Flow Zirkulationspumpe, die Stromspar-Modi der Steuerung, und die extra starke Isolierabdeckung und reduziert den Stromverbrauch und den Geräuschpegel auf ein Minimum. Stromsparende LED Beleuchtung runden die Energieeffizienz ab.
+
+  .aside-tab__card.aside-tab__card--05
+    .aside-tab__card-close
+      svg
+        use(xlink:href="assets/img/sprite.svg#close")
+    svg
+      use(xlink:href="assets/img/sprite.svg#tab-05")
+    h4.aside-tab__card-title Titan Heizung 3 kW
+    p Die Polaris 4-fach Isolierung nutzt die Pumpenabwärme, die High-Flow Zirkulationspumpe, die Stromspar-Modi der Steuerung, und die extra starke Isolierabdeckung und reduziert den Stromverbrauch und den Geräuschpegel auf ein Minimum. Stromsparende LED Beleuchtung runden die Energieeffizienz ab.
+
+  .aside-tab__card.aside-tab__card--06
+    .aside-tab__card-close
+      svg
+        use(xlink:href="assets/img/sprite.svg#close")
+    svg
+      use(xlink:href="assets/img/sprite.svg#tab-06")
+    h4.aside-tab__card-title Strenge Qualitätssicherung
+    p Die Polaris 4-fach Isolierung nutzt die Pumpenabwärme, die High-Flow Zirkulationspumpe, die Stromspar-Modi der Steuerung, und die extra starke Isolierabdeckung und reduziert den Stromverbrauch und den Geräuschpegel auf ein Minimum. Stromsparende LED Beleuchtung runden die Energieeffizienz ab.
+//end   aside-tab__body
