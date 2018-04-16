@@ -59,6 +59,39 @@ module.exports = function() {
   });
   // end catalog-slider in index.html
 
+  // begin productcard-slider in index.html
+  $('#productcard-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 1401,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 1001,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 701,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+  // end productcard-slider in index.html
+
   // begin tips-slider in index.html
   $('#tips-slider').slick({
     dots: false,
@@ -108,7 +141,15 @@ module.exports = function() {
     vertical:true,
     asNavFor: '#productcard-top__slider',
     dots: false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 701,
+        settings: {
+          vertical:false
+        }
+      }
+    ]
   });
 
   // Remove active class from all thumbnail slides

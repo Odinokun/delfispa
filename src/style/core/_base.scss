@@ -125,9 +125,12 @@ svg {
   // text-shadow: none;
 }
 .main {
-  position: relative;//display: flex;
+  position: relative;
+  //display: flex;
   flex: 1 0 auto;
-  padding-left: 90px;@include max(425) {
+  padding-left: 90px;
+
+  @include max(425) {
     padding-left: 60px;
   }
 }
@@ -140,7 +143,9 @@ svg {
   max-width: 1320px;
   margin: 0 auto;
   padding-right: 20px;
-  padding-left: 20px;@include max(425) {
+  padding-left: 20px;
+
+  @include max(425) {
     padding-right: 10px;
     padding-left: 10px;
   }
@@ -151,7 +156,9 @@ svg {
   max-width: 1440px;
   margin: 0 auto;
   padding-right: 20px;
-  padding-left: 20px;@include max(425) {
+  padding-left: 20px;
+
+  @include max(425) {
     padding-right: 10px;
     padding-left: 10px;
   }
@@ -265,7 +272,8 @@ svg {
   .ui-menu-item-wrapper {
     //border-color: #1c1e1e;
     //  margin: 0;
-    color: #fff;//border: none;
+    color: #fff;
+    //border: none;
     background-color: #1c1e1e;
   }
   .ui-state-active {

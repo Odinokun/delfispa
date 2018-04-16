@@ -2,6 +2,12 @@ extends ../_template
 
 mixin catalog-item(peoples)
   .catalog-item(data-peoples='' + peoples + '')
+    .catalog-item__cover
+      button
+        svg
+          use(xlink:href="assets/img/sprite.svg#basket")
+        span buy now
+
     h3.catalog-item__title Delfi Spa - Nerida
 
     .catalog-item__img

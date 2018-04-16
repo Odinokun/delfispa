@@ -14,6 +14,9 @@
     font-size: 20px;
     font-weight: 900;
     color: #919494;
+    @include max(425) {
+      font-size: 16px;
+    }
   }
   &.active {
     background-color: transparent;
@@ -24,7 +27,7 @@
 }
 .productcard-tab__card {
   display: none;
-  padding: 60px 0;
+  padding: 60px 0 40px 0;
   &.active {
     display: block;
   }
@@ -32,9 +35,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include max(1100) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
 }
-
+.productcard-tab__item {
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
 
 .productcard-tab__old-price {
   font-size: 16px;
@@ -104,10 +114,14 @@
   cursor: pointer;
   border: none;
   background-color: #fff;
+  margin: 0 auto;
   img {
     display: block;
     width: 30px;
     margin-right: 35px;
+    @include max(550) {
+      margin-right: 10px;
+    }
   }
   span {
     font-size: 20px;
@@ -116,6 +130,12 @@
     margin: 0;
     transition: color .5s;
     color: $text;
+    @include max(550) {
+      font-size: 16px;
+    }
+    @include max(425) {
+      font-size: 14px;
+    }
   }
   &:hover {
     span {

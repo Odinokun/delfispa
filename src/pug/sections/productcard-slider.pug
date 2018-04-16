@@ -1,0 +1,65 @@
+mixin productcard-slider__item(peoples)
+  .productcard-slider__item(data-peoples='' + peoples + '')
+    h3.productcard-slider__title Delfi Spa - Nerida
+    .productcard-slider__img
+      img(src="assets/img/productcard-slider/slide-01.jpg" alt="delfi-spa")
+    .productcard-slider__param
+      .productcard-slider__param--left
+        span.productcard-slider__param--sizes 217 x 217 x 104 cm
+        span.productcard-slider__param--persons 4-6 people
+      .productcard-slider__param--peoples
+        svg
+          use(xlink:href="assets/img/sprite.svg#people")
+        svg
+          use(xlink:href="assets/img/sprite.svg#people")
+        svg
+          use(xlink:href="assets/img/sprite.svg#people")
+        svg
+          use(xlink:href="assets/img/sprite.svg#people")
+        svg
+          use(xlink:href="assets/img/sprite.svg#people")
+        svg
+          use(xlink:href="assets/img/sprite.svg#people")
+        svg
+          use(xlink:href="assets/img/sprite.svg#people")
+        svg
+          use(xlink:href="assets/img/sprite.svg#people")
+    .productcard-slider__footer
+      .productcard-slider__action
+        span.productcard-slider__price-old Aktion 7.990,- &#8364;
+        br
+        span.productcard-slider__price-new Aktion 5.999,- &#8364;
+      a(href="#").productcard-slider__link
+        svg
+          use(xlink:href="assets/img/sprite.svg#plus")
+
+
+//begin productcard-header
+header.productcard-header
+  .container
+    h2.productcard-header__title Empfohlene Produkte
+//end   productcard-header
+
+
+
+//begin productcard-slider
+section.productcard-slider-section
+  .productcard-slider#productcard-slider
+    +productcard-slider__item('1')
+    +productcard-slider__item('2')
+    +productcard-slider__item('3')
+    +productcard-slider__item('4')
+    +productcard-slider__item('5')
+    +productcard-slider__item('6')
+    +productcard-slider__item('7')
+    +productcard-slider__item('8')
+
+  .productcard-slider__more
+    a(href="#")
+      |Catalogue
+      br
+      |SPA
+      br
+      svg
+        use(xlink:href="assets/img/sprite.svg#arrow")
+//end   productcard-slider
