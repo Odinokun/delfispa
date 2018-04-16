@@ -1,0 +1,69 @@
+//begin productcard-top
+section.productcard-top
+  .productcard-top__left
+    .productcard-top__slider-thumb#productcard-top__slider-thumb
+      span.thumb-prev
+        img(src="assets/img/productcard-slider/card-01-thumb.jpg" alt="delfi spa")
+      span.thumb-prev
+        img(src="assets/img/productcard-slider/card-01-thumb.jpg" alt="delfi spa")
+      span.thumb-prev
+        img(src="assets/img/productcard-slider/card-01-thumb.jpg" alt="delfi spa")
+
+
+    .productcard-top__slider#productcard-top__slider
+      img(src="assets/img/productcard-slider/card-01.jpg" alt="delfi spa")
+      img(src="assets/img/productcard-slider/card-01.jpg" alt="delfi spa")
+      img(src="assets/img/productcard-slider/card-01.jpg" alt="delfi spa")
+
+
+    footer.productcard-top__left-footer
+      button.productcard-top__compare Vergleichen
+        svg
+          use(xlink:href="assets/img/sprite.svg#arrows")
+
+
+  .productcard-top__right
+    include ../elements/breadcrumbs
+    h2.productcard-top__title Delfi Spa - Nerida
+    p.productcard-top__descr Der Whirlpool „Nerida“ von Delfi Spas wurde mit erstklassigem Komfort und umfangreichen Zubehör ausgestattet und bietet wohltuende Hydromassagen für Sie mit Partner oder Freunden. Die 69 Edelstahldüsen und die wunderschön beleuchteten Luftdüsen lösen hartnäckige Verspannungen und verhelfen Ihnen zu perfekter Entspannung.
+    .productcard-top__specification
+      table
+        tr
+          td Maße:
+          td 160 x 210 x 90 cm
+        tr
+          td Fassungsvermögen:
+          td 280 Liter
+        tr
+          td Personen:
+          td 3 Massageplätze
+        tr
+          td Massagedüsen:
+          td 69
+        tr
+          td Luftdüsen:
+          td 13
+        tr
+          td Lieferzeit ca.
+          td 8-13 Wochen
+
+    .productcard-top__btns
+      .productcard-top__btns-item
+        a(href="#").productcard-top__btn
+          svg
+            use(xlink:href="assets/img/sprite.svg#dnk")
+          span Vergleichen
+
+      .productcard-top__btns-item
+        a(href="#").productcard-top__btn
+          svg
+            use(xlink:href="assets/img/sprite.svg#pdf")
+          span Produktflyer
+      .productcard-top__btns-item
+        a(href="#").productcard-top__btn
+          svg
+            use(xlink:href="assets/img/sprite.svg#shield")
+          span Garantie
+
+
+//end productcard-top

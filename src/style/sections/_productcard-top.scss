@@ -1,0 +1,150 @@
+// begin productcard-top
+.productcard-top {
+  display: flex;
+  padding-top: 50px;
+  background-color: #fcfcfc;
+}
+.productcard-top__left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  //flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 870px;
+}
+.productcard-top__slider-thumb {
+  flex: none;
+  width: 20%;
+  //width: 190px;
+  .slick-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90px;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+  .thumb-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 82px;
+    height: 82px;
+    margin-bottom: 10px;
+    transition: border-color .5s;
+    border: 2px solid #d9d9d9;
+    &.slick-current {
+      border-color: $highlight;
+    }
+  }
+}
+.productcard-top__slider {
+  width: 80%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+.productcard-top__left-footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 50px 70px 30px 30px;
+}
+
+.productcard-top__compare {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  &:hover {
+    svg {
+      fill: $text;
+    }
+  }
+  svg {
+    width: 26px;
+    height: 19px;
+    margin-left: 15px;
+    transition: fill .5s;
+
+    fill: $highlight;
+  }
+}
+
+.productcard-top__right {
+  width: 100%;
+  max-width: 640px;
+  padding: 0 30px;
+}
+.productcard-top__title {
+  font-size: 60px;
+}
+.productcard-top__descr {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.productcard-top__specification {
+  table {
+    width: 370px;
+    margin: 30px 0;
+  }
+  tr td:first-child {
+    color: #919494;
+  }
+  tr td:nth-child(2n) {
+    font-weight: 700;
+    color: $text;
+  }
+}
+
+.productcard-top__btns {
+  display: flex;
+}
+.productcard-top__btns-item {
+  width: 33.33%;
+  padding: 10px 25px;
+  border-top: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.productcard-top__btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  span {
+    font-size: 16px;
+    font-weight: 700;
+    transition: color .5s;
+    color: #919494;
+  }
+  &:hover {
+    span {
+      color: $highlight;
+    }
+  }
+  svg {
+    width: 23px;
+    height: 26px;
+    margin-right: 15px;
+    transition: fill .5s;
+
+    fill: $highlight;
+  }
+}

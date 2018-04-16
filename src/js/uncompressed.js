@@ -14,7 +14,8 @@ $(document).ready(function ($) {
     'faq',
     'shops',
     'shop-one',
-    'catalog'
+    'catalog',
+    'productcard'
   ]);
 });
 
@@ -123,12 +124,3 @@ function resetSlider() {
   sliderPersons.slider('value', optionsPersons.min);
   $('.catalog-form__persons-people').attr('data-peoplesfilter', 1);
 }
-
-
-
-// begin persons filter
-// $('#catalog-form__persons ui-slider-range').on('click', function () {
-//   console.log('hellow');
-//   console.log($( "#catalog-form__persons" ).slider( "value" ) );
-// });
-// end persons filter

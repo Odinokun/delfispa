@@ -92,6 +92,39 @@ module.exports = function() {
   });
   // end tips-slider in index.html
 
+
+  // begin productcard-top-slider
+  $('#productcard-top__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '#productcard-top__slider-thumb'
+  });
+
+  $('#productcard-top__slider-thumb').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    vertical:true,
+    asNavFor: '#productcard-top__slider',
+    dots: false,
+    focusOnSelect: true
+  });
+
+  // Remove active class from all thumbnail slides
+  $('#productcard-top__slider-thumb .slick-slide').removeClass('slick-active');
+
+  // Set active class to first thumbnail slides
+  $('#productcard-top__slider-thumb .slick-slide').eq(0).addClass('slick-active');
+
+  // On before slide change match active thumbnail to current slide
+  $('#productcard-top__slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    var mySlideNumber = nextSlide;
+    $('#productcard-top__slider-thumb .slick-slide').removeClass('slick-active');
+    $('#productcard-top__slider-thumb .slick-slide').eq(mySlideNumber).addClass('slick-active');
+  });
+  // end productcard-top-slider
+
   // end Slick slider
 
 };

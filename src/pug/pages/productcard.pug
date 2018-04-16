@@ -1,0 +1,20 @@
+extends ../_template
+
+block variables
+  - var title = 'Delfi Spa - Nerida | Delfi Spa'
+  - var pageHeaderTitle = 'Delfi Spa - Nerida'
+
+block content
+  include ../sections/aside-left
+  include ../sections/header
+
+  //begin content
+  section.main.productcard
+
+    include ../sections/productcard-top
+    include ../sections/index-banner
+
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts
