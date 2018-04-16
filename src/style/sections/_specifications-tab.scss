@@ -1,0 +1,257 @@
+.specifications-tab {
+  margin-bottom: 80px;
+}
+.specifications-tab__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 70px 0;
+  border-top: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+
+  @include max(550) {
+    margin: 30px 0;
+  }
+}
+.specifications-tab__tab {
+  width: 20%;
+  padding: 30px 10px;
+  text-align: center;
+
+  @include max(900) {
+    width: 33.33%;
+  }
+  @include max(600) {
+    width: 100%;
+    padding: 10px;
+  }
+  &.active {
+    span {
+      font-weight: 400;
+      color: $highlight;
+    }
+  }
+  span {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    color: #919494;
+
+    @include max(1100) {
+      font-size: 20px;
+    }
+    &:hover {
+      font-weight: 400;
+      color: $highlight;
+    }
+  }
+}
+
+.specifications-tab__cards {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+// begin specifications-tab__cards--01
+.specifications-tab__cards--01 {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.specifications-tab__list {
+  width: 48%;
+  margin: 0;
+  padding: 0;
+
+  @include max(900) {
+    width: 100%;
+    margin-left: 15px;
+  }
+  li {
+    padding: 5px 0 5px 20px;
+    list-style-image: url('../img/check.png');
+  }
+}
+// end specifications-tab__cards--01
+
+
+// begin specifications-tab__cards--02
+.specifications-tab__cards--02 {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.specifications-tab__accessory-item {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 50px;
+
+  @include max(1000) {
+    width: 100%;
+  }
+  @include max(425) {
+    flex-wrap: wrap;
+  }
+}
+.specifications-tab__accessory-img {
+  flex: none;
+  width: 250px;
+
+  @include max(1200) {
+    width: 200px;
+  }
+  @include max(1000) {
+    width: 250px;
+  }
+  @include max(700) {
+    width: 200px;
+  }
+  @include max(550) {
+    width: 150px;
+  }
+  @include max(425) {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.specifications-tab__accessory-text {
+  padding: 0 20px;
+
+  @include max(425) {
+    padding: 0;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 300;
+
+    @include max(550) {
+      font-size: 18px;
+    }
+  }
+  span {
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    color: $highlight;
+  }
+}
+// end specifications-tab__cards--02
+
+// begin specifications-tab__cards--03
+.specifications-tab__cards-header {
+  padding: 0 0 60px 0;
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+}
+.specifications-tab__cards-header-title {
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.specifications-tab__cards-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.specifications-tab__cards-item {
+  display: flex;
+  width: 50%;
+  margin-bottom: 50px;
+
+  @include max(1000) {
+    width: 100%;
+  }
+  @include max(550) {
+    flex-wrap: wrap;
+  }
+}
+.specifications-tab__cards-img {
+  flex: none;
+  width: 200px;
+
+  @include max(1100) {
+    width: 150px;
+  }
+  @include max(1000) {
+    width: 200px;
+  }
+  @include max(700) {
+    width: 150px;
+  }
+  @include max(550) {
+    width: 200px;
+    margin-bottom: 30px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.specifications-tab__cards-text {
+  padding: 0 20px 0 30px;
+  p {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+.specifications-tab__cards-item-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+// end specifications-tab__cards--03
+
+
+// begin specifications-tab__cards--04
+.specifications-tab__cards--04 {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  table {
+    width: 49%;
+    border-spacing: 0;
+
+    @include max(1000) {
+      width: 100%;
+    }
+  }
+  tr {
+    background-color: #f1f7f8;
+    &:nth-child(2n) {
+      background-color: #fff;
+    }
+  }
+  td {
+    font-size: 16px;
+    width: 40%;
+    padding: 5px 5px 5px 30px;
+    color: #919494;
+
+    @include max(600) {
+      font-size: 14px;
+      padding: 5px;
+    }
+    &:nth-child(2n) {
+      font-weight: 700;
+      width: 60%;
+      padding: 5px 5px 5px 0;
+      color: $text;
+    }
+  }
+}
+// end specifications-tab__cards--04

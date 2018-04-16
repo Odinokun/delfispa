@@ -136,7 +136,14 @@ $('.productcard-tab__tab').on('click', function () {
   $(this).addClass('active');
   $('.productcard-tab__card--' + tab).addClass('active');
   $('.productcard-top__' + tab).addClass('active');
-
-
 });
-// end tabs
+
+// begin specifications-tabs
+$('.specifications-tab__tab').on('click', function () {
+  var tab = $(this).data('tab');
+  $('.specifications-tab__tab').removeClass('active');
+  $('.specifications-tab__cards').removeClass('active');
+  $(this).addClass('active');
+  $('.specifications-tab__cards--' + tab).addClass('active');
+});
+// end specifications-tabs

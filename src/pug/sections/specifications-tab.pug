@@ -1,0 +1,222 @@
+mixin specifications-tab__cards-item(pic, title, text)
+  // begin specifications-tab__cards-item
+  .specifications-tab__cards-item
+    .specifications-tab__cards-img
+      img(src='assets/img/specifications/specifications-tab-cards-' + pic + '.jpg' alt="img")
+    .specifications-tab__cards-text
+      h4.specifications-tab__cards-item-title #{title}
+      p #{text}
+  // end specifications-tab__cards-item
+
+
+mixin specifications-tab__accessory-item(pic, text, price)
+  // begin specifications-tab__accessory-item
+  .specifications-tab__accessory-item
+    .specifications-tab__accessory-img
+      img(src='assets/img/specifications/accessories-' + pic + '.jpg' alt="img")
+    .specifications-tab__accessory-text
+      p #{text}
+      span #{price}
+  // end specifications-tab__accessory-item
+
+
+
+
+//begin specifications-tab
+section.specifications-tab
+  // begin specifications-tab__tabs
+  .specifications-tab__tabs
+    .specifications-tab__tab(data-tab="01")
+      span Ausstattung
+    .specifications-tab__tab(data-tab="02")
+      span Zubehör
+    .specifications-tab__tab(data-tab="03")
+      span Massagedüsen
+    .specifications-tab__tab.active(data-tab="04")
+      span Datenblatt
+    .specifications-tab__tab(data-tab="05")
+      span Farbenauswahl
+  // end specifications-tab__tabs
+
+  // begin specifications-tab__body
+  .specifications-tab__body
+    //begin specifications-tab__cards--01
+    .specifications-tab__cards.specifications-tab__cards--01
+      .container
+        ul.specifications-tab__list
+          li Europäisches, edles Design mit eleganten Linien
+          li Beleuchtetes Touch-Bedienpanel für max. Bedienkomfort
+          li Multilicht LED-Beleuchtung für optische Highlights
+          li Kaskaden und einzigartige Lichteffekte für schöne Atmosphäre
+          li Mehrstufiges intelligentes ClearCrystal Reinigungssystem
+          li Luftsprudelsystem mit warmer Luft und Aromatherapie
+          li Hochwertige Hydrotherapie für alle Körperpartien
+          li Langlebige Edelstahldüsen in optimaler Anordnung
+          li Düsen im Nacken-, Fuß- und Wadenbereich
+        ul.specifications-tab__list
+          li Wasserdesinfektion durch Ozonsystem mit Einwaschkammer
+          li Mehrschichtige 8 mm Acrylwanne mit Hygiene-Bio-Lok®
+          li Polaris 4-fach Isolierung mit Dämmplatten und Reflektorfolie
+          li Wärmenutzung der Pumpen für geringeren Stromverbrauch
+          li Leistungsstarke Titan Heizung 3 kW für lange Badegänge
+          li Einhaltung strengster Sicherheits- und Qualitätsstandards
+          li Geringe Unterhalts- und Betriebskosten
+          li Wartungsarmer Dauerbetrieb
+
+
+    //end specifications-tab__cards--01
+    //begin specifications-tab__cards--02
+    .specifications-tab__cards.specifications-tab__cards--02
+      .container
+        +specifications-tab__accessory-item('01', 'Extra starke Isolierabdeckung', '+ 299 €')
+        +specifications-tab__accessory-item('02', 'Einstiegstreppe (Farbe wie Verkleidung)', '+ 199 €')
+        +specifications-tab__accessory-item('03', 'Lifter für Abdeckung', '+ 199 €')
+        +specifications-tab__accessory-item('04', 'Starter-Paket "Bayrol Pflegeprodukte"', '+ 89 €')
+        +specifications-tab__accessory-item('05', 'Wi-fi Upgrade', '+ 315 €')
+        +specifications-tab__accessory-item('06', 'Ersatzfilter', '+ 29 €')
+
+    //end specifications-tab__cards--02
+    //begin specifications-tab__cards--03
+    .specifications-tab__cards.specifications-tab__cards--03
+      .container
+        header.specifications-tab__cards-header
+          h3.specifications-tab__cards-header-title Düsen sind das Herzstück der Delfi Spa
+          p Damit der Badevorgang zum Erlebnis wird, müssen sich Massage und Hydrotherapie gut anfühlen und eine starke Massagekraft besitzen. In einem Delfi Spa Outdoor Whirlpool orientiert sich die extra ergonomische Anordnung der Massagedüsen an der menschlichen Anatomie. Für die Individualisierung der Massage sind die meisten Düsen individuell in Stärke und Position verstellbar. Sie massieren, regenerieren und vitalisieren den gesamten Körper.
+        .specifications-tab__cards-list
+          +specifications-tab__cards-item('01' , '1x Aqua-Rolling Maxi Düse', 'Eine senkrecht wirkende kräftige Maxi-Düse wirbelt einen Wasserstrahl über den kompletten Rückenbereich Ihres Liegesitzes vom unteren Rücken bis hin zum Nacken. Dies erinnert an diekraftvollen Bewegungen eines Masseurs und stimuliert die Blutzirkulation im Körper.')
+          +specifications-tab__cards-item('02' , '2x RotoTwin Medi Düsen', 'Kreisenden Bewegungen durch Düsen mit doppeltem Wasserstrahl vermindern Verspannungen an den Schulterblättern sowie im Rückenbereich. Sie sorgen für neue Beweglichkeit und ein wunderbares Gefühl derEntspannung.')
+          +specifications-tab__cards-item('03' , '3x RotoTwin Maxi Düsen', 'Düsen mit doppeltem Wasserstrahl sorgen durch ihre Rotation für wunderbare Massagewirkung durch angenehme Wasserströme. Eine entspannende Massage mit kreisenden Bewegungen, die eine tiefer gehende Massagewirkung erzielen.')
+          +specifications-tab__cards-item('04' , '1x Multimassage (12) Maxi Düsen', 'Kreisenden Bewegungen durch Düsen mit doppeltem Wasserstrahl vermindern Verspannungen an den Schulterblättern sowie im Rückenbereich. Sie sorgen für neue Beweglichkeit und ein wunderbares Gefühl derEntspannung.')
+          +specifications-tab__cards-item('05' , '8x DirectHydro Mini Düsen', 'Diese Düsen lockern Verspannungen in kleineren Muskelpartien durch eine direkte und kraftvolle Massage. Wir haben diese Düsen für Sie für die Nackenmassage und für die Reflexzonenmassage der Fußsohlen verbaut. Die Stimulation der Massagepunkte hat eine entspannende Wirkung auf den ganzen Körper.')
+          +specifications-tab__cards-item('06' , '42x DirectHydro Medi Düsen', 'Diese Massageform ist gleichermaßen effektiv auf dem Rücken wie auf den Beinen. Es wird ein konstanter Druck erzeugt, der Verspannungen in größeren Muskelpartien und Gelenken lockert. Ziel der Massage ist, Verspannungen in der rechten und linken Körperseite auszugleichen, die Durchblutung zu fördern und für mehr Ausgewogenheit und Gesundheit zu sorgen.')
+          +specifications-tab__cards-item('07' , '7x DirectHydro Macro Düsen', 'Für die großflächige Massage des Rückens werden meist Düsen mit größeren Öffnungen und einem hohen Wasserdurchfluss eingesetzt. Solche großflächigen Whirlpool-Düsen haben zudem den Effekt, eine tiefergehende Massagewirkung zu erzielen.')
+          +specifications-tab__cards-item('08' , '10x LuftDüsen', 'Genießen Sie diese sanfte, vitalisierende Luftsprudelmassage mit vorgewärmter Luft, tausende von Luftblasen legen Ihre Beine in Schwerelosigkeit, um Ihren Körper zu entspannen und zu regenerieren. Diese sanfte Ganzkörpermassage vitalisiert den Organismus und Sie gewinnen neue Energie.')
+    //end specifications-tab__cards--03
+    //begin specifications-tab__cards--04
+    .specifications-tab__cards.specifications-tab__cards--04.active
+      .container
+        // begin table-01
+        table
+          tr
+            td Name
+            td Nerida
+          tr
+            td Beschreibung
+            td Nerida - alle Vorteile eines großen Whirlpools, konzentriert im platzsparenden Modell.
+          tr
+            td Preis
+            td ab 8.429 € *
+          tr
+            td Abmessungen
+            td 210 x 160 x 90 cm
+          tr
+            td Personen
+            td 3
+          tr
+            td Sitzplätze + Liegeplätze
+            td 1 + 2
+          tr
+            td Leergewicht
+            td 280 kg
+          tr
+            td Wasserfüllmenge
+            td 950 l
+          tr
+            td Wasser-Massagedüsen aus Edelstahl
+            td 64
+          tr
+            td Wärmedämmung
+            td 3-fach Isolierung: - Wanne mit 25 mm hight-density foam
+          tr
+            td Wannenmaterial und Stärke
+            td Acryl Aristech (USA) – mehrschichtig mit 8 mm
+          tr
+            td Außenverkleidung
+            td Langlebig und wartungsfrei
+          tr
+            td Bedien- und Heizungssystem
+            td Balboa (USA)
+          tr
+            td Heizung
+            td 1 x 3 KW
+          tr
+            td Wasserpumpe (für Düsen)
+            td 2 x 3 PS
+          tr
+            td Desinfektionssystem
+            td Ozonator mit Mischkammer
+          tr
+            td Filterung
+            td 1x Kartuschenfilter
+        // end table-01
+
+        // begin table-02
+        table
+          tr
+            td Skimmer
+            td 1
+          tr
+            td Zirkulationspumpe
+            td 1 x 0,5 PS
+          tr
+            td Druckluftpumpe (Blower)
+            td 1 x 400W
+          tr
+            td Luftdüsen
+            td 10
+          tr
+            td Verstellventile
+            td 3
+          tr
+            td LED Bedienfeld
+            td Ja
+          tr
+            td Beleuchtung
+            td 15 x LED excellance
+          tr
+            td Wasserfall mit LED
+            td 1
+          tr
+            td Farblichttherapie
+            td Ja
+          tr
+            td Aromatherapie
+            td Ja
+          tr
+            td Kopfstützen
+            td 2 x Luxe, hinterleuchtet
+          tr
+            td Stützkonstruktion
+            td Aus rostfreiem Edelstahl
+          tr
+            td Frostschutz
+            td Automatisch
+          tr
+            td Heizen und Desinfizieren
+            td Zeitgesteuert
+          tr
+            td Stromanschluss
+            td 400V, 3x 16A
+          tr
+            td Wasserdichte Hülle für Ihren Whirlpool
+            td Ja
+          tr
+            td Abfluss im Wannenboden
+            td Ja
+          tr
+            td ABS Unterbau
+            td Ja
+
+
+
+
+
+
+// end table-02
+
+
+
+    //end specifications-tab__cards--04
+
+  // end specifications-tab__body
+//end   specifications-tab
