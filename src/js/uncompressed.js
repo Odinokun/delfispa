@@ -124,3 +124,19 @@ function resetSlider() {
   sliderPersons.slider('value', optionsPersons.min);
   $('.catalog-form__persons-people').attr('data-peoplesfilter', 1);
 }
+
+
+// begin tabs
+$('.productcard-tab__tab').on('click', function () {
+  var tab = $(this).data('tab');
+  $('.productcard-tab__tab').removeClass('active');
+  $('.productcard-tab__card').removeClass('active');
+  $('.productcard-top__order').removeClass('active');
+  $('.productcard-top__online').removeClass('active');
+  $(this).addClass('active');
+  $('.productcard-tab__card--' + tab).addClass('active');
+  $('.productcard-top__' + tab).addClass('active');
+
+
+});
+// end tabs

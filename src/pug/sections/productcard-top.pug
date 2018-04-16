@@ -26,44 +26,113 @@ section.productcard-top
     include ../elements/breadcrumbs
     h2.productcard-top__title Delfi Spa - Nerida
     p.productcard-top__descr Der Whirlpool „Nerida“ von Delfi Spas wurde mit erstklassigem Komfort und umfangreichen Zubehör ausgestattet und bietet wohltuende Hydromassagen für Sie mit Partner oder Freunden. Die 69 Edelstahldüsen und die wunderschön beleuchteten Luftdüsen lösen hartnäckige Verspannungen und verhelfen Ihnen zu perfekter Entspannung.
-    .productcard-top__specification
-      table
-        tr
-          td Maße:
-          td 160 x 210 x 90 cm
-        tr
-          td Fassungsvermögen:
-          td 280 Liter
-        tr
-          td Personen:
-          td 3 Massageplätze
-        tr
-          td Massagedüsen:
-          td 69
-        tr
-          td Luftdüsen:
-          td 13
-        tr
-          td Lieferzeit ca.
-          td 8-13 Wochen
+    //begin productcard-top__order
+    .productcard-top__order.active
+      .productcard-top__specification
+        table
+          tr
+            td Maße:
+            td 160 x 210 x 90 cm
+          tr
+            td Fassungsvermögen:
+            td 280 Liter
+          tr
+            td Personen:
+            td 3 Massageplätze
+          tr
+            td Massagedüsen:
+            td 69
+          tr
+            td Luftdüsen:
+            td 13
+          tr
+            td Lieferzeit ca.
+            td 8-13 Wochen
 
-    .productcard-top__btns
-      .productcard-top__btns-item
-        a(href="#").productcard-top__btn
-          svg
-            use(xlink:href="assets/img/sprite.svg#dnk")
-          span Vergleichen
+      .productcard-top__btns
+        .productcard-top__btns-item
+          a(href="#").productcard-top__btn
+            svg
+              use(xlink:href="assets/img/sprite.svg#dnk")
+            span Vergleichen
 
-      .productcard-top__btns-item
-        a(href="#").productcard-top__btn
-          svg
-            use(xlink:href="assets/img/sprite.svg#pdf")
-          span Produktflyer
-      .productcard-top__btns-item
-        a(href="#").productcard-top__btn
-          svg
-            use(xlink:href="assets/img/sprite.svg#shield")
-          span Garantie
+        .productcard-top__btns-item
+          a(href="#").productcard-top__btn
+            svg
+              use(xlink:href="assets/img/sprite.svg#pdf")
+            span Produktflyer
+        .productcard-top__btns-item
+          a(href="#").productcard-top__btn
+            svg
+              use(xlink:href="assets/img/sprite.svg#shield")
+            span Garantie
+    //end productcard-top__order
 
+
+    //begin productcard-top__online
+    .productcard-top__online
+      .productcard-top__parametrs
+        .productcard-top__parametrs-row
+          .productcard-top__parametrs-item
+            span Wannenfarbe Acryl:
+          .productcard-top__parametrs-item
+            .productcard-top__select-wrap.custom-select__wrap.custom-select__wrap--light
+              select.productcard-top__select.custom-select
+                option(value='white' selected) White Marble
+                option(value='grey') Dark Grey
+                option(value='black') Black Marble
+                option(value='red') Red Marble
+                option(value='brown') Brown Marble
+                option(value='green') Green Marble
+        .productcard-top__parametrs-row
+          .productcard-top__parametrs-item
+            span Außenverkleidung:
+          .productcard-top__parametrs-item
+            .productcard-top__select-wrap.custom-select__wrap.custom-select__wrap--light
+              select.productcard-top__select.custom-select
+                option(value='grey' selected) Dark Grey
+                option(value='white') White Marble
+                option(value='black') Black Marble
+                option(value='red') Red Marble
+                option(value='brown') Brown Marble
+                option(value='green') Green Marble
+        .productcard-top__parametrs-row
+          .productcard-top__parametrs-item
+            span Lieferzeit:
+          .productcard-top__parametrs-item.productcard-top__parametrs-item--weight
+            svg
+              use(xlink:href="assets/img/sprite.svg#car")
+            span 5-10 Werktage
+
+        .productcard-top__parametrs-row.productcard-top__parametrs-row--zubehor
+          .productcard-top__parametrs-item
+            span Zubehör:
+
+          .productcard-top__parametrs-item
+            .productcard-top__checkbox
+              label
+                input(type="checkbox")
+                .productcard-top__checkbox-wrap
+                span Abdeckung für den Whirlpool &#160;
+                strong +299 €
+            .productcard-top__checkbox
+              label
+                input(type="checkbox")
+                .productcard-top__checkbox-wrap
+                span Einstiegstreppe &#160;
+                strong +199 €
+            .productcard-top__checkbox
+              label
+                input(type="checkbox")
+                .productcard-top__checkbox-wrap
+                span Lifter für Abdeckung &#160;
+                strong +199 €
+            .productcard-top__checkbox
+              label
+                input(type="checkbox")
+                .productcard-top__checkbox-wrap
+                span Starter-Paket "Bayrol Pflegeprodukte" &#160;
+                strong +89 €
+    //end productcard-top__online
 
 //end productcard-top

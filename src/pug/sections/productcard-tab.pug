@@ -1,0 +1,58 @@
+//begin productcard-tab
+section.productcard-tab
+  .productcard-tab__tabs#productcard-tab__tabs
+    .productcard-tab__tab.active(data-tab='order')
+      span Order product
+    .productcard-tab__tab(data-tab='online')
+      span Buy online
+  .productcard-tab__cards
+    .productcard-tab__card.productcard-tab__card--order.active
+      .container
+        .productcard-tab__item
+          span.productcard-tab__old-price Preis: 7.990,- €
+          span.productcard-tab__new-price Aktion 5.999,- €
+          span.productcard-tab__text-price
+            | inkl. 19% MwSt.
+            br
+            | Versandkostenfreie Lieferung
+
+        .productcard-tab__item
+          .productcard-tab__sale
+            svg
+              use(xlink:href="assets/img/sprite.svg#percent")
+            .productcard-tab__sale-text
+              span.productcard-tab__sale-date Sonderpreis bis 15.04.18
+              span.productcard-tab__sale-percent 31% gespart
+
+        .productcard-tab__item
+          button.productcard-tab__basket-btn
+            img(src="assets/img/basket.svg" alt="basket")
+            span Fragen zum Produkt
+            
+            
+    .productcard-tab__card.productcard-tab__card--online
+      .container
+        .productcard-tab__item
+          span.productcard-tab__old-price Preis: 7.990,- €
+          span.productcard-tab__new-price Aktion 5.999,- €
+          span.productcard-tab__text-price
+            | inkl. 19% MwSt.
+            br
+            | Versandkostenfreie Lieferung
+
+        .productcard-tab__item
+          .productcard-tab__sale
+            svg
+              use(xlink:href="assets/img/sprite.svg#percent")
+            .productcard-tab__sale-text
+              span.productcard-tab__sale-date Sonderpreis bis 15.04.18
+              span.productcard-tab__sale-percent 31% gespart
+
+        .productcard-tab__item
+          button.productcard-tab__basket-btn
+            img(src="assets/img/basket.svg" alt="basket")
+            span Fragen zum Produkt
+          .productcard-tab__paypal
+            img(src="assets/img/paypal.png" alt="pay systems")
+
+//end   productcard-tab
