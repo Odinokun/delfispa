@@ -152,8 +152,6 @@ $('.specifications-tab__tab').on('click', function () {
 // begin aside-tabs
 $('.aside-tab__item').on('click', function () {
   var tab = $(this).data('tab');
-  // $('.aside-tab__item').removeClass('active');
-  // $('.aside-tab__card').removeClass('active');
   $(this).addClass('active');
   $('.aside-tab__card--' + tab).addClass('active');
 });
@@ -161,5 +159,28 @@ $('.aside-tab__card-close').on('click', function () {
   $('.aside-tab__item').removeClass('active');
   $('.aside-tab__card').removeClass('active');
 });
-
 // end aside-tabs
+
+// begin bath-tabs
+$('.bath-tab__main-tab').on('click', function () {
+  var tab = $(this).data('tab');
+  $('.bath-tab__main-tab').removeClass('active');
+  $('.bath-tab__item').removeClass('active');
+  $(this).addClass('active');
+  $('.bath-tab__item--' + tab).addClass('active');
+});
+$('.bath-tab__bath-btn').on('click', function () {
+  var tab = $(this).data('tab');
+  $('.bath-tab__bath-btn').removeClass('active');
+  $('.bath-tab__zones').removeClass('active');
+  $(this).addClass('active');
+  $('.bath-tab__zones--' + tab).addClass('active');
+});
+$('.bath-tab__bath-02-btn').on('click', function () {
+  var tab = $(this).data('tab');
+  $('.bath-tab__bath-02-btn').removeClass('active');
+  $('.bath-tab__zones-02').removeClass('active');
+  $(this).addClass('active');
+  $('.bath-tab__zones-02--' + tab).addClass('active');
+});
+// end bath-tabs

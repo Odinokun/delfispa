@@ -1,0 +1,325 @@
+.bath-tab {
+  padding: 100px 0;
+}
+.bath-tab__header {
+  margin-bottom: 30px;
+}
+.bath-tab__header-title {
+  font-size: 40px;
+  text-align: center;
+
+  @include max(700) {
+    font-size: 30px;
+  }
+  @include max(550) {
+    font-size: 22px;
+  }
+}
+.bath-tab__main-tabs {
+  display: flex;
+  width: 440px;
+  margin: 0 auto 90px;
+
+  @include max(700) {
+    width: 100%;
+    max-width: 440px;
+  }
+}
+.bath-tab__main-tab {
+  width: 50%;
+  padding: 10px 5px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #919494;
+  &:first-child {
+    border-radius: 25px 0 0 25px;
+  }
+  &:last-child {
+    border-radius: 0 25px 25px 0;
+  }
+  &.active {
+    border: none;
+    background-image: $gradient;
+    span {
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+  span {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+    color: #919494;
+
+    @include max(700) {
+      font-size: 20px;
+    }
+    @include max(550) {
+      font-size: 16px;
+    }
+  }
+}
+.bath-tab__item {
+  display: none;
+  &.active {
+    display: flex;
+  }
+}
+.bath-tab__item--01 {
+  align-items: center;
+
+  @include max(1200) {
+    flex-direction: column;
+  }
+}
+.bath-tab__bath {
+  position: relative;
+  overflow: hidden;
+  flex: none;
+  width: 500px;
+
+  @include max(700) {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.bath-tab__bath-btn {
+  position: absolute;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex: none;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-image: $gradient;
+
+  @include max(700) {
+    position: static;
+    margin: 0 10px;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 40px;
+    position: relative;
+    z-index: 5;
+    color: #fff;
+  }
+  &.active {
+    background-image: none;
+
+    @include max(700) {
+      border: 1px solid $highlight;
+      background-color: #fff;
+      span {
+        color: $highlight;
+      }
+    }
+    &::after {
+      position: absolute;
+      top: -85px;
+      left: -350px;
+      width: 700px;
+      height: 200px;
+      content: '';
+      background-image: url('../img/bath-shadow.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      @include max(700) {
+        display: none;
+      }
+    }
+  }
+}
+.bath-tab__bath-btn--01 {
+  top: 100px;
+  left: 200px;
+}
+.bath-tab__bath-btn--02 {
+  top: 170px;
+  left: 300px;
+}
+.bath-tab__bath-btn--03 {
+  top: 240px;
+  left: 230px;
+}
+
+
+.bath-tab__zones {
+  display: none;
+  align-items: center;
+
+  @include max(700) {
+    flex-direction: column;
+  }
+  &.active {
+    display: flex;
+  }
+}
+.bath-tab__zones-item {
+  p {
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  &:first-child {
+    flex: none;
+    width: 280px;
+
+    @include max(700) {
+      width: 100%;
+      max-width: 280px;
+    }
+    img {
+      display: block;
+      width: 190px;
+      margin: 0 auto;
+    }
+  }
+  &:last-child {
+    padding-left: 40px;
+
+    @include max(700) {
+      padding: 0;
+      //flex:0 1 auto;
+    }
+  }
+}
+.bath-tab__zones-title {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+
+.bath-tab__item--02 {
+  align-items: center;
+  justify-content: space-between;
+
+  @include max(1000) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.bath-tab__bath-02 {
+  position: relative;
+  flex: none;
+  width: 500px;
+
+  @include max(700) {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.bath-tab__bath-02-btn {
+  position: absolute;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex: none;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-image: $gradient;
+
+  @include max(700) {
+    position: static;
+    margin: 0 10px;
+  }
+  @include max(425) {
+    width: 30px;
+    height: 30px;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+
+    fill: #fff;
+    @include max(425) {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  &.active {
+    background-color: #fff;
+    background-image: none;
+    svg {
+      fill: $highlight;
+    }
+  }
+}
+.bath-tab__bath-02-btn--01 {
+  top: 40px;
+  left: 220px;
+}
+.bath-tab__bath-02-btn--02 {
+  top: 110px;
+  left: 80px;
+}
+.bath-tab__bath-02-btn--03 {
+  top: 95px;
+  left: 340px;
+}
+.bath-tab__bath-02-btn--04 {
+  top: 180px;
+  left: 230px;
+}
+.bath-tab__bath-02-btn--05 {
+  top: 235px;
+  left: 220px;
+}
+
+.bath-tab__zones-02 {
+  display: none;
+  flex-direction: column;
+  max-width: 640px;
+  padding: 0 0 0 20px;
+
+  @include max(1000) {
+    align-items: center;
+  }
+  p {
+    font-weight: 300;
+  }
+  &.active {
+    display: flex;
+  }
+}
+.bath-tab__zones-02-img {
+  margin-bottom: 30px;
+  img {
+    display: block;
+    width: 100%;
+    max-width: 370px;
+  }
+}
+.bath-tab__zones-02-title {
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}

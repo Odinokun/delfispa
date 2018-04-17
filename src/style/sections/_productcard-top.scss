@@ -1,7 +1,7 @@
 // begin productcard-top
 .productcard-top {
   display: flex;
-  padding-top: 50px;
+  padding: 50px 0;
   background-color: #fcfcfc;
 
   @include max(1400) {
@@ -220,9 +220,9 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+
   @include max(600) {
     flex-wrap: wrap;
-
   }
 }
 .productcard-top__parametrs-item {
