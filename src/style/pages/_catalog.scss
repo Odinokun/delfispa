@@ -45,6 +45,10 @@
   display: flex;
   padding-bottom: 100px;
   background-color: #fcfcfc;
+
+  @include max(700) {
+    flex-wrap: wrap;
+  }
 }
 
 
@@ -54,15 +58,28 @@
   width: 330px;
   padding: 0 0 35px 0;
   border: 1px solid #d9d9d9;
+
+  @include max(700) {
+    width: 100%;
+    padding: 0 0 15px 0;
+  }
 }
 .catalog-filter__title {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 25px;
+
+  @include max(700) {
+    font-size: 24px;
+  }
 }
 .catalog-form__row {
   padding: 40px;
   border-bottom: 1px solid #d9d9d9;
+
+  @include max(700) {
+    padding: 20px;
+  }
   &:last-child {
     border: none;
   }
@@ -71,6 +88,10 @@
   font-size: 26px;
   font-weight: 300;
   margin-bottom: 20px;
+
+  @include max(700) {
+    font-size: 18px;
+  }
 }
 .catalog-form__sort-by {
   display: flex;
@@ -317,6 +338,7 @@
   @include max(1000) {
     width: 100%;
   }
+
   &:hover {
     .catalog-item__cover {
       opacity: 1;
@@ -501,8 +523,8 @@
   display: flex;
   align-items: center;
   flex: none;
-  justify-content: space-between;
-  width: 80px;
+  //justify-content: space-between;
+  //width: 80px;
 }
 .catalog-item__compare {
   border: none;
