@@ -255,3 +255,21 @@
   }
 }
 // end specifications-tab__cards--04
+
+// begin specifications-tab__cards--05
+.specifications-tab__cards--05 {
+  .container {
+
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  background-image: $gradient;
+  span {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 40px;
+  }
+}
+// end specifications-tab__cards--05

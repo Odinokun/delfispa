@@ -27,8 +27,14 @@
 .footer-logo__link {
   display: inline-block;
   margin-bottom: 40px;
+  svg {
+    width: 169px;
+    height: 43px;
+    fill:text;
+  }
   img {
-    display: block;
+    //display: block;
+
   }
 }
 

@@ -4,7 +4,9 @@ footer.footer
     //begin footer-item
     .footer-item
       a(href="#").footer-logo__link
-        img(src="assets/img/footer-logo.png" alt="Delfy Spa")
+        svg
+          use(xlink:href="assets/img/sprite.svg#logo-lg")
+        //img(src="assets/img/footer-logo.png" alt="Delfy Spa")
       // begin footer-phone
       .footer-phone
         span.footer-phone__text Gebührenfreie Beratungshotline:
