@@ -4,6 +4,10 @@ block variables
   - var title = 'Review | Delfi Spa'
   - var pageHeaderTitle = 'Referenzen Nerida'
 
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'Referenzen'
+  - var breadcrumbs03 = 'referenzen Merida'
+
 block content
   include ../sections/aside-left
   include ../sections/header
@@ -16,7 +20,18 @@ block content
         a(href="assets/img/review-pdf.jpg" data-fancybox="review")
           img(src="assets/img/review-pdf.jpg" alt="pdf")
       .review__right
-        include ../elements/breadcrumbs
+
+        //begin breadcrumbs
+        section.breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") #{breadcrumbs01}
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") #{breadcrumbs02}
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") #{breadcrumbs03}
+        //end breadcrumbs
+
         h2.review__title Referenzen Nerida
         p "Gestern wurde unser Whirlpool angeliefert. Wie schnell der große schwere Gartenwhirlpool bei uns auf67 der Terrasse stand, dank der eingesetzten Anlieferungstechnik. Sehr professionell. Wir empfehlen Sie gerne weiter!“
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.

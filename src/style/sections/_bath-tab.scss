@@ -30,11 +30,13 @@
   padding: 10px 5px;
   cursor: pointer;
   text-align: center;
-  border: 1px solid #919494;
+  border: 1px solid #d9d9d9;
   &:first-child {
     border-radius: 25px 0 0 25px;
+    border-right: none;
   }
   &:last-child {
+    border-left: none;
     border-radius: 0 25px 25px 0;
   }
   &.active {

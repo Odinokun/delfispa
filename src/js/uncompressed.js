@@ -154,10 +154,13 @@ $('.aside-tab__item').on('click', function () {
   var tab = $(this).data('tab');
   $(this).addClass('active');
   $('.aside-tab__card--' + tab).addClass('active');
+  $('.aside-tab__layer').addClass('active');
+
 });
-$('.aside-tab__card-close').on('click', function () {
+$('.aside-tab__card-close, .aside-tab__layer').on('click', function () {
   $('.aside-tab__item').removeClass('active');
   $('.aside-tab__card').removeClass('active');
+  $('.aside-tab__layer').removeClass('active');
 });
 // end aside-tabs
 
@@ -184,3 +187,13 @@ $('.bath-tab__bath-02-btn').on('click', function () {
   $('.bath-tab__zones-02--' + tab).addClass('active');
 });
 // end bath-tabs
+
+
+// begin catalog card
+$('.catalog-item__more').on('click', function () {
+  $(this).parents('.catalog-item').toggleClass('active');
+});
+$('.catalog-slider__btn').on('click', function () {
+  $(this).parents('.catalog-slider__item').toggleClass('active');
+});
+// end catalog card

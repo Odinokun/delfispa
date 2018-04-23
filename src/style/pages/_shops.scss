@@ -4,9 +4,24 @@
 .shops-map {
   position: relative;
   height: 600px;
+
   @include max(550) {
     height: 400px;
   }
+}
+
+.shops-clouds {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  pointer-events: none;
+  background-image: url('../img/clouds.png');
+  background-repeat: repeat-x;
+  background-position: 0 100%;
 }
 
 
@@ -42,16 +57,16 @@
 // begin shops-footer
 .shops-map__footer {
   position: absolute;
+  z-index: 5;
   bottom: 0;
   left: 0;
-  z-index: 5;
   display: flex;
   align-items: center;
   padding: 60px;
 
   @include max(700) {
-    padding: 30px ;
     flex-wrap: wrap;
+    padding: 30px ;
   }
 }
 .shops-map__footer-title {
@@ -73,6 +88,7 @@
 .shops-map__city-select-wrap {
   position: relative;
   height: 44px;
+
   @include max(700) {
     width: 100%;
   }
@@ -91,8 +107,9 @@
 //begin shops-adress
 .shops-adress {
   padding: 50px 0;
+
   @include max(550) {
-    padding:  0;
+    padding: 0;
   }
   .container {
     display: flex;
@@ -102,6 +119,7 @@
 .shops-adress__item {
   width: 25%;
   padding: 40px 10px 40px 0;
+
   @include max(1000) {
     width: 33.33%;
   }

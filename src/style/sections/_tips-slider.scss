@@ -3,33 +3,25 @@
   padding-bottom: 50px;
 }
 .tips-slider {
-  width: calc(80% + 10px);
   position: relative;
+  width: calc(80% + 10px);
   margin-left: -10px;
-  //&::before {
-  //  content: '';
-  //  width: 10px;
-  //  background-color: #ff0;
-  //  z-index: 5;
-  //  position: absolute;
-  //  left: 0;
-  //  top: 0;
-  //  bottom: 0;
-  //}
-  //
-    @include max(1400) {
-      width: calc(75% + 10px);
-    }
-    @include max(1000) {
-      width: calc(70% + 10px);
-    }
-    @include max(700) {
-      width: calc(80% + 10px);
-    }
+
+  @include max(1400) {
+    width: calc(75% + 10px);
+  }
+  @include max(1000) {
+    width: calc(70% + 10px);
+  }
+  @include max(700) {
+    width: calc(80% + 10px);
+  }
 }
 .tips-slider__item {
   position: relative;
+  display: block;
   padding: 10px 0 0 10px;
+  text-decoration: none;
 }
 
 .tips-slider__img {
@@ -46,9 +38,15 @@
     opacity: 0;
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
   }
-  &.active {
+
+  &:hover {
     &::before {
       opacity: .8;
+    }
+    .tips-slider__link {
+      svg {
+        fill: #fff;
+      }
     }
   }
   img {
@@ -84,8 +82,6 @@
   &:hover {
     svg {
       transform: rotate(180deg);
-
-      fill: #fff;
     }
   }
   svg {
@@ -96,7 +92,6 @@
     fill: $highlight;
   }
 }
-//
 .tips-slider__more {
   display: flex;
   align-items: center;
@@ -115,6 +110,7 @@
   @include max(700) {
     width: 20%;
   }
+
   a {
     font-size: 30px;
     font-weight: 700;
@@ -122,16 +118,17 @@
     transition: color .5s;
     text-decoration: none;
     color: $text;
+
     @include max(1100) {
       font-size: 24px;
       max-width: 70%;
     }
     @include max(700) {
+      font-size: 20px;
       position: relative;
-      white-space: nowrap;
       max-width: 1000px;
       transform: rotate(-90deg);
-      font-size: 20px;
+      white-space: nowrap;
     }
     @include max(550) {
       font-size: 18px;

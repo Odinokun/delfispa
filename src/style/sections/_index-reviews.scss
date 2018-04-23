@@ -77,7 +77,11 @@
     img {
       display: block;
       max-width: 100%;
+      transition: border-color .5s;
       border: 10px solid #e6fffe;
+      &:hover {
+        border-color:#caf8f6;
+      }
     }
   }
 }

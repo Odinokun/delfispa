@@ -80,6 +80,7 @@
   @include max(700) {
     padding: 20px;
   }
+
   &:last-child {
     border: none;
   }
@@ -325,6 +326,8 @@
 .catalog-item {
   position: relative;
   width: 25%;
+  display: block;
+  text-decoration: none;
   padding: 40px;
   border-right: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
@@ -338,12 +341,23 @@
   @include max(1000) {
     width: 100%;
   }
+}
+.catalog-item__link{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
 
-  &:hover {
-    .catalog-item__cover {
-      opacity: 1;
-    }
-  }
+.catalog-item.active {
+.catalog-item__cover {
+    opacity: 1;
+    pointer-events: auto;
+
+}
+
 }
 .catalog-item__cover {
   position: absolute;
@@ -357,6 +371,7 @@
   flex-direction: column;
   justify-content: center;
   transition: opacity .5s;
+  pointer-events: none;
   opacity: 0;
   &::before {
     position: absolute;
@@ -408,6 +423,7 @@
   font-weight: 700;
   margin-bottom: 20px;
   text-align: center;
+  color: $text;
 }
 .catalog-item__img {
   margin-bottom: 30px;
@@ -501,6 +517,7 @@
   font-weight: 700;
   position: relative;
   display: inline-block;
+  color: $text;
   margin-bottom: 5px;
   &::before {
     position: absolute;
@@ -517,14 +534,13 @@
 .catalog-item__price-new {
   font-size: 20px;
   font-weight: 700;
+  color: $text;
   display: block;
 }
 .catalog-item__price--right {
   display: flex;
   align-items: center;
   flex: none;
-  //justify-content: space-between;
-  //width: 80px;
 }
 .catalog-item__compare {
   border: none;
@@ -544,6 +560,8 @@
   }
 }
 .catalog-item__more {
+  z-index: 7;
+  cursor: pointer;
   &:hover {
     svg {
       fill: $text;

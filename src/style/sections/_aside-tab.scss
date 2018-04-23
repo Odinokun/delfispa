@@ -1,3 +1,20 @@
+.aside-tab__layer {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity .5s;
+  pointer-events: none;
+  opacity: 0;
+  background-color: #fff;
+  &.active {
+    pointer-events: auto;
+    opacity: .8;
+  }
+}
+
 .aside-tab__wrap {
   display: flex;
   flex-wrap: wrap;
@@ -24,10 +41,12 @@
   @include max(700) {
     width: 100%;
   }
+
   &::before {
     position: absolute;
     top: -1px;
-    right: 0;
+    right: -2px;
+    z-index: 1;
     bottom: -1px;
     left: -1px;
     content: '';
@@ -107,22 +126,9 @@
   @include max(550) {
     padding: 50px 20px;
   }
+
   &.active {
     transform: translateX(0);
-  }
-  &::before {
-    position: absolute;
-    top: 0;
-    right: 500px;
-    bottom: 0;
-    width: calc(100vw - 500px);
-    content: '';
-    opacity: .8;
-    background-color: #fff;
-
-    @include max(550) {
-      display: none;
-    }
   }
   & > svg {
     width: 50px;
@@ -150,13 +156,17 @@
     top: 20px;
     left: 20px;
   }
+
   &:hover {
-    fill: $highlight;
+    svg {
+      transform: rotate(360deg);
+    }
   }
   svg {
     width: 20px;
     height: 20px;
-    transition: fill .5s;
+    transition: transform .5s;
+    transform: rotate(0);
 
     fill: #fff;
   }

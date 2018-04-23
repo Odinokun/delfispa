@@ -3,6 +3,9 @@ extends ../_template
 block variables
   - var title = 'Berlin | Delfi Spa'
   - var pageHeaderTitle = 'Berlin'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'Unsere Fachgeschäfte'
+  - var breadcrumbs03 = 'berlin'
 
 block content
   include ../sections/aside-left
@@ -12,9 +15,21 @@ block content
   section.main.shops
     //begin shops-top-section
     section.shops-top-section
+      .shops-clouds
+
       //begin shops-header
       header.shops-header
-        include ../elements/breadcrumbs
+        //begin breadcrumbs
+        section.breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") #{breadcrumbs01}
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") #{breadcrumbs02}
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") #{breadcrumbs03}
+        //end breadcrumbs
+
         h2.shops-header__title Berlin
       //end shops-header
 
@@ -62,7 +77,10 @@ block content
               span Mo – Fr von 10:00-18:00 Uhr
               span Samstag von 10:00-14:30 Uhr
 
-            a(href="#").btn-sm Mehr erfahren
+            span.btn.btn--custom
+              span.btn--inner
+                a(href="#") Mehr erfahren
+
     //end   shops-adress
       
   //end content
