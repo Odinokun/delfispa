@@ -220,6 +220,8 @@ svg {
     width: 10px;
     height: 10px;
     margin: auto;
+    transition: opacity .5s;
+    opacity: 1;
     &::before,
     &::after {
       position: absolute;
@@ -253,6 +255,11 @@ svg {
     outline: none;
   }
 }
+.ui-selectmenu-button-open {
+  .ui-selectmenu-icon {
+    opacity: 0;
+  }
+}
 .custom-select__wrap--dark {
   .ui-button,
   .ui-button:active {
@@ -270,10 +277,7 @@ svg {
     }
   }
   .ui-menu-item-wrapper {
-    //border-color: #1c1e1e;
-    //  margin: 0;
     color: #fff;
-    //border: none;
     background-color: #1c1e1e;
   }
   .ui-state-active {
@@ -311,4 +315,4 @@ svg {
   border-top: none;
 }
 
-// end .custom-select
+// end custom-select

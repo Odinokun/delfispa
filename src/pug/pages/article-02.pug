@@ -3,6 +3,9 @@ extends ../_template
 block variables
   - var title = 'Article | Delfi Spa'
   - var pageHeaderTitle = 'Article'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'blog'
+  - var breadcrumbs03 = 'Article'
 
 block content
   include ../sections/aside-left
@@ -12,7 +15,18 @@ block content
   section.main.article-02
     //begin article-02-header
     header.article-02-header(style="background-image:url('assets/img/bg-article-02-header.jpg')")
-      include ../elements/breadcrumbs
+
+      //begin breadcrumbs
+      section.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs01}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs02}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs03}
+      //end breadcrumbs
+
       h2.article-02-header__title Kaufberatung Wichtige Tipps
     //end article-02-header
 

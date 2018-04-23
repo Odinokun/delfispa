@@ -13,7 +13,7 @@ $(function() {
   // require('./modules/popup')();
 
   // begin hover on the link in slider
-  require('./modules/hoverOnTheLink')();
+  // require('./modules/hoverOnTheLink')();
 
   // begin Animate.css
   // require('./modules/waypoints')();

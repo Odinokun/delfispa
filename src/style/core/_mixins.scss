@@ -20,6 +20,11 @@
     @content;
   }
 }
+@mixin maxh($height) {
+  @media screen and (max-height: $height + 'px') {
+    @content;
+  }
+}
 
 // ===== ol style =====
 @mixin counter($var) {

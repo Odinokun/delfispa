@@ -1,35 +1,55 @@
-mixin top-slider-row()
-  .top-slider__text-row
-    .top-slider__text-item.top-slider__text-item--title
-      h2.top-slider__text-title Mehr Lebensqualität mit vielen Highlights
-    .top-slider__text-item.top-slider__text-item--text
-      p Heutzutage wächst zunehmend das Bedürfnis, Körper und Geist zu entspannen.  Unsere Infrasun- Infrarotkabinen lösen Verspannungen, wirken gegen die typischen Stresssymptome und tragen zu mehr Energie und Wohlbefinden in Ihrem Alltag bei.
-      a(href="#").top-slider__link-mehr.btn-sm Mehr info
-    a(href="#").top-slider__text-item.top-slider__text-item--link
-      .top-slider__next-link
-        span.top-slider__next-link--sm Choise your spa
-        span.top-slider__next-link--lg All models
-      .top-slider__next-arrow
-        svg
-          use(xlink:href="assets/img/sprite.svg#arrow")
+mixin top-slider__text-item(link)
+  a(href='' + link + '').top-slider__text-item.top-slider__text-item--link
+    .top-slider__next-link
+      span.top-slider__next-link--sm Choise your spa
+      span.top-slider__next-link--lg All models
+    .top-slider__next-arrow
+      svg
+        use(xlink:href="assets/img/sprite.svg#arrow")
 
 //begin top-section
 section.top-section
   .top-slider#top-slider
-    //begin top-slider__slide
-    .top-slider__slide(style="background-image:url('assets/img/top-slider/slide-01.jpg')")
-      +top-slider-row()
-    //end top-slider__slide
-    //begin top-slider__slide
-    .top-slider__slide(style="background-image:url('assets/img/top-slider/slide-02.jpg')")
-      +top-slider-row()
-    //end top-slider__slide
-    //begin top-slider__slide
-    .top-slider__slide(style="background-image:url('assets/img/top-slider/slide-03.jpg')")
-      +top-slider-row()
-    //end top-slider__slide
-    //begin top-slider__slide
-    .top-slider__slide(style="background-image:url('assets/img/top-slider/slide-04.jpg')")
-      +top-slider-row()
-    //end top-slider__slide
+    //begin top-slider__slide 01
+    .top-slider__slide.top-slider__slide--01(style="background-image:url('assets/img/top-slider/slide-01.jpg')")
+      .top-slider__text-row
+        .top-slider__text-item.top-slider__text-item--title
+          h2.top-slider__text-title Mehr Lebensqualität mit vielen Highlights
+        .top-slider__text-item.top-slider__text-item--text
+          p Heutzutage wächst zunehmend das Bedürfnis, Körper und Geist zu entspannen.  Unsere Infrasun- Infrarotkabinen lösen Verspannungen, wirken gegen die typischen Stresssymptome und tragen zu mehr Energie und Wohlbefinden in Ihrem Alltag bei.
+          span.btn.btn--custom.top-slider__link-mehr
+            span.btn--inner
+              a(href="#") Mehr info
+        +top-slider__text-item('/catalog.html')
+    //end top-slider__slide 01
+
+    //begin top-slider__slide 02
+    .top-slider__slide.top-slider__slide--02(style="background-image:url('assets/img/top-slider/slide-02.jpg')")
+      .top-slider__text-row
+        .top-slider__text-item.top-slider__text-item--title
+          h2.top-slider__text-title Profitieren Sie von aktuellen Aktionen!
+        .top-slider__text-item.top-slider__text-item--text
+          ul.top-slider__list
+            li Mit super Nachlässen bei allen Modellen
+            li Aufbauservice deutschlandweit zubuchbar
+            li Erfragen Sie unsere Rabatte für Ausstellungsstücke
+          span.btn.btn--custom.top-slider__link-mehr
+            span.btn--inner
+              a(href="#") Mehr info
+        +top-slider__text-item('/catalog.html')
+    //end top-slider__slide 02
+
+    //begin top-slider__slide 03
+    .top-slider__slide.top-slider__slide--03(style="background-image:url('assets/img/top-slider/slide-03.jpg')")
+      .top-slider__text-row
+        .top-slider__text-item.top-slider__text-item--title
+          h2.top-slider__text-title 6 Standorte bundesweit
+        .top-slider__text-item.top-slider__text-item--text
+          p Besuchen Sie uns in einer unserer deutschlandweiten Fachgeschäfte und treffen Sie Ihre Auswahl in unserer entspannten Atmosphäre. Täglich von Mo-Sa mit festen Öffnungszeiten.
+          span.btn.btn--custom.top-slider__link-mehr
+            span.btn--inner
+              a(href="#") Mehr info
+        +top-slider__text-item('/catalog.html')
+    //end top-slider__slide 03
+
 //end   top-section

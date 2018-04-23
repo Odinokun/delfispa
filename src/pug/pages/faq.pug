@@ -14,6 +14,9 @@ mixin faq-accordion__row(title)
 block variables
   - var title = 'FAQ | Delfi Spa'
   - var pageHeaderTitle = 'FAQ'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'Unsere Fachgeschäfte'
+  - var breadcrumbs03 = 'berlin'
 
 block content
   include ../sections/aside-left
@@ -23,7 +26,18 @@ block content
   section.main.faq
     //begin faq-header
     header.faq-header(style="background-image:url('assets/img/bg-faq-header.jpg')")
-      include ../elements/breadcrumbs
+
+      //begin breadcrumbs
+      section.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs01}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs02}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs03}
+      //end breadcrumbs
+
       h2.faq-header__title Fragen und Antworten
       p.faq-header__subtitle
         |Hier finden Sie Antworten auf die am häufigsten gestellten Fragen.

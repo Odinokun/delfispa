@@ -23,7 +23,18 @@ section.productcard-top
 
 
   .productcard-top__right
-    include ../elements/breadcrumbs
+
+    //begin breadcrumbs
+    section.breadcrumbs
+      ul.breadcrumbs__list
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href="#") #{breadcrumbs01}
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href="#") #{breadcrumbs02}
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href="#") #{breadcrumbs03}
+    //end breadcrumbs
+
     h2.productcard-top__title Delfi Spa - Nerida
     p.productcard-top__descr Der Whirlpool „Nerida“ von Delfi Spas wurde mit erstklassigem Komfort und umfangreichen Zubehör ausgestattet und bietet wohltuende Hydromassagen für Sie mit Partner oder Freunden. Die 69 Edelstahldüsen und die wunderschön beleuchteten Luftdüsen lösen hartnäckige Verspannungen und verhelfen Ihnen zu perfekter Entspannung.
     //begin productcard-top__order

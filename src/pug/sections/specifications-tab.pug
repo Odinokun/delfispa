@@ -23,13 +23,13 @@ mixin specifications-tab__accessory-item(pic, text, price)
 section.specifications-tab
   // begin specifications-tab__tabs
   .specifications-tab__tabs
-    .specifications-tab__tab(data-tab="01")
+    .specifications-tab__tab.active(data-tab="01")
       span Ausstattung
     .specifications-tab__tab(data-tab="02")
       span Zubehör
     .specifications-tab__tab(data-tab="03")
       span Massagedüsen
-    .specifications-tab__tab.active(data-tab="04")
+    .specifications-tab__tab(data-tab="04")
       span Datenblatt
     .specifications-tab__tab(data-tab="05")
       span Farbenauswahl
@@ -38,7 +38,7 @@ section.specifications-tab
   // begin specifications-tab__body
   .specifications-tab__body
     //begin specifications-tab__cards--01
-    .specifications-tab__cards.specifications-tab__cards--01
+    .specifications-tab__cards.specifications-tab__cards--01.active
       .container
         ul.specifications-tab__list
           li Europäisches, edles Design mit eleganten Linien
@@ -90,7 +90,7 @@ section.specifications-tab
     //end specifications-tab__cards--03
 
     //begin specifications-tab__cards--04
-    .specifications-tab__cards.specifications-tab__cards--04.active
+    .specifications-tab__cards.specifications-tab__cards--04
       .container
         // begin table-01
         table
@@ -205,5 +205,11 @@ section.specifications-tab
             td Ja
         // end table-02
     //end specifications-tab__cards--04
+
+    //begin specifications-tab__cards--05
+    .specifications-tab__cards.specifications-tab__cards--05
+      .container
+        span в разработке
+    //end specifications-tab__cards--05
   // end specifications-tab__body
 //end   specifications-tab

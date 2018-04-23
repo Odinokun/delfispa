@@ -3,6 +3,9 @@ extends ../_template
 block variables
   - var title = 'Reviews | Delfi Spa'
   - var pageHeaderTitle = 'Reviews'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'Catalogue'
+  - var breadcrumbs03 = 'Catalogue'
 
 block content
   include ../sections/aside-left
@@ -12,7 +15,18 @@ block content
   section.main.reviews
     //begin reviews-header
     header.reviews-header
-      include ../elements/breadcrumbs
+
+      //begin breadcrumbs
+      section.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs01}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs02}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs03}
+      //end breadcrumbs
+
       h2.reviews-header__title Referenzen
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
     //end reviews-header

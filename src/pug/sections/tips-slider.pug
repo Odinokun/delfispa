@@ -1,11 +1,11 @@
 mixin tips-slider__item(pic, title)
-  .tips-slider__item
+  a(href="#").tips-slider__item
     .tips-slider__img
       img(src='assets/img/tips-slider/slide-' + pic + '.jpg' alt='delfi-spa')
       .tips-slider__footer
         .tips-slider__title
           span #{title}
-        a(href="#").tips-slider__link
+        span.tips-slider__link
           svg
             use(xlink:href="assets/img/sprite.svg#plus")
 

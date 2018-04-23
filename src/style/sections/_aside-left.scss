@@ -5,6 +5,7 @@
   bottom: 0;
   left: 0;
   width: 90px;
+  max-height: 100vh;
 
   @include max(425) {
     width: 60px;
@@ -23,21 +24,28 @@
     width: 60px;
     height: 60px;
   }
-  img {
-    display: block;
+
+  svg {
     flex: none;
     width: 42px;
     height: 42px;
+
+    fill: #fff;
   }
 }
 
 // begin left-menu-burger
 .left-menu-burger {
   position: absolute;
-  top: 65vh;
+  top: 680px;
   left: 32px;
   cursor: pointer;
   transform: rotate(-90deg);
+
+  @include maxh(800) {
+    top: auto;
+    bottom: 30px;
+  }
   @include max(425) {
     left: 19px;
   }
@@ -113,9 +121,9 @@
   width: 100%;
   height: calc(100vh - 90px);
   background-color: #fff;
-  @include max(425) {
 
-  height: calc(100vh - 60px);
+  @include max(425) {
+    height: calc(100vh - 60px);
   }
   &::before {
     position: absolute;
@@ -147,6 +155,7 @@
   transition: transform .5s;
   transform: translateY(-100vh);
   background-color: #fff;
+
   @include max(1000) {
     width: 600px;
   }
@@ -168,9 +177,9 @@
   margin: 0;
   padding: 0 20px 0 70px;
   list-style: none;
-  @include max(700) {
-  padding: 0 20px;
 
+  @include max(700) {
+    padding: 0 20px;
   }
 }
 .left-menu__item--parent {
@@ -189,6 +198,7 @@
   background-repeat: no-repeat;
   background-position: 0 50%;
   background-size: contain;
+
   @include max(1000) {
     top: 15px;
   }
@@ -204,6 +214,7 @@
   font-weight: 700;
   text-decoration: none;
   color: $text;
+
   @include max(1000) {
     font-size: 30px;
   }
@@ -226,6 +237,7 @@
   font-weight: 700;
   text-decoration: none;
   color: $text;
+
   @include max(1000) {
     font-size: 26px;
   }
@@ -238,6 +250,7 @@
 }
 .left-menu__item--top-menu {
   display: none;
+
   @include max(1000) {
     display: block;
   }

@@ -2,6 +2,7 @@ extends ../_template
 
 mixin catalog-item(peoples)
   .catalog-item(data-peoples='' + peoples + '')
+    a(href="/productcard.html").catalog-item__link
     .catalog-item__cover
       button
         svg
@@ -50,8 +51,10 @@ mixin catalog-item(peoples)
 
 
 block variables
-  - var title = 'Catalog | Delfi Spa'
-  - var pageHeaderTitle = 'Catalog'
+  - var title = 'Catalogue | Delfi Spa'
+  - var pageHeaderTitle = 'Catalogue'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs03 = 'Catalogue'
 
 block content
   include ../sections/aside-left
@@ -61,7 +64,16 @@ block content
   section.main.catalog
     //begin catalog-header
     header.catalog-header
-      include ../elements/breadcrumbs
+
+      //begin breadcrumbs
+      section.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs01}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs03}
+      //end breadcrumbs
+
       h2.catalog-header__title Catalogue SPA Pools
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
     //end catalog-header

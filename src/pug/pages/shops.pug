@@ -25,7 +25,9 @@ mixin shops-adress__item(id, title)
       span Mo – Fr von 10:00-18:00 Uhr
       span Samstag von 10:00-14:30 Uhr
 
-    a(href="shop-one.html").btn-sm Mehr erfahren
+    span.btn.btn--custom
+      span.btn--inner
+        a(href="shop-one.html") Mehr erfahren
   //end shops-adress__item
 
 
@@ -33,6 +35,8 @@ mixin shops-adress__item(id, title)
 block variables
   - var title = 'Unsere Fachgeschäfte | Delfi Spa'
   - var pageHeaderTitle = 'Unsere Fachgeschäfte'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs03 = 'Unsere Fachgeschäfte'
 
 block content
   include ../sections/aside-left
@@ -43,8 +47,19 @@ block content
     //begin shops-top-section
     section.shops-top-section
       //begin shops-header
+      .shops-clouds
+
       header.shops-header
-        include ../elements/breadcrumbs
+
+        //begin breadcrumbs
+        section.breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") #{breadcrumbs01}
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") #{breadcrumbs03}
+        //end breadcrumbs
+
         h2.shops-header__title Unsere Fachgeschäfte
       //end shops-header
 
