@@ -4,8 +4,7 @@ block variables
   - var title = 'Reviews | Delfi Spa'
   - var pageHeaderTitle = 'Reviews'
   - var breadcrumbs01 = 'home'
-  - var breadcrumbs02 = 'Catalogue'
-  - var breadcrumbs03 = 'Catalogue'
+  - var breadcrumbs03 = 'Referenzen'
 
 block content
   include ../sections/aside-left
@@ -21,8 +20,6 @@ block content
         ul.breadcrumbs__list
           li.breadcrumbs__item
             a.breadcrumbs__link(href="#") #{breadcrumbs01}
-          li.breadcrumbs__item
-            a.breadcrumbs__link(href="#") #{breadcrumbs02}
           li.breadcrumbs__item
             a.breadcrumbs__link(href="#") #{breadcrumbs03}
       //end breadcrumbs
@@ -44,19 +41,23 @@ block content
       //end reviews__item--pdf
 
       //begin reviews__item--blockquote
-      .reviews__item.reviews__item--blockquote
+      a(href="#").reviews__item.reviews__item--blockquote
         .reviews__item-left
+          svg
+            use(xlink:href="assets/img/sprite.svg#reviews")
           img(src="assets/img/reviews-icon.png" alt="review")
-        a(href="#").reviews__item-right
+        .reviews__item-right
           p Gestern wurde unser Whirlpool angeliefert. Wie schnell der große schwere Gartenwhirlpool bei uns auf67 der Terrasse stand, dank der eingesetzten Anlieferungstechnik. Sehr professionell. Wir empfehlen Sie gerne weiter!
           span.reviews-slider__signature M. Hölscher, Ampfing
       //end reviews__item--blockquote
 
       //begin reviews__item--blockquote
-      .reviews__item.reviews__item--blockquote
+      a(href="#").reviews__item.reviews__item--blockquote
         .reviews__item-left
+          svg
+            use(xlink:href="assets/img/sprite.svg#reviews")
           img(src="assets/img/reviews-icon.png" alt="review")
-        a(href="#").reviews__item-right
+        .reviews__item-right
           p Gestern wurde unser Whirlpool angeliefert. Wie schnell der große schwere Gartenwhirlpool bei uns auf67 der Terrasse stand, dank der eingesetzten Anlieferungstechnik. Sehr professionell. Wir empfehlen Sie gerne weiter!
           span.reviews-slider__signature M. Hölscher, Ampfing
       //end reviews__item--blockquote
@@ -82,10 +83,12 @@ block content
       //end reviews__item--pdf
 
       //begin reviews__item--blockquote
-      .reviews__item.reviews__item--blockquote
+      a(href="#").reviews__item.reviews__item--blockquote
         .reviews__item-left
+          svg
+            use(xlink:href="assets/img/sprite.svg#reviews")
           img(src="assets/img/reviews-icon.png" alt="review")
-        a(href="#").reviews__item-right
+        .reviews__item-right
           p Gestern wurde unser Whirlpool angeliefert. Wie schnell der große schwere Gartenwhirlpool bei uns auf67 der Terrasse stand, dank der eingesetzten Anlieferungstechnik. Sehr professionell. Wir empfehlen Sie gerne weiter!
           span.reviews-slider__signature M. Hölscher, Ampfing
       //end reviews__item--blockquote

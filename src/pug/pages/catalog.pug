@@ -54,7 +54,7 @@ block variables
   - var title = 'Catalogue | Delfi Spa'
   - var pageHeaderTitle = 'Catalogue'
   - var breadcrumbs01 = 'home'
-  - var breadcrumbs03 = 'Catalogue'
+  - var breadcrumbs03 = 'Catalog'
 
 block content
   include ../sections/aside-left
@@ -144,9 +144,9 @@ block content
 
           .catalog-form__row
             .catalog-form__reset
+              input(type="reset" value="Zurücksetzen" onclick='resetSlider();')
               svg
                 use(xlink:href="assets/img/sprite.svg#reset")
-              input(type="reset" value="Zurücksetzen" onclick='resetSlider();')
       //end catalog-filter
 
       //begin catalog-list
