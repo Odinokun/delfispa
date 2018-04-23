@@ -196,6 +196,9 @@ $('.catalog-item__more').on('click', function () {
 $('.catalog-slider__btn').on('click', function () {
   $(this).parents('.catalog-slider__item').toggleClass('active');
 });
+$('.productcard-slider__btn').on('click', function () {
+  $(this).parents('.productcard-slider__item').toggleClass('active');
+});
 
 
 $(document).click(function(e){
@@ -209,6 +212,13 @@ $(document).click(function(e){
   var elem = $(".catalog-slider__item");
   if(e.target!=elem[0]&&!elem.has(e.target).length){
     $('.catalog-slider__item').removeClass('active');
+  }
+});
+
+$(document).click(function(e){
+  var elem = $(".productcard-slider__item");
+  if(e.target!=elem[0]&&!elem.has(e.target).length){
+    $('.productcard-slider__item').removeClass('active');
   }
 });
 // end catalog card
