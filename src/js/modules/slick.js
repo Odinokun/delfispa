@@ -9,7 +9,7 @@ module.exports = function() {
     speed: 500,
     fade: true,
     arrows: false,
-    autoplay: true,
+    // autoplay: true,
     cssEase: 'linear'
   });
   // end top-slider in index.html

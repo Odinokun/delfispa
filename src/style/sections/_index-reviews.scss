@@ -16,6 +16,7 @@
   @include max(700) {
     width: 80%;
   }
+
   .slick-dots {
     position: absolute;
     bottom: 90px;
@@ -48,6 +49,7 @@
   align-items: center;
   flex-wrap: wrap;
   min-height: 500px;
+  text-decoration: none;
 }
 .reviews-slider__left {
   flex: none;
@@ -80,7 +82,7 @@
       transition: border-color .5s;
       border: 10px solid #e6fffe;
       &:hover {
-        border-color:#caf8f6;
+        border-color: #caf8f6;
       }
     }
   }
@@ -89,6 +91,7 @@
   flex: none;
   width: 60%;
   padding: 0 20px 100px 50px;
+  text-decoration: none;
 
   @include max(1400) {
     width: 70%;
@@ -104,6 +107,7 @@
     font-weight: 300;
     line-height: 1.4;
     max-width: 580px;
+    color: $text;
 
     @include max(1000) {
       max-width: 100%;
@@ -114,6 +118,7 @@
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 75px;
+  color: $text;
 
   @include max(1000) {
     font-size: 30px;
@@ -125,6 +130,87 @@
   font-weight: 700;
   display: block;
   margin-top: 40px;
+  color: $text;
+}
+
+.reviews-slider__item--blockquote {
+  &:hover {
+    .reviews-slider__middle {
+      svg {
+        fill: $highlight;
+      }
+    }
+  }
+  .reviews-slider__middle {
+    position: relative;
+    svg {
+      width: 85px;
+      height: 65px;
+      margin-top: 5px;
+      transition: fill .5s;
+
+      fill: #bdf2fb;
+      @include max(1000) {
+        margin-top: 0;
+        margin-bottom: 7px;
+      }
+    }
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 22px;
+      height: 20px;
+      margin: auto;
+    }
+  }
+}
+.reviews-slider__item--video {
+  .reviews-slider__middle {
+    a {
+      position: relative;
+      outline: none;
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          border-left: 26px solid #fff;
+        }
+      }
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        content: '';
+        transition: .5s;
+        pointer-events: none;
+        opacity: 0;
+        background-image: $gradient;
+      }
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 24px;
+        height: 26px;
+        margin: auto;
+        content: '';
+        transition: .5s;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 26px solid $highlight;;
+      }
+    }
+  }
 }
 
 .reviews-more {
@@ -145,6 +231,7 @@
   @include max(700) {
     width: 20%;
   }
+
   a {
     font-size: 30px;
     font-weight: 700;

@@ -196,4 +196,19 @@ $('.catalog-item__more').on('click', function () {
 $('.catalog-slider__btn').on('click', function () {
   $(this).parents('.catalog-slider__item').toggleClass('active');
 });
+
+
+$(document).click(function(e){
+  var elem = $(".catalog-item");
+  if(e.target!=elem[0]&&!elem.has(e.target).length){
+    $('.catalog-item').removeClass('active');
+  }
+});
+
+$(document).click(function(e){
+  var elem = $(".catalog-slider__item");
+  if(e.target!=elem[0]&&!elem.has(e.target).length){
+    $('.catalog-slider__item').removeClass('active');
+  }
+});
 // end catalog card

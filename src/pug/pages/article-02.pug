@@ -1,5 +1,16 @@
 extends ../_template
 
+mixin tips-slider__item(pic, title)
+  a(href="#").tips-slider__item
+    .tips-slider__img
+      img(src='assets/img/tips-slider/slide-' + pic + '.jpg' alt='delfi-spa')
+      .tips-slider__footer
+        .tips-slider__title
+          span #{title}
+        span.tips-slider__link
+          svg
+            use(xlink:href="assets/img/sprite.svg#plus")
+
 block variables
   - var title = 'Article | Delfi Spa'
   - var pageHeaderTitle = 'Article'
@@ -81,7 +92,22 @@ block content
         span Wir wünschen Ihnen viel Erfolg bei der Suche Ihres Traum-Whirlpools.
     //end   article-heart
 
-    include ../sections/tips-slider
+    //begin tips-slider
+    section.tips-slider-section
+      .tips-slider#tips-slider
+        +tips-slider__item('02', 'Lieferung, Montage und Kundendienst bundesweit')
+        +tips-slider__item('03', 'Überblick über einmalige und fortlaufende Kosten')
+        +tips-slider__item('04', 'Umweltgedanke beim modernen Whirlpool ')
+        +tips-slider__item('02', 'Lieferung, Montage und Kundendienst bundesweit')
+        +tips-slider__item('03', 'Überblick über einmalige und fortlaufende Kosten')
+        +tips-slider__item('04', 'Umweltgedanke beim modernen Whirlpool ')
+
+      .tips-slider__more
+        a(href="#") Weitere Tipps, Videos und Antworten auf Fragen
+          br
+          svg
+            use(xlink:href="assets/img/sprite.svg#arrow")
+    //end   tips-slider
 
   //end content
 

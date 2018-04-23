@@ -9,6 +9,7 @@
   @include max(700) {
     padding: 30px ;
   }
+
   .breadcrumbs {
     width: 100%;
   }
@@ -49,6 +50,7 @@
   flex: none;
   width: 50%;
   padding: 50px 0;
+
   @include max(1100) {
     width: 100%;
   }
@@ -62,6 +64,7 @@
   flex: none;
   justify-content: center;
   width: 320px;
+
   @include max(1300) {
     width: 260px;
   }
@@ -69,12 +72,12 @@
     width: 320px;
   }
   @include max(768) {
-    width: 260px;
     justify-content: flex-start;
+    width: 260px;
   }
   @include max(600) {
-    width: 100%;
     justify-content: center;
+    width: 100%;
   }
   img {
     display: block;
@@ -87,7 +90,87 @@
     img {
       display: block;
       max-width: 100%;
+      transition: border-color .5s;
       border: 10px solid #e6fffe;
+      &:hover {
+        border-color: #caf8f6;
+      }
+    }
+  }
+}
+.reviews__item--blockquote {
+  text-decoration: none;
+  &:hover {
+    .reviews__item-left {
+      svg {
+        fill: $highlight;
+      }
+    }
+  }
+  .reviews__item-left {
+    position: relative;
+    svg {
+      width: 85px;
+      height: 65px;
+      margin-top: 5px;
+      transition: fill .5s;
+
+      fill: #bdf2fb;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 22px;
+      height: 20px;
+      margin: auto;
+    }
+  }
+}
+.reviews__item--video {
+  .reviews__item-left {
+    a {
+      position: relative;
+      outline: none;
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          border-left: 26px solid #fff;
+        }
+      }
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        content: '';
+        transition: .5s;
+        pointer-events: none;
+        opacity: 0;
+        background-image: $gradient;
+      }
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 24px;
+        height: 26px;
+        margin: auto;
+        content: '';
+        transition: .5s;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 26px solid $highlight;;
+      }
     }
   }
 }
@@ -97,13 +180,21 @@
   justify-content: center;
   padding-right: 60px;
   text-decoration: none;
+
   @include max(600) {
     padding-top: 40px;
     padding-right: 10px;
   }
+  &:hover {
+    p,
+    .reviews-slider__signature {
+      color: $highlight;
+    }
+  }
   p {
     font-size: 16px;
     font-weight: 300;
+    transition: color .5s;
     color: $text;
   }
 }
@@ -111,5 +202,6 @@
   font-size: 16px;
   font-weight: 700;
   margin-top: 0;
+  transition: color .5s;
   color: $text;
 }
