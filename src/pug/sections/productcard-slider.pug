@@ -1,5 +1,12 @@
 mixin productcard-slider__item(peoples)
   .productcard-slider__item(data-peoples='' + peoples + '')
+    a(href="/productcard.html").productcard-slider__link
+    .productcard-slider__cover
+      button
+        svg
+          use(xlink:href="assets/img/sprite.svg#basket")
+        span buy now
+
     h3.productcard-slider__title Delfi Spa - Nerida
     .productcard-slider__img
       img(src="assets/img/productcard-slider/slide-01.jpg" alt="delfi-spa")
@@ -29,7 +36,7 @@ mixin productcard-slider__item(peoples)
         span.productcard-slider__price-old Aktion 7.990,- &#8364;
         br
         span.productcard-slider__price-new Aktion 5.999,- &#8364;
-      a(href="#").productcard-slider__link
+      .productcard-slider__btn
         svg
           use(xlink:href="assets/img/sprite.svg#plus")
 
