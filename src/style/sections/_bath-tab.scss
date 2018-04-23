@@ -63,15 +63,15 @@
 }
 .bath-tab__item {
   display: none;
+  align-items: flex-start;
   &.active {
     display: flex;
   }
 }
 .bath-tab__item--01 {
-  align-items: center;
-
   @include max(1200) {
     flex-direction: column;
+    align-items: center;
   }
 }
 .bath-tab__bath {
@@ -79,6 +79,10 @@
   overflow: hidden;
   flex: none;
   width: 500px;
+  margin-top: 50px;
+  @include max(1200) {
+    margin-top: 0;
+  }
 
   @include max(700) {
     display: flex;
@@ -208,7 +212,7 @@
 
 
 .bath-tab__item--02 {
-  align-items: center;
+  //align-items: center;
   justify-content: space-between;
 
   @include max(1000) {
@@ -220,6 +224,10 @@
   position: relative;
   flex: none;
   width: 500px;
+  margin-top: 50px;
+  @include max(1000) {
+    margin-top: 0;
+  }
 
   @include max(700) {
     display: flex;
@@ -300,7 +308,7 @@
   display: none;
   flex-direction: column;
   max-width: 640px;
-  padding: 0 0 0 20px;
+  padding: 60px 0 0 20px;
 
   @include max(1000) {
     align-items: center;

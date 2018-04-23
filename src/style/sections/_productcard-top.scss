@@ -3,6 +3,7 @@
   display: flex;
   padding: 50px 0;
   background-color: #fcfcfc;
+  align-items: flex-start;
 
   @include max(1400) {
     align-items: center;
