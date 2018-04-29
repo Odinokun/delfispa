@@ -1,5 +1,5 @@
-mixin tips-slider__item(pic, title)
-  a(href="#").tips-slider__item
+mixin tips-slider__item(article, pic, title)
+  a(href='article-' + article + '.html').tips-slider__item
     .tips-slider__img
       img(src='assets/img/tips-slider/slide-' + pic + '.jpg' alt='delfi-spa')
       .tips-slider__footer
@@ -12,17 +12,17 @@ mixin tips-slider__item(pic, title)
 //begin tips-slider
 section.tips-slider-section
   .tips-slider#tips-slider
-    +tips-slider__item('01', 'Kaufberatung Wichtige Tipps')
-    +tips-slider__item('02', 'Lieferung, Montage und Kundendienst bundesweit')
-    +tips-slider__item('03', 'Überblick über einmalige und fortlaufende Kosten')
-    +tips-slider__item('04', 'Umweltgedanke beim modernen Whirlpool ')
-    +tips-slider__item('01', 'Kaufberatung Wichtige Tipps')
-    +tips-slider__item('02', 'Lieferung, Montage und Kundendienst bundesweit')
-    +tips-slider__item('03', 'Überblick über einmalige und fortlaufende Kosten')
-    +tips-slider__item('04', 'Umweltgedanke beim modernen Whirlpool ')
+    +tips-slider__item('01', '01', 'Kaufberatung Wichtige Tipps')
+    +tips-slider__item('02', '02', 'Lieferung, Montage und Kundendienst bundesweit')
+    +tips-slider__item('01', '03', 'Überblick über einmalige und fortlaufende Kosten')
+    +tips-slider__item('02', '04', 'Umweltgedanke beim modernen Whirlpool ')
+    +tips-slider__item('01', '01', 'Kaufberatung Wichtige Tipps')
+    +tips-slider__item('02', '02', 'Lieferung, Montage und Kundendienst bundesweit')
+    +tips-slider__item('01', '03', 'Überblick über einmalige und fortlaufende Kosten')
+    +tips-slider__item('02', '04', 'Umweltgedanke beim modernen Whirlpool ')
 
   .tips-slider__more
-    a(href="#") Weitere Tipps, Videos und Antworten auf Fragen
+    a(href="articles.html") Weitere Tipps, Videos und Antworten auf Fragen
       br
       svg
         use(xlink:href="assets/img/sprite.svg#arrow")

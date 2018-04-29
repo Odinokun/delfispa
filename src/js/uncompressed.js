@@ -15,7 +15,8 @@ $(document).ready(function ($) {
     'shops',
     'shop-one',
     'catalog',
-    'productcard'
+    'productcard',
+    'productcard-nerida'
   ]);
 });
 
