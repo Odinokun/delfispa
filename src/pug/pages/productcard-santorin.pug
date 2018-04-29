@@ -1,11 +1,11 @@
 extends ../_template
 
 block variables
-  - var title = 'Delfi Spa - Nerida | Delfi Spa'
-  - var pageHeaderTitle = 'Delfi Spa - Nerida'
+  - var title = 'Delfi Spa - Santorin | Delfi Spa'
+  - var pageHeaderTitle = 'Delfi Spa - Santorin'
   - var breadcrumbs01 = 'home'
   - var breadcrumbs02 = 'Catalogue'
-  - var breadcrumbs03 = 'Delfi Spa - Nerida'
+  - var breadcrumbs03 = 'Delfi Spa - Santorin'
 
 block content
   include ../sections/aside-left
@@ -18,20 +18,20 @@ block content
       .productcard-top__left
         .productcard-top__slider-thumb#productcard-top__slider-thumb
           span.thumb-prev
-            img(src="assets/img/productcard-top-slider/nerida-01-thumb.jpg" alt="nerida")
+            img(src="assets/img/productcard-top-slider/santorin-01-thumb.jpg" alt="nerida")
           span.thumb-prev
-            img(src="assets/img/productcard-top-slider/nerida-02-thumb.jpg" alt="nerida")
+            img(src="assets/img/productcard-top-slider/santorin-02-thumb.jpg" alt="nerida")
           span.thumb-prev
-            img(src="assets/img/productcard-top-slider/nerida-03-thumb.jpg" alt="nerida")
+            img(src="assets/img/productcard-top-slider/santorin-03-thumb.jpg" alt="nerida")
           span.thumb-prev
-            img(src="assets/img/productcard-top-slider/nerida-04-thumb.jpg" alt="nerida")
+            img(src="assets/img/productcard-top-slider/santorin-04-thumb.jpg" alt="nerida")
 
 
         .productcard-top__slider#productcard-top__slider
-          img(src="assets/img/productcard-top-slider/nerida-01.jpg" alt="nerida")
-          img(src="assets/img/productcard-top-slider/nerida-02.jpg" alt="nerida")
-          img(src="assets/img/productcard-top-slider/nerida-03.jpg" alt="nerida")
-          img(src="assets/img/productcard-top-slider/nerida-04.jpg" alt="nerida")
+          img(src="assets/img/productcard-top-slider/santorin-01.jpg" alt="nerida")
+          img(src="assets/img/productcard-top-slider/santorin-02.jpg" alt="nerida")
+          img(src="assets/img/productcard-top-slider/santorin-03.jpg" alt="nerida")
+          img(src="assets/img/productcard-top-slider/santorin-04.jpg" alt="nerida")
 
 
         //footer.productcard-top__left-footer
@@ -53,27 +53,27 @@ block content
               a.breadcrumbs__link(href="#") #{breadcrumbs03}
         //end breadcrumbs
 
-        h2.productcard-top__title Delfi Spa - Nerida
-        p.productcard-top__descr Unser Modell „Nerida“ von Delfi Spas wurde mit erstklassigem Komfort und umfangreichen Zubehör ausgestattet und bietet wohltuende Hydromassagen für Sie mit Partner oder Freunden. Die 69 Edelstahldüsen und die wunderschön beleuchteten Luftdüsen lösen hartnäckige Verspannungen und verhelfen Ihnen zu perfekter Entspannung.
+        h2.productcard-top__title Delfi Spa - Santorin
+        p.productcard-top__descr Das luxuriöse Modell „Santorin“ ist ein großzügiger Garten-Whirlpool mit Platz für fünf Personen, komfortablen Sitzund Liegepositionen und einer großartigen Massage. Äußerst beliebt ist die Kombination verschiedener Sitzformen und Düsentypen, die sich je nach individuellem Bedürfnis einzeln regeln lassen. Genießen Sie eine wohltuende Zeit in Ihrer Wellness-Oase!
         //begin productcard-top__order
         .productcard-top__order.active
           .productcard-top__specification
             table
               tr
                 td Maße:
-                td 160 x 210 x 90 cm
+                td 230 x 230 x 92 cm
               tr
                 td Fassungsvermögen:
                 td 280 Liter
               tr
                 td Personen:
-                td 3 Massageplätze
+                td 5 Massageplätze
               tr
                 td Massagedüsen:
-                td 69
+                td 85
               tr
                 td Luftdüsen:
-                td 13
+                td 22
               tr
                 td Lieferzeit ca.
                 td 8-13 Wochen
@@ -179,8 +179,8 @@ block content
         .productcard-tab__card.productcard-tab__card--order.active
           .container
             .productcard-tab__item
-              span.productcard-tab__old-price Preis: 8.429,- €
-              span.productcard-tab__new-price Aktion 5.699,- €
+              span.productcard-tab__old-price Preis: 12.449,- €
+              span.productcard-tab__new-price Aktion 7.499,- €
               span.productcard-tab__text-price
                 | inkl. 19% MwSt.
                 br
@@ -203,8 +203,8 @@ block content
         .productcard-tab__card.productcard-tab__card--online
           .container
             .productcard-tab__item
-              span.productcard-tab__old-price Preis: 8.429,- €
-              span.productcard-tab__new-price Aktion 5.699,- €
+              span.productcard-tab__old-price Preis: 12.449,- €
+              span.productcard-tab__new-price Aktion 7.499,- €
               span.productcard-tab__text-price
                 | inkl. 19% MwSt.
                 br
@@ -234,7 +234,7 @@ block content
       header.bath-tab__header
 
         .container
-          h2.bath-tab__header-title Produktinformationen Model "Nerida"
+          h2.bath-tab__header-title Produktinformationen Model "Santorin"
       // end bath-tab__header
 
       .container
@@ -245,7 +245,7 @@ block content
             span Hydrotherapie
 
       .container
-        .bath-tab__body
+        .bath-tab__body.bath-tab__body--santorin
           //begin bath-tab__item--01
           .bath-tab__item.bath-tab__item--01.active
             .bath-tab__bath
@@ -255,27 +255,45 @@ block content
                 span 2
               .bath-tab__bath-btn.bath-tab__bath-btn--03(data-tab="03")
                 span 3
-              img(src="assets/img/zones-bath.jpg" alt="man")
+              .bath-tab__bath-btn.bath-tab__bath-btn--04(data-tab="04")
+                span 4
+              .bath-tab__bath-btn.bath-tab__bath-btn--05(data-tab="05")
+                span 5
+              img(src="assets/img/zones-bath-santorin.jpg" alt="man")
             .bath-tab__zones.bath-tab__zones--01.active
               .bath-tab__zones-item
-                img(src="assets/img/man/nerida-man-01.jpg" alt="man")
+                img(src="assets/img/man/marbella-man-01.jpg" alt="man")
               .bath-tab__zones-item
                 h3.bath-tab__zones-title Whirlplatz Massage-Liege
-                p Auf diesem ergonomisch geformten Liegeplatz haben auch größere Nutzer besonders entspannt und bequem Platz und können sich die Massage sanft bis kraftvoll nach Belieben einstellen. Die senkrecht wirkende Maxi-Düse wirbelt einen Wasserstrahl über den kompletten unteren Rücken und wird durch eine Vielzahl kleiner und mittelgroßer teilweise rotierender Düsen vom oberen Rücken bis zu den Beinen unterstützt. Die Luftdüsen mit vorgewärmter Luft transportieren Sauerstoff in die Hautporen und verstärken die Entlastung der Gelenke. Eine effektive Fußmassage mit sechs Düsen rundet das Ganzkörper-Massageerlebnis ab.
+                p Kraftvoll gegen Rücken- und Schulterverspannungen, diese Liege kombiniert eine kräftigende Rückenmassage mit einem Gefühl der Schwerelosigkeit der Beine. Fünf Hydrotherapie-Düsen bilden einen Bogen hinter Ihren Schultern und massieren diese gleichmäßig. Darunter sorgen sechs große, teilweise doppelt rotierende Düsen für Entspannung und Belebung im gesamten Rückenbereich. Je zwei seitlich angebrachte Düsen massieren das Becken und die Hände. Die Oberund Unterschenkel werden von unten mit Wasser- und Luftdüsen so massiert, dass Sie das Gefühl bekommen, als würden Sie schweben. Und nach einem langen Tag auf den Beinen gibt es nichts besseres als unsere belebende Fußreflexzonenmassage.
 
             .bath-tab__zones.bath-tab__zones--02
               .bath-tab__zones-item
-                img(src="assets/img/man/nerida-man-02.jpg" alt="man")
+                img(src="assets/img/man/marbella-man-02.jpg" alt="man")
               .bath-tab__zones-item
-                h3.bath-tab__zones-title Whirlplatz Massage-Sitz
-                p Für die großflächige Massage des Rückens werden vier Düsen mit größeren Öffnungen und einem höheren Wasserdurchfluss eingesetzt. Die größte kräftig rotierende Düse im mittleren Rückenbereich sorgt zentral für eine druckvolle Wasserverwirbelung, und relaxt die sonst oft stark beanspruchten Muskelgruppen, die für eine gerade Körperhaltung verantwortlich sind. Der Kreislauf wird angeregt und die Durchblutung gefördert, während Luftblasen dabei Ihre Oberschenkel massieren und umspielen.
+                h3.bath-tab__zones-title Whirlplatz Massage-Liege
+                p Entspannung von Kopf bis Fuß durch großartige Massage, vier Düsen kümmern sich um die Entspannung Ihrer Schultern, während drei besonders große Düsen teilweise rotierend an Ihrem Rücken für einen wilden Wasserwirbel und gute Durchblutung sorgen. Während seitlich angebrachte Düsen Ihr Becken und Ihre Hände massieren, sorgen zusätzliche Massage- und Luftdüsen für praktisch schwerelose Beine. Der idealer Platz für große Menschen wird durch zwei Fußmassagedüsen abgerundet, die den Massagegenuss perfekt machen. Genießen Sie den beleuchteten Wasserfall. Durch die Luftblasen, die Strahlen und das warme Wasser wird für eine Entspannung der Muskeln gesorgt und gleichzeitig der Körper massiert.
 
             .bath-tab__zones.bath-tab__zones--03
               .bath-tab__zones-item
-                img(src="assets/img/man/nerida-man-03.jpg" alt="man")
+                img(src="assets/img/man/marbella-man-03.jpg" alt="man")
               .bath-tab__zones-item
-                h3.bath-tab__zones-title Whirlplatz Massage-Liege
-                p Für jede Verspannung gibt es die passende Massageeinstellung, in diesem Liegeplatz haben wir unterschiedliche Düsen verbaut, die alle in der Leistung und Richtung regulierbar sind. Dank der optimalen Positionierung genießen Sie im Schulterbereich eine effiziente Massage, gleichzeitig massieren teilweise rotierende großflächige Düsen mit großen Öffnungen und einem hohen Wasserdurchfluss den Rücken und sorgen für neue Beweglichkeit. Nach einem langen Tag auf den Beinen gibt es nichts besseres als unsere belebende Fußreflexzonenmassage mit sechs Massagedüsen.
+                h3.bath-tab__zones-title Whirlplatz Massage-Sitz
+                p Kompakte Massagepower rund um den Rücken - vier große Rückendüsen sorgen für zentrale Wasserwirbel am Rücken, während Luftdüsen die Oberschenkel massieren und der Fußbereich mit weiteren Massagedüsen aufwartet. Genießen Sie eine wohltuende Zeit und steigern Sie Ihr Wohlbefinden!
+
+            .bath-tab__zones.bath-tab__zones--04
+              .bath-tab__zones-item
+                img(src="assets/img/man/marbella-man-04.jpg" alt="man")
+              .bath-tab__zones-item
+                h3.bath-tab__zones-title Whirlplatz Massage-Sitz
+                p Der Chefsessel - 19 (!) Düsen sorgen für eine großflächige Massage des gesamten Rückens inklusive Schultern und Lendenwirbelbereich. Rund um den Schulterbereich befinden sich sechs Schulter- und zwei Nackendüsen, darunter weitere mittlere Düsen, sowie fünf größere, teilweise rotierende Düsen. Diese sorgen für ein ultimatives Whirlgefühl am gesamten Rücken. Kräftig und mit hohem Wasserdurchsatz werden die Muskeln entspannt und die Durchblutung gefördert. Zusatzdüsen für Becken und Hände runden die Massage sinnvoll ab. Luftdüsen umspielen die Oberschenkel und Waden und für Ihre Füße stehen ebenfalls Düsen bereit, um die Massage komplett zu machen.
+
+            .bath-tab__zones.bath-tab__zones--05
+              .bath-tab__zones-item
+                img(src="assets/img/man/marbella-man-05.jpg" alt="man")
+              .bath-tab__zones-item
+                h3.bath-tab__zones-title Whirlplatz Massage-Sitz
+                p Entspannung ganz einfach, Relaxen mit einer Rückenmassage über drei große Rückendüsen, ergänzt um Luftdüsen für die Oberschenkel und Fußmassage. Je nach individuellem Bedürfnis lassen sich bei Delfi Spa die Intensität und der Abstrahlwinkel jeder einzelnen Düse einzeln regeln.
           //end bath-tab__item--01
 
           //begin bath-tab__item--02
@@ -296,7 +314,7 @@ block content
               .bath-tab__bath-02-btn.bath-tab__bath-02-btn--05(data-tab="05")
                 svg
                   use(xlink:href="assets/img/sprite.svg#plus")
-              img(src="assets/img/zones-bath.jpg" alt="man")
+              img(src="assets/img/zones-bath-santorin.jpg" alt="marbella")
             .bath-tab__zones-02.bath-tab__zones-02--01.active
               .bath-tab__zones-02-img
                 img(src="assets/img/bath-tab-01.jpg" alt="img")
@@ -434,31 +452,14 @@ block content
               h3.specifications-tab__cards-header-title Düsen sind das Herzstück der Delfi Spa
               p Damit der Badevorgang zum Erlebnis wird, müssen sich Massage und Hydrotherapie gut anfühlen und eine starke Massagekraft besitzen. In einem Delfi Spa Outdoor Whirlpool orientiert sich die extra ergonomische Anordnung der Massagedüsen an der menschlichen Anatomie. Für die Individualisierung der Massage sind alle DirectHydro Düsen individuell in Stärke und Position verstellbar. Die vielfältigen Düsenarten massieren, regenerieren und vitalisieren den gesamten Körper.
             .specifications-tab__cards-list
-              // begin specifications-tab__cards-item
-              .specifications-tab__cards-item
-                .specifications-tab__cards-img
-                  img(src='assets/img/specifications/specifications-tab-cards-01.jpg' alt="img")
-                .specifications-tab__cards-text
-                  h4.specifications-tab__cards-item-title 1x Aqua-Rolling Maxi Düse
-                  p Eine senkrecht wirkende kräftige Maxi-Düse wirbelt einen Wasserstrahl über den kompletten Rückenbereich Ihres Liegesitzes vom unteren Rücken Richtung Schultern. Dies erinnert an die kraftvollen Bewegungen eines Masseurs und stimuliert die Blutzirkulation im Körper
-              // end specifications-tab__cards-item
 
               // begin specifications-tab__cards-item
               .specifications-tab__cards-item
                 .specifications-tab__cards-img
                   img(src='assets/img/specifications/specifications-tab-cards-03.jpg' alt="img")
                 .specifications-tab__cards-text
-                  h4.specifications-tab__cards-item-title 3x RotoTwin Maxi Düsen
-                  p Düsen mit doppeltem Wasserstrahl sorgen durch ihre Rotation für wunderbare Massagewirkung durch angenehme Wasserströme. Eine entspannende Massage mit kreisenden Bewegungen, die eine tiefer gehende Massagewirkung erzielen.
-              // end specifications-tab__cards-item
-
-              // begin specifications-tab__cards-item
-              .specifications-tab__cards-item
-                .specifications-tab__cards-img
-                  img(src='assets/img/specifications/specifications-tab-cards-04.jpg' alt="img")
-                .specifications-tab__cards-text
-                  h4.specifications-tab__cards-item-title 1x Multimassage (12) Maxi Düsen
-                  p Für die großflächige Massage des Rückens werden meist Whirlpool-Düsen mit großen Öffnungen und einem hohen Wasserdurchfluss eingesetzt. Bei dieser Düsenart wird der Wasserstrom auf zwölf Einzeldüsen verteilt, die für eine sanfte und pulsierende Behandlung des Rückenbereichs sorgen
+                  h4.specifications-tab__cards-item-title 5x RotoTwin Macro Düsen
+                  p Kreisenden Bewegungen durch Düsen mit doppeltem Wasserstrahl vermindern Verspannungen an den Schulterblättern sowie im Rückenbereich. Sie sorgen für neue Beweglichkeit und ein wunderbares Gefühl der Entspannung.
               // end specifications-tab__cards-item
 
               // begin specifications-tab__cards-item
@@ -466,43 +467,34 @@ block content
                 .specifications-tab__cards-img
                   img(src='assets/img/specifications/specifications-tab-cards-09.jpg' alt="img")
                 .specifications-tab__cards-text
-                  h4.specifications-tab__cards-item-title 1x DirectHydro Maxi Düsen
-                  p Diese Düse ist leistungsstark, ohne jedoch unangenehm zu sein, zur Leistungsoptimierung können Sie den Strömungswinkel dieser Düse beliebig verstellen. Durch den besonders starken Wasserstrahl ist eine intensive und komplexe Massage am Rücken möglich.
+                  h4.specifications-tab__cards-item-title 1x RotoSingle Macro Düsen
+                  p Kreisenden Bewegungen durch Düsen mit einfachem Wasserstrahl vermindern Verspannungen an den Schulterblättern sowie im Rückenbereich. Eine entspannende Massage mit kreisenden Bewegungen, die eine tiefer gehende Massagewirkung erzielen.
               // end specifications-tab__cards-item
 
               // begin specifications-tab__cards-item
               .specifications-tab__cards-item
                 .specifications-tab__cards-img
-                  img(src='assets/img/specifications/specifications-tab-cards-07.jpg' alt="img")
+                  img(src='assets/img/specifications/specifications-tab-cards-01.jpg' alt="img")
                 .specifications-tab__cards-text
-                  h4.specifications-tab__cards-item-title 7x DirectHydro Macro Düsen
+                  h4.specifications-tab__cards-item-title 2x DirectHydro Macro Düsen
                   p Für die großflächige Massage des Rückens werden meist Düsen mit größeren Öffnungen und einem hohen Wasserdurchfluss eingesetzt. Solche großflächigen Whirlpool-Düsen haben zudem den Effekt, eine tiefergehende Massagewirkung zu erzielen.
               // end specifications-tab__cards-item
 
               // begin specifications-tab__cards-item
               .specifications-tab__cards-item
                 .specifications-tab__cards-img
-                  img(src='assets/img/specifications/specifications-tab-cards-02.jpg' alt="img")
+                  img(src='assets/img/specifications/specifications-tab-cards-01.jpg' alt="img")
                 .specifications-tab__cards-text
-                  h4.specifications-tab__cards-item-title 2x RotoTwin Medi Düsen
-                  p Kreisenden Bewegungen durch Düsen mit doppeltem Wasserstrahl vermindern Verspannungen an den Schulterblättern sowie im Rückenbereich. Sie sorgen für neue Beweglichkeit und ein wunderbares Gefühl der Entspannung.
+                  h4.specifications-tab__cards-item-title 28x DirectHydro Medi Düsen
+                  p Bei dieser Massageform wird ein konstanter Druck erzeugt, der Verspannungen in größeren Muskelpartien und Gelenken lockert. Ziel der Massage ist, Verspannungen in der rechten und linken Körperseite auszugleichen, die Durchblutung zu fördern und für mehr Ausgewogenheit und Gesundheit zu sorgen. Alle Düsen sind in Massagerichtung und Intensität verstellbar.
               // end specifications-tab__cards-item
 
               // begin specifications-tab__cards-item
               .specifications-tab__cards-item
                 .specifications-tab__cards-img
-                  img(src='assets/img/specifications/specifications-tab-cards-06.jpg' alt="img")
+                  img(src='assets/img/specifications/specifications-tab-cards-01.jpg' alt="img")
                 .specifications-tab__cards-text
-                  h4.specifications-tab__cards-item-title 42x DirectHydro Medi Düsen
-                  p Diese Massageform ist gleichermaßen effektiv auf dem Rücken wie auf den Beinen. Es wird ein konstanter Druck erzeugt, der Verspannungen in größeren Muskelpartien und Gelenken lockert. Ziel der Massage ist, Verspannungen in der rechten und linken Körperseite auszugleichen, die Durchblutung zu fördern und für mehr Ausgewogenheit und Gesundheit zu sorgen. Alle Düsen sind in Massagerichtung und Intensität verstellbar.
-              // end specifications-tab__cards-item
-
-              // begin specifications-tab__cards-item
-              .specifications-tab__cards-item
-                .specifications-tab__cards-img
-                  img(src='assets/img/specifications/specifications-tab-cards-05.jpg' alt="img")
-                .specifications-tab__cards-text
-                  h4.specifications-tab__cards-item-title 8x DirectHydro Mini Düsen
+                  h4.specifications-tab__cards-item-title 41x DirectHydro Mini Düsen
                   p Diese Düsen lockern Verspannungen in kleineren Muskelpartien durch eine direkte und kraftvolle Massage. Wir haben diese Düsen für Sie für die Schultermassage und für die Reflexzonenmassage der Fußsohlen verbaut. Die Stimulation der Massagepunkte hat eine entspannende Wirkung auf den ganzen Körper. Alle Düsen sind in Massagerichtung und Intensität verstellbar.
               // end specifications-tab__cards-item
 
@@ -511,8 +503,8 @@ block content
                 .specifications-tab__cards-img
                   img(src='assets/img/specifications/specifications-tab-cards-08.jpg' alt="img")
                 .specifications-tab__cards-text
-                  h4.specifications-tab__cards-item-title 10x Luftmassagedüsen
-                  p Genießen Sie diese sanfte, vitalisierende Luftsprudel-Massage mit vorgewärmter Luft, unzählige Luftblasen legen Ihre Beine in Schwerelosigkeit, um Ihren Körper zu entspannen und zu regenerieren. Diese sanfte Ganzkörpermassage vitalisiert den Organismus und Sie gewinnen neue Energie.
+                  h4.specifications-tab__cards-item-title 14x Luftmassagedüsen
+                  p Genießen Sie die sanfte, vitalisierende Luftsprudel-Massage mit vorgewärmter Luft, unzählige Luftblasen legen Ihre Beine in Schwerelosigkeit, um Ihren Körper zu entspannen und zu regenerieren. Diese sanfte Ganzkörpermassage vitalisiert den Organismus und Sie gewinnen neue Energie.
               // end specifications-tab__cards-item
         //end specifications-tab__cards--03
 
@@ -523,46 +515,46 @@ block content
             table
               tr
                 td Modellname
-                td Nerida
+                td Santorin
               tr
                 td Preis
-                td ab 5.998 € *
+                td ab 7.298 € *
               tr
                 td Abmessungen
-                td 210 x 160 x 90 cm
+                td 210 x 200 x 93 cm
               tr
                 td Wasserfüllmenge
-                td 950 l
+                td 1390 l
               tr
                 td Leergewicht
-                td 280 kg
+                td 365 kg
               tr
                 td Sitzplätze
-                td 1x komfortabler Massage-Sitzplatz
+                td 3x komfortable Massage-Sitzplätze
               tr
                 td Liegeplätze
                 td 2x ergonomisch geformte Ganzkörper-Massageliegen
               tr
                 td Wassermassagedüsen aus Edelstahl
-                td 65x Stück
+                td 77x Stück
               tr
                 td Wasserpumpen
-                td 2x 3 PS
+                td 3x 3 PS
               tr
                 td Massageregelventil
                 td 1x Massageregler zum Lenken des Wasserdrucks auf verschiedene Düsensysteme
               tr
                 td Luftmassagedüsen
-                td 10x x Stück mit vorgewärmter Luft und LED hinterleuchtet
+                td 14x Stück mit vorgewärmter Luft und LED hinterleuchtet
               tr
                 td Druckluftpumpe (Blower)
-                td 1x 400 W
+                td 1x 700 W
               tr
                 td Luftregler
-                td 3x Luftbeimischregler für stufenlose Einstellung von kraftvollen bis sanften Massagestrahlen
+                td 5x Luftbeimischregler für stufenlose Einstellung von kraftvollen bis sanften Massagestrahlen
               tr
                 td Kopfstützen
-                td 2x Luxe, hinterleuchtet
+                td 3x Luxe, hinterleuchtet
               tr
                 td Zirkulationspumpe, programmierbar
                 td 1x 0,5 PS (energiesparend)
@@ -575,7 +567,7 @@ block content
                 td Ozonator mit Mischkammer
               tr
                 td Beleuchtung der Wasserlinie
-                td 15x Multi-Licht LED
+                td 39x Multi-Licht LED
               tr
                 td Wasserfall
                 td 1x Entspannungs-Wasserfall mit LED-Beleuchtung

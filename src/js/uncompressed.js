@@ -16,7 +16,9 @@ $(document).ready(function ($) {
     'shop-one',
     'catalog',
     'productcard',
-    'productcard-nerida'
+    'productcard-nerida',
+    'productcard-marbella',
+    'productcard-santorin'
   ]);
 });
 

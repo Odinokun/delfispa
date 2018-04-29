@@ -92,6 +92,7 @@
     width: 100%;
     max-width: 500px;
   }
+
   img {
     display: block;
     width: 100%;
@@ -125,6 +126,7 @@
     color: #fff;
   }
   &.active {
+    pointer-events: none;
     background-image: none;
 
     @include max(700) {
@@ -164,6 +166,64 @@
 .bath-tab__bath-btn--03 {
   top: 240px;
   left: 230px;
+}
+.bath-tab__body--marbella {
+  .bath-tab__bath {
+    margin-top: 0;
+  }
+  .bath-tab__bath-btn--01 {
+    top: 145px;
+    left: 140px;
+  }
+  .bath-tab__bath-btn--02 {
+    top: 260px;
+    left: 330px;
+    transform: rotate(90deg);
+    span {
+      transform: rotate(-90deg);
+    }
+  }
+  .bath-tab__bath-btn--03 {
+    top: 350px;
+    left: 235px;
+  }
+  .bath-tab__bath-btn--04 {
+    top: 320px;
+    left: 150px;
+  }
+  .bath-tab__bath-btn--05 {
+    top: 240px;
+    left: 130px;
+  }
+}
+.bath-tab__body--santorin {
+  .bath-tab__bath {
+    margin-top: 0;
+  }
+  .bath-tab__bath-btn--01 {
+    top: 145px;
+    left: 140px;
+  }
+  .bath-tab__bath-btn--02 {
+    top: 260px;
+    left: 330px;
+    transform: rotate(90deg);
+    span {
+      transform: rotate(-90deg);
+    }
+  }
+  .bath-tab__bath-btn--03 {
+    top: 350px;
+    left: 235px;
+  }
+  .bath-tab__bath-btn--04 {
+    top: 320px;
+    left: 150px;
+  }
+  .bath-tab__bath-btn--05 {
+    top: 240px;
+    left: 130px;
+  }
 }
 
 
@@ -241,6 +301,7 @@
     width: 100%;
     max-width: 500px;
   }
+
   img {
     display: block;
     width: 100%;
@@ -307,13 +368,63 @@
   top: 235px;
   left: 220px;
 }
+.bath-tab__body--marbella {
+  .bath-tab__bath-02 {
+    margin-top: 0;
+  }
+  .bath-tab__bath-02-btn--01 {
+    top: 40px;
+    left: 220px;
+  }
+  .bath-tab__bath-02-btn--02 {
+    top: 110px;
+    left: 80px;
+  }
+  .bath-tab__bath-02-btn--03 {
+    top: 95px;
+    left: 340px;
+  }
+  .bath-tab__bath-02-btn--04 {
+    top: 180px;
+    left: 230px;
+  }
+  .bath-tab__bath-02-btn--05 {
+    top: 235px;
+    left: 220px;
+  }
+}
+.bath-tab__body--santorin {
+  .bath-tab__bath-02 {
+    margin-top: 0;
+  }
+  .bath-tab__bath-02-btn--01 {
+    top: 40px;
+    left: 220px;
+  }
+  .bath-tab__bath-02-btn--02 {
+    top: 110px;
+    left: 80px;
+  }
+  .bath-tab__bath-02-btn--03 {
+    top: 95px;
+    left: 340px;
+  }
+  .bath-tab__bath-02-btn--04 {
+    top: 180px;
+    left: 230px;
+  }
+  .bath-tab__bath-02-btn--05 {
+    top: 235px;
+    left: 220px;
+  }
+}
 
 .bath-tab__zones-02 {
   display: none;
   flex-direction: column;
   max-width: 640px;
-  padding: 60px 0 0 20px;
   min-height: 500px;
+  padding: 60px 0 0 20px;
 
   @include max(1000) {
     align-items: center;
