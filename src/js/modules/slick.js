@@ -9,7 +9,7 @@ module.exports = function() {
     speed: 500,
     fade: true,
     arrows: false,
-    // autoplay: true,
+    autoplay: true,
     cssEase: 'linear'
   });
   // end top-slider in index.html
@@ -132,20 +132,33 @@ module.exports = function() {
     slidesToScroll: 1,
     arrows: false,
     fade: true,
+    infinite:false,
     asNavFor: '#productcard-top__slider-thumb'
   });
 
   $('#productcard-top__slider-thumb').slick({
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     vertical:true,
     asNavFor: '#productcard-top__slider',
     dots: false,
     focusOnSelect: true,
+    centerMode: true,
+    infinite:false,
     responsive: [
       {
         breakpoint: 701,
         settings: {
+          slidesToShow: 4,
+          centerMode: false,
+          vertical:false
+        }
+      },
+      {
+        breakpoint: 551,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
           vertical:false
         }
       }
