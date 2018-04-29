@@ -45,7 +45,7 @@
   display: flex;
   padding-bottom: 100px;
   background-color: #fcfcfc;
-  align-items: flex-start;
+  //align-items: flex-start;
 
   @include max(700) {
     flex-wrap: wrap;
@@ -58,9 +58,10 @@
   flex: none;
   width: 330px;
   padding: 0 0 35px 0;
-  border-left: 1px solid #d9d9d9;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  border: 1px solid #d9d9d9;
+  //border-left: 1px solid #d9d9d9;
+  //border-top: 1px solid #d9d9d9;
+  //border-bottom: 1px solid #d9d9d9;
 
   @include max(700) {
     width: 100%;
@@ -365,10 +366,10 @@
 // begin catalog-list
 .catalog-list {
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
   border-top: 1px solid #d9d9d9;
-  border-left: 1px solid #d9d9d9;
 }
 .catalog-item {
   position: relative;
