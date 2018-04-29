@@ -313,6 +313,7 @@
   flex-direction: column;
   max-width: 640px;
   padding: 60px 0 0 20px;
+  min-height: 500px;
 
   @include max(1000) {
     align-items: center;
