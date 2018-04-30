@@ -276,7 +276,6 @@
 
 
 .bath-tab__item--02 {
-  //align-items: center;
   justify-content: space-between;
 
   @include max(1000) {
@@ -373,11 +372,11 @@
     margin-top: 0;
   }
   .bath-tab__bath-02-btn--01 {
-    top: 40px;
-    left: 220px;
+    top: 400px;
+    left: 233px;
   }
   .bath-tab__bath-02-btn--02 {
-    top: 110px;
+    top: 135px;
     left: 80px;
   }
   .bath-tab__bath-02-btn--03 {
@@ -385,12 +384,12 @@
     left: 340px;
   }
   .bath-tab__bath-02-btn--04 {
-    top: 180px;
-    left: 230px;
+    top: 240px;
+    left: 190px;
   }
   .bath-tab__bath-02-btn--05 {
-    top: 235px;
-    left: 220px;
+    top: 270px;
+    left: 330px;
   }
 }
 .bath-tab__body--santorin {
@@ -398,24 +397,24 @@
     margin-top: 0;
   }
   .bath-tab__bath-02-btn--01 {
-    top: 40px;
-    left: 220px;
+    top: 210px;
+    left: 390px;
   }
   .bath-tab__bath-02-btn--02 {
-    top: 110px;
+    top: 122px;
     left: 80px;
   }
   .bath-tab__bath-02-btn--03 {
-    top: 95px;
-    left: 340px;
+    top: 140px;
+    left: 320px;
   }
   .bath-tab__bath-02-btn--04 {
-    top: 180px;
-    left: 230px;
+    top: 220px;
+    left: 200px;
   }
   .bath-tab__bath-02-btn--05 {
-    top: 235px;
-    left: 220px;
+    top: 270px;
+    left: 330px;
   }
 }
 
