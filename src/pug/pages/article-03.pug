@@ -1,0 +1,92 @@
+extends ../_template
+
+mixin tips-slider__item(pic, title)
+  a(href="#").tips-slider__item
+    .tips-slider__img
+      img(src='assets/img/tips-slider/slide-' + pic + '.jpg' alt='delfi-spa')
+      .tips-slider__footer
+        .tips-slider__title
+          span #{title}
+        span.tips-slider__link
+          svg
+            use(xlink:href="assets/img/sprite.svg#plus")
+
+block variables
+  - var title = 'Article | Delfi Spa'
+  - var pageHeaderTitle = 'Article'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'blog'
+  - var breadcrumbs03 = 'Article'
+
+block content
+  include ../sections/aside-left
+  include ../sections/header
+
+  //begin content
+  section.main.article-03
+    //begin article-03-header
+    header.article-03-header(style="background-image:url('assets/img/bg-article-03-header.jpg')")
+
+      //begin breadcrumbs
+      section.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="/") #{breadcrumbs01}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="blog.html") #{breadcrumbs02}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs03}
+      //end breadcrumbs
+
+      h2.article-03-header__title Bequeme Finanzierung Teilzahlung, Ratenzahlung
+    //end article-03-header
+
+    //begin article
+    section.article
+      .container
+        .article__row.article__row--text
+          p
+            |Ein Delfi Spa Whirlpool bringt sofort Spaß und Wohlbefinden und ist eine gute Investition in Ihre Gesundheit. Und jetzt wird alles noch einfacher für Sie:
+            br
+            |Unsere 0%-Finanzierung erlaubt die Anschaffung Ihres Whirlpools ohne Zusatzkosten und mit bis zu 36 bequemen Monatsraten – mit oder ohne Anzahlung.
+
+        .article__row.article__row--sale
+          .article-sale
+            .article-sale__banner
+              h3.article-sale__title
+                | 0%-Finanzierung
+                span *
+                br
+                | 36 Monate Laufzeit
+
+          .article-sale-descr
+            h3.article-sale-descr__title Ihre Vorteile auf einen Blick:
+            ul.article-sale-descr__list
+              li Finanzierung mit oder ohne Anzahlung
+              li Kostenfreie Sondertilgung jederzeit möglich
+              li Flexible Laufzeiten von 12 bis 36 Monaten
+              li Schnelle Bearbeitung ohne Bearbeitungsgebühr
+            span.article-sale-descr__note * Finanzierung über die CreditPlus Bank in einem unserer Showrooms.
+
+
+    //end   article
+
+    //begin tips-slider
+    section.tips-slider-section
+      .tips-slider#tips-slider
+        +tips-slider__item('05', 'Lieferung, Montage und Kundendienst bundesweit')
+        +tips-slider__item('03', 'Überblick über einmalige und fortlaufende Kosten')
+        +tips-slider__item('04', 'Umweltgedanke beim modernen Whirlpool ')
+        +tips-slider__item('06', 'Bequeme Finanzierung Teilzahlung, Ratenzahlung')
+
+      .tips-slider__more
+        a(href="#") Weitere Tipps, Videos und Antworten auf Fragen
+          br
+          svg
+            use(xlink:href="assets/img/sprite.svg#arrow")
+    //end   tips-slider
+
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts

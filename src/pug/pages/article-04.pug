@@ -1,0 +1,141 @@
+extends ../_template
+
+mixin tips-slider__item(pic, title)
+  a(href="#").tips-slider__item
+    .tips-slider__img
+      img(src='assets/img/tips-slider/slide-' + pic + '.jpg' alt='delfi-spa')
+      .tips-slider__footer
+        .tips-slider__title
+          span #{title}
+        span.tips-slider__link
+          svg
+            use(xlink:href="assets/img/sprite.svg#plus")
+
+block variables
+  - var title = 'Article | Delfi Spa'
+  - var pageHeaderTitle = 'Article'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'blog'
+  - var breadcrumbs03 = 'Article'
+
+block content
+  include ../sections/aside-left
+  include ../sections/header
+
+  //begin content
+  section.main.article-04
+    //begin article-04-header
+    header.article-04-header(style="background-image:url('assets/img/bg-article-04-header.jpg')")
+
+      //begin breadcrumbs
+      section.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="/") #{breadcrumbs01}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="blog.html") #{breadcrumbs02}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs03}
+      //end breadcrumbs
+
+      h2.article-04-header__title Überblick über einmalige und fortlaufende Kosten
+    //end article-04-header
+
+    //begin article
+    section.article
+      .container
+        .article__row.article__row--text
+          p Ein Außenwhirlpool oder Outdoor-Whirlpool ist eine Anschaffung fürs Leben. Daher gibt es vor dem Kauf einige Dinge zu beachten, damit sich die Energie- und Heizkosten für viele Jahre niedrig halten.
+          p Vor dem Kauf Ihres Whirlpools sollten Sie darauf achten, dass Sie sofort die gesamten Anschaffungskosten berücksichtigen, die aus Kaufpreis, Anlieferkosten, Inbetriebnahme durch den Servicetechniker, Komplettisolation, Abdeckung und eventuell Lifter dafür, Treppe, Erstausstattung Pflegeprodukte mit Pooltester und Wasserpflegeprodukten für eine 3-monatige Nutzung bestehen.
+
+
+        .article__row.article__row--table
+          header.article-table__header
+            h3.article-table__header-title Welche Stromkosten entstehen am Tag?
+          .article-table__row
+            .article-table__item
+              h4.article-table__title ClearCrystal Reinigungssystem
+              table.article-table
+                tr
+                  td Filterzyklen pro Tag:
+                  td 2
+                tr
+                  td Länge eines Filterzyklus:
+                  td 2 Std.
+                tr
+                  td Leistung der Pumpe:
+                  td 250W
+                tr
+                  td Verbrauch der Pumpe während Zyklus:
+                  td 0,5 kWh
+                tr
+                  td Kosten der mtl. Filterzyklen:
+                  td 8,10 €
+
+            .article-table__item
+              h4.article-table__title Badevorgang mit Whirlen
+              table.article-table
+                tr
+                  td Anzahl Whirleinheiten pro Woche:
+                  td 3
+                tr
+                  td Länge der Whirleinheiten:
+                  td 0,5 Std.
+                tr
+                  td Leistung der Pumpe:
+                  td 2000W
+                tr
+                  td Verbrauch der Pumpe in Whirlfunktion:
+                  td ca. 1,0 kWh
+                tr
+                  td Kosten der mtl. Whirleinheiten:
+                  td 3,24 €
+
+            .article-table__item
+              h4.article-table__title Wasserheizung pro Monat
+              table.article-table
+                tr
+                  td Geschätzter Temperaturverlust pro Tag:
+                  td 2°C
+                tr
+                  td Energieverbrauch/Tag zum Nachheizen:
+                  td 2,3 kWh
+                tr
+                  td Kosten der Heizung/Monat:
+                  td 18,63 €
+
+
+
+        .article__row.article__row--sale
+          .article-sale
+            .article-sale__banner
+              h4.article-sale__subtitle Gesamtverbrauch mtl.:
+              h3.article-sale__title 29,97€ - oder ca. 1,- €/Tag
+
+          .article-sale-descr
+            p Vor jedem Kauf sollte eine ausführliche Beratung stattfinden. Zum einen hinsichtlich der unterschiedlichen Modelle und Einsatzmöglichkeiten im Innen- oder Außenbereich. Zum anderen bezüglich der Lieferung, Montage und der Wasserpflege.
+            p Nutzen Sie deshalb am besten unser Kontaktformular und vertrauen Sie auf den Expertenrat zu Ihrem neuen Wunschwhirlpool. Der überzeugt dann nicht nur durch eine gute Leistung und ein schickes Design, sondern durch Energieeffizienz, Wartungsfreundlichkeit und Langlebigkeit.
+
+
+
+    //end   article
+
+    //begin tips-slider
+    section.tips-slider-section
+      .tips-slider#tips-slider
+        +tips-slider__item('05', 'Lieferung, Montage und Kundendienst bundesweit')
+        +tips-slider__item('03', 'Überblick über einmalige und fortlaufende Kosten')
+        +tips-slider__item('04', 'Umweltgedanke beim modernen Whirlpool ')
+        +tips-slider__item('06', 'Bequeme Finanzierung Teilzahlung, Ratenzahlung')
+
+      .tips-slider__more
+        a(href="#") Weitere Tipps, Videos und Antworten auf Fragen
+          br
+          svg
+            use(xlink:href="assets/img/sprite.svg#arrow")
+    //end   tips-slider
+
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts

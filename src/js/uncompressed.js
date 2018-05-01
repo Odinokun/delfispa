@@ -8,6 +8,8 @@ $(document).ready(function ($) {
     'index',
     'article-01',
     'article-02',
+    'article-03',
+    'article-04',
     'article-05',
     'reviews',
     'review',
