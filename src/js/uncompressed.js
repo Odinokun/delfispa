@@ -27,7 +27,8 @@ $(document).ready(function ($) {
     'datenschutz',
     'haftungsausschluss',
     'agb',
-    'blog'
+    'blog',
+    'contacts'
   ]);
 });
 

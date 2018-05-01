@@ -1,0 +1,262 @@
+//begin contacts header
+.contacts-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 60px;
+  background-color: #f6f8fa;
+
+  @include max(700) {
+    padding: 30px ;
+  }
+
+  .breadcrumbs {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.contacts-header__title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.15;
+  padding-right: 20px;
+
+  @include max(1100) {
+    font-size: 50px;
+  }
+  @include max(700) {
+    font-size: 40px;
+  }
+  @include max(425) {
+    font-size: 28px;
+  }
+}
+//end contacts header
+
+
+.contacts-block {
+  padding: 55px 0 90px 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include max(1000) {
+      flex-wrap: wrap;
+    }
+  }
+}
+.contacts-block__left {
+  flex: none;
+  width: 320px;
+
+  @include max(1000) {
+    margin-bottom: 30px;
+  }
+  @include max(470) {
+    width: 100%;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+.contacts-block__right {
+  width: 100%;
+  max-width: 800px;
+  padding-left: 30px;
+
+  @include max(1000) {
+    max-width: 100%;
+    padding-left: 0;
+  }
+}
+.contacts-block__title {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 70px;
+  color: #1c1e1e;
+
+  @include max(550) {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+.contacts-block__table {
+  width: 100%;
+  td {
+    font-size: 16px;
+    width: 50%;
+    padding: 7px 15px 7px 0;
+    vertical-align: top;
+
+    @include max(1200) {
+      width: auto;
+    }
+    @include max(425) {
+      padding: 7px 5px 7px 0;
+    }
+    &:nth-child(odd) {
+      font-weight: 300;
+      color: #919494;
+    }
+    &:nth-child(even) {
+      font-weight: 700;
+      color: #1c1e1e;
+      span {
+        font-weight: 300;
+      }
+    }
+  }
+  a {
+    position: relative;
+    display: inline-block;
+    transition: color .5s;
+    text-decoration: none;
+    color: #1c1e1e;
+    &:hover {
+      color: $highlight;
+    }
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      content: '';
+      background-color: $highlight;
+    }
+  }
+}
+
+
+// begin contacts form
+.contacts-form {
+  padding-top: 55px;
+  padding-bottom: 80px;
+  background-image: linear-gradient(135deg, #fffefe 0%, #fffeff 0%, #d7fffe 100%);
+}
+.contacts-form__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 40px;
+
+  @include max(1024) {
+    font-size: 30px;
+  }
+}
+.contacts-form__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contacts-form__checkbox-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.contacts-form__label {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-right: 40px;
+  input {
+    display: none;
+  }
+  span {
+    font-size: 15px;
+    font-weight: 300;
+    color: #242424;
+  }
+}
+.contacts-form__checkbox {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  border: 1px solid #d9d9d9;
+}
+.contacts-form__label input:checked + .contacts-form__checkbox {
+  background-image: url('../img/check.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contacts-form__inputs-item {
+  width: calc(25% - 30px);
+
+  @include max(1000) {
+    width: 48%;
+  }
+  @include max(550) {
+    width: 100%;
+  }
+  input,
+  textarea {
+    font-size: 15px;
+    font-weight: 300;
+    width: 100%;
+    margin-bottom: 30px;
+    border: 1px solid #d9d9d9;
+    background-color: transparent;
+  }
+  input {
+    line-height: 45px;
+    height: 45px;
+    padding: 0 20px;
+  }
+  textarea {
+    height: 120px;
+    padding: 13px 20px;
+  }
+}
+.contacts-form__inputs-item--lg {
+  width: 50%;
+
+  @include max(1000) {
+    width: 100%;
+  }
+}
+.contacts-form__footer {
+  display: flex;
+  align-items: flex-start;
+
+  @include max(1000) {
+    flex-wrap: wrap;
+  }
+}
+.contacts-form__footer-checkbox {
+  flex: none;
+
+  @include max(1000) {
+    width: 100%;
+  }
+}
+.contacts-form__footer-text {
+  margin-bottom: 30px;
+  padding-left: 50px;
+
+  @include max(1000) {
+    width: 100%;
+    padding-left: 0;
+  }
+  p {
+    font-size: 13px;
+    font-weight: 300;
+    margin: 0;
+    color: #919494;
+  }
+}
+
+.contacts-form__btn {
+  margin-top: 20px;
+  margin-left: auto;
+  input {
+    display: block;
+    border: none;
+    background-color: transparent;
+  }
+}
+// end contacts form
