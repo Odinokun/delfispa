@@ -1,0 +1,17 @@
+.text-page__header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+.impressum-table {
+  tr {
+    vertical-align: initial;
+  }
+  td{
+    padding: 10px 0;
+    &:nth-child(odd){
+      font-weight: 700;
+      padding-right: 20px;
+    }
+  }
+}

@@ -18,7 +18,13 @@ $(document).ready(function ($) {
     'productcard',
     'productcard-nerida',
     'productcard-marbella',
-    'productcard-santorin'
+    'productcard-santorin',
+    'brand',
+    'impressum',
+    'datenschutz',
+    'haftungsausschluss',
+    'agb',
+    'blog'
   ]);
 });
 

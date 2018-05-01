@@ -1,0 +1,120 @@
+extends ../_template
+
+block variables
+  - var title = 'AGB | Delfi Spa'
+  - var pageHeaderTitle = 'AGB'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'AGB'
+
+block content
+  include ../sections/aside-left
+  include ../sections/header
+
+  //begin content
+  section.main.text-page
+    .container
+      //begin header
+      header.text-page__header
+        //begin breadcrumbs
+        section.breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="/") #{breadcrumbs01}
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") #{breadcrumbs02}
+        //end breadcrumbs
+
+        h2.text-page__title AGB
+        p
+          strong Die Allgemeinen Geschäfts- und Lieferbedingungen
+          br
+          |Gültig ab 28.04.2018
+      //end brand-header
+
+
+      //begin text-page__content
+      section.text-page__content
+        h5 1. Allgemeines
+        p a) Allen Angeboten, Auftragsannahmen, Lieferungen und Leistungen liegen ausschließlich die nachfolgenden Geschäftsbedingungen zugrunde. Abweichende Vereinbarungen bedürfen der Schriftform. Bedingungen des Käufers bleiben für uns auch dann unverbindlich, wenn wir ihnen nicht ausdrücklich widersprochen haben. Allen, auch künftigen Liefergeschäften, liegen diese Geschäftsbedingungen zugrunde.
+        p b) Sämtliche Angaben hinsichtlich der von uns vertriebenen Geräte in Produktbeschreibungen, Prospekten o. a. sind stets freibleibend, soweit sie nicht ausdrücklich als verbindlich zugesichert sind. Dies gilt insbesondere für Änderungen, die dem technischen Fortschritt oder dem Erhalt der Lieferfähigkeit dienen.
+        p c) 4Deluxe bietet keine Produkte zum Kauf durch Minderjährige an.
+        p d) Alle angegebenen Preise verstehen sich, soweit nicht gesondert schriftlich vereinbart, ohne gesondertes Zubehör, Fracht, Aufrüstungen, Installation oder sonstige Nebenleistungen.
+
+        h5 2. Angebot und Vertragsabschluß
+        p a) Unsere Angebote sind unverbindlich und freibleibend. Abbildungen können von der tatsächlich gelieferten Ware abweichen und gelten lediglich als Beispiele. Die von uns veröffentlichten und im Angebot gegebenen Produktinformationen basieren auf Hersteller-Angaben, für deren Richtigkeit wir keine Garantie übernehmen können. Sollte uns vom Lieferanten ein Ersatzartikel angeboten werden, so werden wir Sie darüber informieren. Ein Schadensersatzanspruch aufgrund nicht mehr lieferbarer Artikel kann nicht geltend gemacht werden.
+        p b) Ihre Bestellung ist ein verbindliches Angebot Ihrerseits zum Abschluss eines Kaufvertrages. Wir bestätigen daraufhin per E-Mail den Eingang Ihrer Bestellung bei uns und bestätigen Ihnen alle Einzelheiten (Bestätigung Ihrer Bestellung). Diese Bestätigung Ihrer Bestellung stellt keine Annahme Ihres Angebotes dar, sondern soll Sie nur über den Eingang Ihrer Bestellung bei uns informieren. Ein Kaufvertrag kommt erst dann zustande, wenn wir das bestellte Produkt an Sie liefern oder den Versand an Sie mit einer zweiten E-Mail (Versandbestätigung) bestätigen.
+        p c) Der Kunde hat dafür zu sorgen, dass zum Zeitpunkt der Bestellung sowohl die Email-Adresse als auch die Versandadresse aktuell sind. Falls aufgrund unrichtiger Angaben des Kunden Ware fehlerhaft versandt wird und daraus Kosten entstehen, werden diese Kosten dem Kunden in Rechnung gestellt.
+
+        h5 3. Preise
+        p Die Preise sind in EUR inklusive der zur Zeit der Bestellung gültigen gesetzlichen Mehrwertsteuer von 19% ohne Nachlässe ausgewiesen. Es gelten die jeweiligen Preise zum Zeitpunkt der Bestellung. Die Preise verstehen sich ab Werk oder Lager zzgl. der ausgewiesenen Versandkosten.
+
+        h5 4. Zahlungsbedingungen
+        p Sie können die bestellten Artikel per Vorkasse per Banküberweisung oder über den Zahlungsdienstleister Paypal, oder bar bei Anlieferung bezahlen. Bei Vorkasse erfolgt die Zahlung nach Beendigung des Bestellvorgangs. Der Zeitpunkt der Bezahlung wird vom Kunden gewählt. Je früher wir Ihre Zahlung verbuchen können, umso eher können wir Ihre Bestellung bearbeiten.
+
+        h5 5. Eigentumsvorbehalt
+        p Die gelieferten Waren bleiben bis zur vollständigen Zahlung aller Verbindlichkeiten, bei Zahlung per Scheck oder Wechsel bis zu deren Einlösung, Eigentum der Firma 4Deluxe GmbH.
+
+        h5 6. Lieferung
+        p a) Soweit keine andere Vereinbarung getroffen wurde, erfolgt die Lieferung ab dem Lager von 4Deluxe an die vom Besteller angegebene Lieferadresse, Bordsteinkante. Angaben über die Lieferfrist sind unverbindlich, soweit nicht ausnahmsweise der Liefertermin verbindlich zugesagt wurde.
+        p b) Der avisierte Liefertermin erfolgt unter dem Vorbehalt, dass wir vom Hersteller rechtzeitig und richtig beliefert werden. Falls wir ohne eigenes Verschulden zur Lieferung der bestellten Ware nicht in der Lage sind, weil der Lieferant seine vertraglichen Verpflichtungen nicht erfüllt, sind wir dem Besteller gegenüber zum Rücktritt berechtigt. In einem solchen Fall sind wir verpflichtet, den Besteller unverzüglich darüber zu informieren, dass das bestellte Produkt nicht zur Verfügung steht. Die gesetzlichen Ansprüche des Bestellers bleiben unberührt.
+        p c) Wird als Sondervereinbarung Montage/Aufbau durch den Verkäufer oder von ihm beauftragte Dritte vereinbart, so steht der Käufer dafür ein, dass im Moment der Lieferung die nachfolgenden Mindestvoraussetzungen vorliegen: Der Liefer-LKW des Spediteurs muss das Gebäude problemlos anfahren und - für den Zeitraum des Abladens sowie des Aufbaus - zulässigerweise parken dürfen und können.
+        p d) Der Käufer steht dafür ein, dass die Teile der Ware innerhalb des Gebäudes problemlos zum Aufstellungsplatz transportiert werden können, dafür müssen ausreichend breite Türen, Treppen und Flure vorhanden sein. Für den Fall, dass diese Teile aufgrund der örtlichen Verhältnisse nicht zur Verwendungsstelle transportiert werden können, trägt der Käufer alle daraus entstehenden Mehrkosten einschließlich zusätzlicher Transportkosten.
+        p e) Wir sind zur Teillieferung im zumutbaren Umfang berechtigt.
+        p f) Sofern der Kunde Verbraucher ist, trägt der Verkäufer unabhängig von der Versandart in jedem Fall das Versandrisiko. Sofern der Kunde Unternehmer ist, gehen alle Risiken und Gefahren der Versendung auf den Kunden über, sobald die Ware von dem Verkäufer an den beauftragten Logistikpartner übergeben worden ist.
+
+        h5 7. Widerrufsbelehrung für Verbraucher entsprechend BGB § 312b, Fernabsatzverträge, Widerrufsrecht
+        p a) Für Fernabsatzverträge entsprechend BGB § 312b, die unter ausschließlicher Verwendung von Fernkommunikationsmitteln (zum Beispiel ohne Test oder Vorführung des Produkts im Geschäft oder auf der Messe) abgeschossen wurden, gilt dieses Widerrufsrecht.
+        p b) Sie können Ihre Vertragserklärung innerhalb von 14 Tagen ohne Angabe von Gründen in Textform (z. B. Brief, Fax, E-Mail) oder - wenn Ihnen die Sache vor Fristablauf überlassen wird - durch Rücksendung der Sache widerrufen.
+        p c) Die Frist beginnt nach Erhalt dieser Belehrung in Textform, jedoch nicht vor Eingang der Ware beim Empfänger (bei der wiederkehrenden Lieferung gleichartiger Waren nicht vor Eingang der ersten Teillieferung) und auch nicht vor Erfüllung unserer Informationspflichten gemäß Artikel 246 § 2 in Verbindung mit § 1 Abs. 1 und 2 EGBGB sowie unserer Pflichten gemäß § 312e Abs. 1 Satz 1 BGB in Verbindung mit Artikel 246 § 3 EGBGB. Zur Wahrung der Widerrufsfrist genügt die rechtzeitige Absendung des Widerrufs oder der Sache.
+        p Der Widerruf bzw. die Rücksendung hat zu erfolgen an:
+        p
+          |4Deluxe GmbH
+          br
+          |Erlenstraße 1
+          br
+          |12167 Berlin
+          br
+          |Fax: 030-61674116
+          br
+          |E-mail: info@4-deluxe.de
+          br
+          |(Rücksendungen ausschließlich an die genannte Anschrift).
+
+        h5 Widerrufsfolgen
+        p a) Senden Sie die Ware bitte möglichst in Originalverpackung mit sämtlichem Zubehör und mit allen Verpackungsbestandteilen an uns zurück. Verwenden Sie ggf. eine schützende Umverpackung. Wenn Sie die Originalverpackung nicht mehr besitzen, sorgen Sie bitte mit einer geeigneten Verpackung für einen ausreichenden Schutz vor Transportschäden, um Schadensersatzansprüche wegen Beschädigungen infolge mangelhafter Verpackung zu vermeiden.
+        p b) Paketversandfähige Artikel sind von Ihnen zurückzusenden. Sie haben die Kosten der Rücksendung zu tragen. Nicht paketversandfähige Artikel werden von uns bei Ihnen abgeholt. Sie tragen die direkten Kosten der Rückholung der Waren in Höhe von 195,00 EUR für Massagesessel oder Infrarotkabinen bzw. von 395,00 € bis höchstens 499,00 € für Whirlpools.
+        p c) Können Sie uns die empfangenen Leistungen ganz oder teilweise nicht oder nur in verschlechtertem Zustand zurückgewähren, müssen Sie uns insoweit ggf. Wertersatz leisten. Bei der Überlassung von Sachen gilt dies nicht, wenn die Verschlechterung der Sache ausschließlich auf deren Prüfung - wie Sie Ihnen etwa im Ladengeschäft möglich gewesen wäre - zurückzuführen ist. Im Übrigen können Sie die Pflicht zum Wertersatz für eine durch die bestimmungsgemäße Ingebrauchnahme der Sache entstandene Verschlechterung vermeiden, indem Sie die Sache nicht wie Ihr Eigentum in Gebrauch nehmen und alles unterlassen, was deren Wert beeinträchtigt.
+        p d) Das Rückgaberecht besteht nicht bei Lieferung von Waren, die nach Kundenspezifikation angefertigt werden oder eindeutig auf die persönlichen Bedürfnisse zugeschnitten sind.
+        p e) Das Widerrufsrecht besteht nicht bei Fernabsatzverträgen zur Lieferung von Waren, die nach Kundenspezifikation angefertigt werden, oder eindeutig auf die persönlichen Bedürfnisse zugeschnitten sind.
+
+        h5 8. Gewährleistung/Haftung
+        p a) Der Käufer hat die Ware nach Erhalt auf Transportschäden, offensichtliche Mängel, Beschaffenheit und Vollständigkeit, zu untersuchen. Offensichtliche Mängel sind von dem Käufer innerhalb der gesetzlichen Vorgaben schriftlich uns gegenüber zu rügen.
+        p b) Die Gewährleistung erlischt bei Eingriffen, Reparaturen oder Reparaturversuchen nicht autorisierter Dritter. Die Abtretung von Gewährleistungsansprüchen ist ausgeschlossen. Ersetzte Teile gehen in unser Eigentum über. Die Gewährleistung verlängert sich nicht nach Mängelbeseitigung.
+        p c) Die Gewährleistung erstreckt sich nicht auf Komponenten, die nicht von der Firma 4Deluxe GmbH geliefert und eingebaut wurden. Die Gewährleistung erlischt, wenn ein Defekt aufgrund unsachgemäßer Handhabung oder unsachgemäßem Einbaus seitens des Kunden oder nicht autorisierter Dritter entsteht.
+        p d) Für Verbraucher beträgt die Frist der Gewährleistung zwei Jahre ab Anlieferungszeitpunkt der Ware.
+        p e) Für Unternehmer beträgt die Frist der Gewährleistung 6 Monate ab Anlieferungszeitpunkt der Ware.
+        p f) Bei gebrauchten Sachen beträgt die Frist der Gewährleistung ein Jahr ab Anlieferungszeitpunkt der Ware.
+        p g) Soweit ein von uns zu vertretender Mangel an der Kaufsache vorliegt, sind wir nach unserer Wahl zur Mängelbeseitigung oder Ersatzleistung berechtigt. Mängel sind innerhalb von 14 Tagen nach Erhalt der Ware bei uns anzuzeigen.
+        p h) Eine Nacherfüllung kann nach der Wahl des Käufers durch Beseitigung des Mangels oder Lieferung einer neuen Ware erfolgen. Wir behalten uns aber vor, die von dem Käufer gewählte Art der Nacherfüllung zu verweigern, wenn sie mit für uns unverhältnismäßigen Kosten verbunden ist. Sind wir zur Ersatzlieferung nicht bereit oder nicht in der Lage oder schlägt die Nachbesserung mindestens dreimal fehl, kann der Käufer nach seiner Wahl Herabsetzung des Kaufpreises (Minderung) verlangen oder den Rücktritt vom Vertrag erklären.
+        p i) Soweit sich nichts anderes ergibt, sind weitergehende Ansprüche des Bestellers - gleich, aus welchen Rechtsgründen - ausgeschlossen. Wir haften deshalb nicht für Schäden, die nicht im Liefergegenstand selbst entstanden sind. Vorstehende Haftungsbefreiung gilt nicht, sofern die Schäden durch Vorsatz, grobe Fahrlässigkeit oder Fehlen einer zugesicherten Eigenschaft, Verletzung vertragswesentlicher Pflichten, Leistungsverzug, Unmöglichkeit sowie Ansprüchen nach §§1 und 4 des Produkthaftungsgesetzes beruht. Soweit unsere Haftung ausgeschlossen oder beschränkt ist, gilt dies auch für die persönliche Haftung unserer Angestellten, Arbeitnehmer, Mitarbeiter, Vertreter und Erfüllungsgehilfen.
+
+        h5 9. Datenschutz
+        p a) Der Kunde ermächtigt uns und ist damit einverstanden, seine personenbezogenen Daten, die im Zusammenhang mit der Geschäftsbeziehung erhalten wurden, im Sinne der Datenschutzgesetze zu verarbeiten, zu speichern und zu verarbeiten.
+        p b) Wir speichern und verwenden die persönlichen Kundendaten zur Abwicklung der Aufträge und eventueller Reklamationen.
+        p c) Personenbezogenen Kundendaten werden wir nicht an Dritte weitergegeben. Ausgenommen hiervon ist die Übermittlung von Kundendaten an Dienstleistungspartner, die zur Bestellabwicklung erforderlich sind. In diesen Fällen beschränkt sich der Umfang der übermittelten Daten jedoch auf das erforderliche Minimum.
+        p d) Der Kunde hat ein Recht auf Auskunft sowie ein Recht auf Berichtigung, Sperrung und Löschung seiner gespeicherten Daten.
+
+        h5 10. Änderung der Allgemeinen Geschäftsbestimmungen
+        p Wir behalten uns vor, unsere Allgemeinen Geschäftsbedingungen unter Wahrung einer Ankündigungsfrist von mindestens zwei Wochen zu ändern. Die Ankündigung erfolgt durch Veröffentlichung der geänderten Allgemeinen Geschäftsbedingungen mit Angabe des Zeitpunkts des Inkrafttretens im Internet auf unserer Website www.4-deluxe.de. Sofern der Kunde nicht innerhalb von zwei Wochen nach Veröffentlichung widerspricht, so gelten die abgeänderten Geschäftsbedingungen vom Kunden als angenommen.
+
+        h5 11. Schlussbestimmungen
+        p a) Ausschließlicher Gerichtsstand ist das Gericht unseres Geschäftssitzes soweit der Kunde ein Kaufmann im Sinne des HGB oder einer Körperschaft des öffentlichen Rechts ist. Wir haben das Recht, auch am Sitz des Kunden zu klagen.
+        p b) Sollten einzelne Bestimmungen dieses Vertrages ganz oder teilweise nicht rechtswirksam sein oder ihre Rechtswirksamkeit später verlieren, wird die Gültigkeit des Vertrages im Übrigen nicht berührt.
+
+      //end   text-page__content
+      
+
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts
