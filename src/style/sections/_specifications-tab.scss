@@ -265,17 +265,65 @@
 
 // begin specifications-tab__cards--05
 .specifications-tab__cards--05 {
-  background-image: $gradient;
+  //background-image: $gradient;
   .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 500px;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    //min-height: 500px;
+  }
+}
+//.specifications-tab__cards-header {
+//  padding: 0 0 60px 0;
+//  p {
+//    font-size: 16px;
+//    font-weight: 300;
+//    line-height: 1.5;
+//  }
+//}
+.specifications-tab__colors-header-title {
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.specifications-tab__colors-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.specifications-tab__colors-item {
+  //width: 250px;
+  width: 20%;
+  flex: none;
+  margin-bottom: 30px;
+  @include max(1100) {
+    width: 25%;
+  }
+  @include max(900) {
+    width: 33.33%;
+  }
+  @include max(700) {
+    width: 50%;
+  }
+}
+.specifications-tab__colors-pic {
+  margin-bottom: 10px;
+  img {
+    display: block;
+    max-width: 90%;
+  }
+}
+.specifications-tab__colors-title {
+  font-size: 16px;
+  font-weight: 300;
+  @include max(550) {
+    font-size: 14px;
   }
   span {
-    font-size: 40px;
-    text-transform: uppercase;
-    color: #fff;
+    padding: 0 8px;
+  }
+  strong {
+    font-weight: 700;
   }
 }
 // end specifications-tab__cards--05

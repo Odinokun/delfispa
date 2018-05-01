@@ -44,6 +44,7 @@ bower/
 bower_components/
 dist
 build
+pug-backup
 
 ### My files ###
 *.zip
