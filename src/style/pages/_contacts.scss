@@ -255,8 +255,12 @@
   margin-left: auto;
   input {
     display: block;
+    padding: 15px 70px 15px 0;
     border: none;
     background-color: transparent;
+    &:hover {
+      padding: 15px 70px 15px 70px;
+    }
   }
 }
 // end contacts form

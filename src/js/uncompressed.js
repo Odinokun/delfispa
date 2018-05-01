@@ -28,7 +28,8 @@ $(document).ready(function ($) {
     'haftungsausschluss',
     'agb',
     'blog',
-    'contacts'
+    'contacts',
+    'order'
   ]);
 });
 
