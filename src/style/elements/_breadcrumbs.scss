@@ -55,7 +55,8 @@
     color: #fff;
   }
 }
-.article-02 {
+.article-02,
+.article-05 {
   .breadcrumbs__item::after,
   .breadcrumbs__link {
     color: #919494;
@@ -63,6 +64,7 @@
 }
 .shops,
 .catalog,
+.blog,
 .productcard,
 .review,
 .reviews {

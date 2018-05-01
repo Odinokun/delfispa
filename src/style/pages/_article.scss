@@ -64,6 +64,39 @@
 // end article-02-header
 
 
+// begin article-05-header
+.article-05-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 440px;
+  padding: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include max(700) {
+    min-height: 300px;
+    padding: 30px ;
+  }
+}
+.article-05-header__title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 800px;
+  color: #fff;
+
+  @include max(1024) {
+    font-size: 40px;
+  }
+  @include max(700) {
+    font-size: 28px;
+  }
+}
+// end article-02-header
+
+
 // begin article
 .article {
   padding: 20px 0 50px 0;

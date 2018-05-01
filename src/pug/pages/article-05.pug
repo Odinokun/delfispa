@@ -1,0 +1,98 @@
+extends ../_template
+
+mixin tips-slider__item(pic, title)
+  a(href="#").tips-slider__item
+    .tips-slider__img
+      img(src='assets/img/tips-slider/slide-' + pic + '.jpg' alt='delfi-spa')
+      .tips-slider__footer
+        .tips-slider__title
+          span #{title}
+        span.tips-slider__link
+          svg
+            use(xlink:href="assets/img/sprite.svg#plus")
+
+block variables
+  - var title = 'Article | Delfi Spa'
+  - var pageHeaderTitle = 'Article'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'blog'
+  - var breadcrumbs03 = 'Article'
+
+block content
+  include ../sections/aside-left
+  include ../sections/header
+
+  //begin content
+  section.main.article-05
+    //begin article-05-header
+    header.article-05-header(style="background-image:url('assets/img/bg-article-05-header.jpg')")
+
+      //begin breadcrumbs
+      section.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="/") #{breadcrumbs01}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="blog.html") #{breadcrumbs02}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs03}
+      //end breadcrumbs
+
+      h2.article-05-header__title Lieferung , Montage und Kundendienst bundesweit
+    //end article-01-header
+
+    //begin article
+    section.article
+      .container
+        .article__row.article__row--text
+          p Entspannung von Anfang an - wir bieten Ihnen maßgeschneiderte Service- und Lieferpakete an. Ob sehr preisgünstig zusammen mit Ihren Helfern oder als Full-Service-Paket, bei dem wir uns um alles kümmern - wir bringen Ihren Pool und nehmen ihn zuverlässig in Betrieb. Ob es um die Lieferung, Installation oder sonstige Unterstützung zur Einrichtung Ihrer privaten Wellness-Oase geht, auf unsere Erfahrung und Hilfe können Sie sich verlassen.
+
+        .article__row.article__row--left
+          .article__item-pic
+            img(src="assets/img/article/article-07.jpg" alt="delfi spa")
+          .article__item-text
+            h3.article__item-title Lieferung mit oder ohne "Full Service"
+            p Gerne liefern wir Ihren neuen Delfi Spa Whirlpool zu Ihnen nach Hause, mit unseren speziellen Anlieferungtechnik findet Ihre Wohlfühl-Oase schnell seinen Platz im Garten, auf der Terrasse oder im Indoor-Bereich.
+
+        .article__row.article__row--right
+          .article__item-pic
+            img(src="assets/img/article/article-08.jpg" alt="delfi spa")
+          .article__item-text
+            h3.article__item-title Kraneinsatz für entlegene Standorte
+            p In manchen Fällen kann der Whirlpool nur durch einen Kran an seinen Aufstellort gelangen, zum Beispiel bei Dachterrassen. Gerne übernehmen wir die Kranorganisation für Sie.
+
+        .article__row.article__row--left
+          .article__item-pic
+            img(src="assets/img/article/article-09.jpg" alt="delfi spa")
+          .article__item-text
+            h3.article__item-title Aufmaß-Service und Beratung
+            p Sind Sie sich nicht sicher, auf welchem Weg Ihr neuer Whirlpool zum Aufstellort transportiert werden kann, kann das Aufmaß auf Wunsch von einem geschulten Service-Mitarbeiter durchgeführt werden. Reicht die Gartentorbreite aus? Lassen Bäume und Sträucher eine Einbringung zu? Ist das Gefälle überwindbar. Oder wird zur Anlieferung ein Kran benötigt? Wir garantieren die perfekte Anlieferung, damit Ihr Whirlpool am Liefertag reibungslos an seinem Aufstellort in Betrieb genommen werden kann.
+
+        .article__row.article__row--right
+          .article__item-pic
+            img(src="assets/img/article/article-10.jpg" alt="delfi spa")
+          .article__item-text
+            h3.article__item-title Inbetriebnahme und Ihr erstes Badeerlebnis
+            p Nachdem Ihr Außen-Whirlpool am richtigen Ort ist, wird er von unserem Servicemitarbeiter mit Wasser befüllt und sofort betriebsbereit gemacht. Die optimale Balance der Wasserqualität wird vorbereitet und die Installation des Zubehörs und sonstiger Accessoires vorgenommen. Nach wenigen Stunden - je nach Außentemperatur - kann Ihr Whirlpool dann schon von Ihnen in Benutzung genommen werden.
+
+    //end   article
+
+    //begin tips-slider
+    section.tips-slider-section
+      .tips-slider#tips-slider
+        +tips-slider__item('05', 'Lieferung, Montage und Kundendienst bundesweit')
+        +tips-slider__item('03', 'Überblick über einmalige und fortlaufende Kosten')
+        +tips-slider__item('04', 'Umweltgedanke beim modernen Whirlpool ')
+        +tips-slider__item('06', 'Bequeme Finanzierung Teilzahlung, Ratenzahlung')
+
+      .tips-slider__more
+        a(href="#") Weitere Tipps, Videos und Antworten auf Fragen
+          br
+          svg
+            use(xlink:href="assets/img/sprite.svg#arrow")
+    //end   tips-slider
+
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts
