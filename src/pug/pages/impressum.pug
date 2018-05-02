@@ -1,0 +1,69 @@
+extends ../_template
+
+block variables
+  - var title = 'Impressum | Delfi Spa'
+  - var pageHeaderTitle = 'FAQ'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'impressum'
+
+block content
+  include ../sections/aside-left
+  include ../sections/header
+
+  //begin content
+  section.main.text-page
+    .container
+      //begin header
+      header.text-page__header
+        //begin breadcrumbs
+        section.breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="/") #{breadcrumbs01}
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") #{breadcrumbs02}
+        //end breadcrumbs
+
+        h2.text-page__title Impressum
+      //end brand-header
+
+
+      //begin text-page__content
+      section.text-page__content
+        table.impressum-table
+          tr
+            td Verantwortlicher Herausgeber
+            td 4Deluxe GmbH, Marketingabteilung
+          tr
+            td Geschäftsführer
+            td Julia Hoffmann
+          tr
+            td Firma
+            td 4Deluxe GmbH
+          tr
+            td Anschrift
+            td
+              |Erlenstraße 1
+              br
+              |12167 Berlin
+          tr
+            td Handelsregister
+            td
+              |Amtsgericht Charlottenburg HRB 130402
+              br
+              |USt-ID: DE275104185
+          tr
+            td Kontakt
+            td
+              |Telefon +49-30-61674114
+              br
+              |Telefax +49-30-61674116
+              br
+              |info@4-deluxe.de
+      //end   text-page__content
+      
+
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts

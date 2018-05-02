@@ -126,11 +126,12 @@ svg {
 }
 .main {
   position: relative;
-  //display: flex;
+
+//display: flex;
   flex: 1 0 auto;
   padding-left: 90px;
 
-  @include max(425) {
+@include max(425) {
     padding-left: 60px;
   }
 }
@@ -145,7 +146,7 @@ svg {
   padding-right: 20px;
   padding-left: 20px;
 
-  @include max(425) {
+@include max(425) {
     padding-right: 10px;
     padding-left: 10px;
   }
@@ -158,7 +159,7 @@ svg {
   padding-right: 20px;
   padding-left: 20px;
 
-  @include max(425) {
+@include max(425) {
     padding-right: 10px;
     padding-left: 10px;
   }
@@ -286,5 +287,20 @@ svg {
 .ui-widget.ui-widget-content {
   border-top: none;
 }
-
 // end custom-select
+
+
+.sitemap__list {
+  ul {
+    padding-left: 20px;
+  }
+  a {
+    font-size: 18px;
+    transition: color .5s;
+    text-decoration: none;
+    color: $text;
+    &:hover {
+      color: $highlight;
+    }
+  }
+}

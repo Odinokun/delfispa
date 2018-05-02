@@ -1,0 +1,114 @@
+extends ../_template
+
+block variables
+  - var title = 'FAQ | Delfi Spa'
+  - var pageHeaderTitle = 'FAQ'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'blog'
+  - var breadcrumbs03 = 'article'
+
+block content
+  include ../sections/aside-left
+  include ../sections/header
+
+  //begin content
+  section.main.brand
+    //begin brand-header
+    header.brand-header(style="background-image:url('assets/img/bg-faq-brand.jpg')")
+
+      //begin breadcrumbs
+      section.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="/") #{breadcrumbs01}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="blog.html") #{breadcrumbs02}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs03}
+      //end breadcrumbs
+
+      h2.brand-header__title Delfi Spa Whirlpools
+      p.brand-header__subtitle
+        | Idee,
+        br
+        | Strategie
+        br
+        | und Kundenversprechen
+    //end brand-header
+      
+    //begin brand-text
+    section.brand-text
+      .container
+        svg
+          use(xlink:href="assets/img/sprite.svg#logo")
+        .brand-text__text
+          p Seit 2010 arbeiten wir an der Entwicklung von modernen, innovativen und qualitativ hochwertigen Whirlpools für die Anforderungen unserer anspruchsvollen Kunden in unserer Klimazone, um ihnen ein unvergleichliches  Whirlpool-Erlebnis über Jahre hinweg zu garantieren.
+    //end   brand-text
+
+    //begin brand-about
+    section.brand-about
+      .container
+        .brand-about__row
+          .brand-about__picture
+            img(src="assets/img/brand-01.jpg" alt="Delfi Spa")
+          .brand-about__text
+            h3.brand-about__title Hydrotherapie – Gesund durch Wasser
+            p Für den maximalen hydro-therapeutischen Nutzen verbauen wir bei den Delfi Spa für Sie pulsierende, rotierende und knetende Edelstahldüsen. Abhängig vom Massageplatz werden alle Körperpartien optimal versorgt, ob Nacken & Schultern, Rücken- & Lendenbereich, Ober- & Unterschenkel, die Handflächen und natürlich auch die Fußsohlen. Es ist nicht die Vielzahl der Düsen, wie oft angenommen, sondern es ist die präzise Positionierung und die korrekte Düsengröße, die eine effektive Massagewirkung erzielen.
+
+        .brand-about__row
+          .brand-about__picture
+            img(src="assets/img/brand-02.jpg" alt="Delfi Spa")
+          .brand-about__text
+            h3.brand-about__title Isolierung – für unsere Klimazone
+            p Delfi Spa steht für einen geringen Stromverbrauch und eine sehr gute Isolation, angepasst an unsere Klimazone mit kaltem Winter. Laut Aufzeichnungen des Deutschen Wetterdienstes schwanken die Temperaturen zwischen -25 im Winter und +40 Grad im Sommer. Delfi Spa steht für Wärmekonservierung und damit für einen minimalen Verbrauch an Energie. Daher liegen die durchschnittlichen Stromkosten bei einer maximalen Leistungsfähigkeit für einen Delfi Spa Whirlpool bei lediglich 1,- €/Tag.
+        .brand-about__row
+          .brand-about__picture
+            img(src="assets/img/brand-03.jpg" alt="Delfi Spa")
+          .brand-about__text
+            h3.brand-about__title Unsere Produktionsstätten
+            p Die Fertigung erfolgt in hochmodernen Produktionsstätten mithilfe von computergestützten Anlagen. Die Herstellung erfolgt durch erfahrene Facharbeiter nach den von uns definierten Vorgaben und unter Einhaltung strengster Sicherheits- und Qualitätsstandards. Die Delfi Spa Whirlpools sind den Bedürfnisse und den hohen Qualitätsanforderungen unserer Kunden angepasst, besitzen ein erstklassiges Design, sind leicht zu benutzen und pflegeleicht.
+        .brand-about__row
+          .brand-about__picture
+            img(src="assets/img/brand-04.jpg" alt="Delfi Spa")
+          .brand-about__text
+            h3.brand-about__title Qualitätssicherung
+            p Anders als bei vielen Mitbewerbern durchlaufen die Delfi Spa Whirlpools im Werk eine aufwendige Prüfung: jedes einzelne Modell wird mehrstündigen Testläufen unterzogen, mit Wasser befüllt und aufgeheizt. Jedes Modell muss mehr als 75 Prüfpunkte durchlaufen, dabei werden alle Funktionen ausgiebig getestet. Nur so können wir den Erwartungen unserer Kunden in Bezug auf Qualität und Zuverlässigkeit gerecht werden. Abschließend ist der Whirlpool nahezu anschlussfertig und verlässt sicher verpackt das Werk.
+    //end   brand-about
+
+
+    //begin brand-blue
+    section.brand-blue
+      .brand-blue__item
+        .brand-blue__icon
+          svg
+            use(xlink:href="assets/img/sprite.svg#lamp")
+        .brand-blue__text
+          h3.brand-blue__title Geniale Idee
+          p Unser oberstes Ziel ist es, Hochleistungs-Whirlpools  zu fertigen, um die Erwartungen unserer Kunden in  Bezug auf Qualität und Zuverlässigkeit übertreffen.
+          p Wir präsentieren unseren Kunden ein ausgefeiltes  Produkt von bester, gesicherter Qualität.
+
+      .brand-blue__item
+        .brand-blue__icon
+          svg
+            use(xlink:href="assets/img/sprite.svg#chess")
+        .brand-blue__text
+          h3.brand-blue__title Klare Strategie
+          p Die richtige Materialwahl und gute Verarbeitung garantieren langlebige und energieeffizient Whirlpools.
+          p Die Produkte sind pflegeleicht in der Handhabung und  verhelfen unseren Kunden zu mehr Luxus und Entspannung in ihrem eigenen Zuhause.
+
+
+      .brand-blue__item
+        .brand-blue__icon
+          svg
+            use(xlink:href="assets/img/sprite.svg#markers")
+        .brand-blue__text
+          h3.brand-blue__title Immer in Ihrer Nähe
+          p Beratung und Betreuung vor, während und nach dem Kauf, sind sehr wichtig. Dies finden Sie bei uns durch kompetente Beratung unserer sorgfältig geschulten Fachberater und einem Vor-Ort-Service durch unsere erfahrenen Serviceteams.
+
+    //end   brand-blue
+
+
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts

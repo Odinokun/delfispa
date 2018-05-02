@@ -1,0 +1,88 @@
+extends ../_template
+
+block variables
+  - var title = 'Sitemap | Delfi Spa'
+  - var pageHeaderTitle = 'Sitemap'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'Sitemap'
+
+block content
+  include ../sections/aside-left
+  include ../sections/header
+
+  //begin content
+  section.main.text-page
+    .container
+      //begin header
+      header.text-page__header
+        //begin breadcrumbs
+        section.breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="/") #{breadcrumbs01}
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") #{breadcrumbs02}
+        //end breadcrumbs
+
+        h2.text-page__title Sitemap
+      //end brand-header
+
+
+      //begin text-page__content
+      section.text-page__content.sitemap__list
+        ul
+          li
+            a(href="catalog.html") Catalogue SPA Pools
+            ul
+              li
+                a(href="productcard-nerida.html") Delfi Spa - Nerida
+              li
+                a(href="productcard-marbella.html") Delfi Spa - Marbella
+              li
+                a(href="productcard-santorin.html") Delfi Spa - Santorin
+          li
+            a(href="blog.html") TIPPS rund um Ihren Whirlpool
+            ul
+              li
+                a(href="article-01.html") Umweltgedanke beim modernen Whirlpool
+              li
+                a(href="article-02.html") Kaufberatung Wichtige Tipps
+              li
+                a(href="article-03.html") Bequeme Finanzierung Teilzahlung, Ratenzahlung
+              li
+                a(href="article-04.html") Überblick über einmalige und fortlaufende Kosten
+              li
+                a(href="article-05.html") Lieferung , Montage und Kundendienst bundesweit
+
+          li
+            a(href="agb.html") AGB
+          li
+            a(href="brand.html") Delfi Spa Whirlpools
+          li
+            a(href="contacts.html") Kontaktanfrage
+          li
+            a(href="datenschutz.html") Datenschutz der 4Deluxe GmbH
+          li
+            a(href="haftungsausschluss.html") Haftungsausschluss
+          li
+            a(href="impressum.html") Impressum
+          li
+            a(href="sitemap.html")
+              strong Sitemap
+          li
+            a(href="faq.html") FAQ
+          li
+            a(href="news.html") News & Aktionen
+          li
+            a(href="order.html") Ihre Bestellanfrage
+          li
+            a(href="reviews.html") Referenzen
+          li
+            a(href="shops.html") Unsere Fachgeschäfte
+
+      //end   text-page__content
+      
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts
