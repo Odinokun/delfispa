@@ -6,30 +6,31 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
+    'agb',
     'article-01',
     'article-02',
     'article-03',
     'article-04',
     'article-05',
-    'reviews',
-    'review',
-    'review-pdf',
-    'faq',
-    'shops',
-    'shop-one',
+    'blog',
+    'brand',
     'catalog',
+    'contacts',
+    'datenschutz',
+    'haftungsausschluss',
+    'impressum',
+    'faq',
+    'news',
+    'order',
     'productcard',
     'productcard-nerida',
     'productcard-marbella',
     'productcard-santorin',
-    'brand',
-    'impressum',
-    'datenschutz',
-    'haftungsausschluss',
-    'agb',
-    'blog',
-    'contacts',
-    'order'
+    'reviews',
+    'review',
+    'review-pdf',
+    'shops',
+    'shop-one'
   ]);
 });
 
@@ -138,6 +139,8 @@ $("#catalog-form__by-stock input").change(function () {
     sliderSize.slider('values', [ optionsSize.min, optionsSize.max ]);
     sliderPersons.slider('value', optionsPersons.min);
     $('.catalog-form__persons-people').attr('data-peoplesfilter', 0);
+    $('.catalog-item').fadeIn();
+    console.log('fack');
   }
   //end обнуление фильтров
 // end объявление фильтров

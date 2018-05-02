@@ -1,0 +1,72 @@
+extends ../_template
+
+block variables
+  - var title = 'Versand und Zahlung | Delfi Spa'
+  - var pageHeaderTitle = 'Versand und Zahlung'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'Versand und Zahlung'
+
+block content
+  include ../sections/aside-left
+  include ../sections/header
+
+  //begin content
+  section.main.text-page
+    .container
+      //begin header
+      header.text-page__header
+        //begin breadcrumbs
+        section.breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="/") #{breadcrumbs01}
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") #{breadcrumbs02}
+        //end breadcrumbs
+
+        h2.text-page__title Versand und Zahlung
+        p
+          strong Sie haben bei uns die Wahl:
+        ul
+          li
+            strong Lieferung mit Platzierung und Inbetriebnahme
+          li
+            strong Lieferung frei Bordsteinkante für den Heimwerker
+        p Alle Whirlpools sind verpackt auf einer Einwegpalette (hochkant). Lagerpools können innerhalb von 5-7 Werktagen nach Zahlungsabwicklung per Spedition "frei Bordsteinkante" versendet werden. Bitte beachten Sie, die Lieferung auf Inseln ohne Straßenanbindung erfolgt mit einem Zuschlag und Serviceleistungen können eingeschränkt sein.
+      //end brand-header
+
+
+      //begin text-page__content
+      section.text-page__content
+        h4 So können Sie bei uns sicher bezahlen
+        br
+
+        h5 Fair:
+        p 20% Anzahlung / 50% vor Lieferung und 30% bei Inbetriebnahme (Zahlungsart verfügbar bei Buchung eines Inbetriebnahmepaketes). Nach Erhalt Ihrer Auftragsbestätigung zahlen Sie 20% an, bei Bekanntgabe des Liefertermins 50% und den Rest bar an unseren Techniker am Tag der Inbetriebnahme.
+        br
+
+        h5 Praktisch:
+        p Vorkasse - wenn Sie unbar zahlen wollen, überweisen Sie den Gesamtbetrag im Voraus nach Erhalt der Auftragsbestätigung.
+        br
+
+        h5 Entspannt:
+        p Teilzahlung/Ratenkauf - mit oder ohne Anzahlung, bis zu 72 Monatsraten zu einem günstigen Zinssatz. Mehr Informationen über unsere kostenfreie Beratungshotline: 0800-58 95 287.
+        br
+
+        h5 Paypal:
+        p Kreditkartenzahlung - über den Zahlungsdienstleister Paypal können Sie die Zahlung mittels Kreditkarte oder Lastschrift durchführen. Sie benötigen bei Paypal ein Kundenkonto - die Registrierung ist ganz einfach.
+        br
+
+        p Bitte beachten Sie, die Lieferung auf Inseln ohne Straßenanbindung erfolgt mit einem Zuschlag und Serviceleistungen können eingeschränkt sein.
+        br
+
+        p Bitte fragen Sie nach Ihrem Angebot oder nutzen Sie unsere kostenlose Beratungshotline: 0800-58 95 287
+        br
+
+      //end   text-page__content
+      
+
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts
