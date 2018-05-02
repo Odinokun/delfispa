@@ -1,5 +1,5 @@
-mixin tips-slider__item(article, pic, title)
-  a(href='article-' + article + '.html').tips-slider__item
+mixin tips-slider__item(pic, title)
+  a(href='article-01.html').tips-slider__item
     .tips-slider__img
       img(src='assets/img/tips-slider/slide-' + pic + '.jpg' alt='delfi-spa')
       .tips-slider__footer
@@ -12,14 +12,138 @@ mixin tips-slider__item(article, pic, title)
 //begin tips-slider
 section.tips-slider-section
   .tips-slider#tips-slider
-    +tips-slider__item('01', '01', 'Kaufberatung Wichtige Tipps')
-    +tips-slider__item('02', '02', 'Lieferung, Montage und Kundendienst bundesweit')
-    +tips-slider__item('01', '03', 'Überblick über einmalige und fortlaufende Kosten')
-    +tips-slider__item('02', '04', 'Umweltgedanke beim modernen Whirlpool ')
-    +tips-slider__item('01', '01', 'Kaufberatung Wichtige Tipps')
-    +tips-slider__item('02', '02', 'Lieferung, Montage und Kundendienst bundesweit')
-    +tips-slider__item('01', '03', 'Überblick über einmalige und fortlaufende Kosten')
-    +tips-slider__item('02', '04', 'Umweltgedanke beim modernen Whirlpool ')
+
+    // begin tips-slider__item-01
+    a(href='article-01.html').tips-slider__item.tips-slider__item--01
+      .tips-slider__img
+        img(src='assets/img/tips-slider/slide-04.jpg' alt='delfi-spa')
+        .tips-slider__footer
+          .tips-slider__title
+            span Umweltgedanke beim modernen Whirlpool
+          span.tips-slider__link
+            svg
+              use(xlink:href="assets/img/sprite.svg#plus")
+    // end tips-slider__item-01
+
+    // begin tips-slider__item-02
+    a(href='article-02.html').tips-slider__item.tips-slider__item--02
+      .tips-slider__img
+        img(src='assets/img/tips-slider/slide-01.jpg' alt='delfi-spa')
+        .tips-slider__footer
+          .tips-slider__title
+            span Kaufberatung Wichtige Tipps
+          span.tips-slider__link
+            svg
+              use(xlink:href="assets/img/sprite.svg#plus")
+    // end tips-slider__item-02
+
+    // begin tips-slider__item-03
+    a(href='article-03.html').tips-slider__item.tips-slider__item--03
+      .tips-slider__img
+        img(src='assets/img/tips-slider/slide-05.jpg' alt='delfi-spa')
+        .tips-slider__footer
+          .tips-slider__title
+            span Bequeme Finanzierung Teilzahlung, Ratenzahlung
+          span.tips-slider__link
+            svg
+              use(xlink:href="assets/img/sprite.svg#plus")
+    // end tips-slider__item-03
+
+    // begin tips-slider__item-04
+    a(href='article-04.html').tips-slider__item.tips-slider__item--04
+      .tips-slider__img
+        img(src='assets/img/tips-slider/slide-03.jpg' alt='delfi-spa')
+        .tips-slider__footer
+          .tips-slider__title
+            span Überblick über einmalige und fortlaufende Kosten
+          span.tips-slider__link
+            svg
+              use(xlink:href="assets/img/sprite.svg#plus")
+    // end tips-slider__item-04
+
+    // begin tips-slider__item-05
+    a(href='article-05.html').tips-slider__item.tips-slider__item--05
+      .tips-slider__img
+        img(src='assets/img/tips-slider/slide-02.jpg' alt='delfi-spa')
+        .tips-slider__footer
+          .tips-slider__title
+            span Lieferung, Montage und Kundendienst bundesweit
+          span.tips-slider__link
+            svg
+              use(xlink:href="assets/img/sprite.svg#plus")
+    // end tips-slider__item-05
+
+
+
+
+      //*********************************
+      // ПОВТОР ТЕХ ЖЕ СТАТЕЙ
+      //*********************************
+
+
+
+
+
+    // begin tips-slider__item-01
+    a(href='article-01.html').tips-slider__item.tips-slider__item--01
+      .tips-slider__img
+        img(src='assets/img/tips-slider/slide-04.jpg' alt='delfi-spa')
+        .tips-slider__footer
+          .tips-slider__title
+            span Umweltgedanke beim modernen Whirlpool
+          span.tips-slider__link
+            svg
+              use(xlink:href="assets/img/sprite.svg#plus")
+    // end tips-slider__item-01
+
+    // begin tips-slider__item-02
+    a(href='article-02.html').tips-slider__item.tips-slider__item--02
+      .tips-slider__img
+        img(src='assets/img/tips-slider/slide-01.jpg' alt='delfi-spa')
+        .tips-slider__footer
+          .tips-slider__title
+            span Kaufberatung Wichtige Tipps
+          span.tips-slider__link
+            svg
+              use(xlink:href="assets/img/sprite.svg#plus")
+    // end tips-slider__item-02
+
+    // begin tips-slider__item-03
+    a(href='article-03.html').tips-slider__item.tips-slider__item--03
+      .tips-slider__img
+        img(src='assets/img/tips-slider/slide-05.jpg' alt='delfi-spa')
+        .tips-slider__footer
+          .tips-slider__title
+            span Bequeme Finanzierung Teilzahlung, Ratenzahlung
+          span.tips-slider__link
+            svg
+              use(xlink:href="assets/img/sprite.svg#plus")
+    // end tips-slider__item-03
+
+    // begin tips-slider__item-04
+    a(href='article-04.html').tips-slider__item.tips-slider__item--04
+      .tips-slider__img
+        img(src='assets/img/tips-slider/slide-03.jpg' alt='delfi-spa')
+        .tips-slider__footer
+          .tips-slider__title
+            span Überblick über einmalige und fortlaufende Kosten
+          span.tips-slider__link
+            svg
+              use(xlink:href="assets/img/sprite.svg#plus")
+    // end tips-slider__item-04
+
+    // begin tips-slider__item-05
+    a(href='article-05.html').tips-slider__item.tips-slider__item--05
+      .tips-slider__img
+        img(src='assets/img/tips-slider/slide-02.jpg' alt='delfi-spa')
+        .tips-slider__footer
+          .tips-slider__title
+            span Lieferung, Montage und Kundendienst bundesweit
+          span.tips-slider__link
+            svg
+              use(xlink:href="assets/img/sprite.svg#plus")
+    // end tips-slider__item-05
+
 
   .tips-slider__more
     a(href="blog.html") Weitere Tipps, Videos und Antworten auf Fragen

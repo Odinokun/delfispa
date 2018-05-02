@@ -71,24 +71,7 @@ block content
 
     //end   article
 
-    //begin tips-slider
-    section.tips-slider-section
-      .tips-slider#tips-slider
-        +tips-slider__item('05', 'Lieferung, Montage und Kundendienst bundesweit')
-        +tips-slider__item('03', 'Überblick über einmalige und fortlaufende Kosten')
-        +tips-slider__item('04', 'Umweltgedanke beim modernen Whirlpool ')
-        +tips-slider__item('06', 'Bequeme Finanzierung Teilzahlung, Ratenzahlung')
-        +tips-slider__item('05', 'Lieferung, Montage und Kundendienst bundesweit')
-        +tips-slider__item('03', 'Überblick über einmalige und fortlaufende Kosten')
-        +tips-slider__item('04', 'Umweltgedanke beim modernen Whirlpool ')
-        +tips-slider__item('06', 'Bequeme Finanzierung Teilzahlung, Ratenzahlung')
-
-      .tips-slider__more
-        a(href="#") Weitere Tipps, Videos und Antworten auf Fragen
-          br
-          svg
-            use(xlink:href="assets/img/sprite.svg#arrow")
-    //end   tips-slider
+    include ../sections/tips-slider
 
   //end content
 

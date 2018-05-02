@@ -92,22 +92,7 @@ block content
         span Wir wünschen Ihnen viel Erfolg bei der Suche Ihres Traum-Whirlpools.
     //end   article-heart
 
-    //begin tips-slider
-    section.tips-slider-section
-      .tips-slider#tips-slider
-        +tips-slider__item('02', 'Lieferung, Montage und Kundendienst bundesweit')
-        +tips-slider__item('03', 'Überblick über einmalige und fortlaufende Kosten')
-        +tips-slider__item('04', 'Umweltgedanke beim modernen Whirlpool ')
-        +tips-slider__item('02', 'Lieferung, Montage und Kundendienst bundesweit')
-        +tips-slider__item('03', 'Überblick über einmalige und fortlaufende Kosten')
-        +tips-slider__item('04', 'Umweltgedanke beim modernen Whirlpool ')
-
-      .tips-slider__more
-        a(href="#") Weitere Tipps, Videos und Antworten auf Fragen
-          br
-          svg
-            use(xlink:href="assets/img/sprite.svg#arrow")
-    //end   tips-slider
+    include ../sections/tips-slider
 
   //end content
 

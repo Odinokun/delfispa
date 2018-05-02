@@ -22,7 +22,6 @@ $(document).ready(function ($) {
     'faq',
     'news',
     'order',
-    'productcard',
     'productcard-nerida',
     'productcard-marbella',
     'productcard-santorin',

@@ -1,16 +1,5 @@
 extends ../_template
 
-mixin blog-item(pic, title)
-  a(href="#").blog-item
-    .blog-item__img
-      img(src='assets/img/blog/blog-' + pic + '.jpg' alt='delfi-spa')
-      .blog-item__footer
-        .blog-item__title
-          span #{title}
-        span.blog-item__link
-          svg
-            use(xlink:href="assets/img/sprite.svg#plus")
-
 block variables
   - var title = 'Blog | Delfi Spa'
   - var pageHeaderTitle = 'Blog'
@@ -45,16 +34,65 @@ block content
 
     //begin blog-list
     section.blog-list
-      +blog-item('01', 'Kaufberatung Wichtige Tipps')
-      +blog-item('02', 'Lieferung, Montage und Kundendienst bundesweit')
-      +blog-item('03', 'Überblick über einmalige und fortlaufende Kosten')
-      +blog-item('04', 'Umweltgedanke beim modernen Whirlpool ')
-      +blog-item('05', 'Bequeme Finanzierung Teilzahlung, Ratenzahlung')
-      +blog-item('03', 'Überblick über einmalige und fortlaufende Kosten')
-      +blog-item('04', 'Umweltgedanke beim modernen Whirlpool ')
-      +blog-item('05', 'Bequeme Finanzierung Teilzahlung, Ratenzahlung')
-      +blog-item('01', 'Kaufberatung Wichtige Tipps')
-      +blog-item('02', 'Lieferung, Montage und Kundendienst bundesweit')
+      // begin block-item
+      a(href="article-02.html").blog-item
+        .blog-item__img
+          img(src='assets/img/blog/blog-01.jpg' alt='delfi-spa')
+          .blog-item__footer
+            .blog-item__title
+              span Kaufberatung Wichtige Tipps
+            span.blog-item__link
+              svg
+                use(xlink:href="assets/img/sprite.svg#plus")
+      // end block-item
+
+      // begin block-item
+      a(href="article-05.html").blog-item
+        .blog-item__img
+          img(src='assets/img/blog/blog-02.jpg' alt='delfi-spa')
+          .blog-item__footer
+            .blog-item__title
+              span Lieferung, Montage und Kundendienst bundesweit
+            span.blog-item__link
+              svg
+                use(xlink:href="assets/img/sprite.svg#plus")
+      // end block-item
+
+      // begin block-item
+      a(href="article-04.html").blog-item
+        .blog-item__img
+          img(src='assets/img/blog/blog-03.jpg' alt='delfi-spa')
+          .blog-item__footer
+            .blog-item__title
+              span Überblick über einmalige und fortlaufende Kosten
+            span.blog-item__link
+              svg
+                use(xlink:href="assets/img/sprite.svg#plus")
+      // end block-item
+
+      // begin block-item
+      a(href="article-01.html").blog-item
+        .blog-item__img
+          img(src='assets/img/blog/blog-04.jpg' alt='delfi-spa')
+          .blog-item__footer
+            .blog-item__title
+              span Umweltgedanke beim modernen Whirlpool
+            span.blog-item__link
+              svg
+                use(xlink:href="assets/img/sprite.svg#plus")
+      // end block-item
+
+      // begin block-item
+      a(href="article-03.html").blog-item
+        .blog-item__img
+          img(src='assets/img/blog/blog-05.jpg' alt='delfi-spa')
+          .blog-item__footer
+            .blog-item__title
+              span Bequeme Finanzierung Teilzahlung, Ratenzahlung
+            span.blog-item__link
+              svg
+                use(xlink:href="assets/img/sprite.svg#plus")
+      // end block-item
 
     //end   blog-list
 

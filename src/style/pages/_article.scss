@@ -466,3 +466,32 @@
     }
   }
 }
+
+
+// begin удаляем ссылки на себя же из слайдера
+.article-01 {
+  .tips-slider__item--01 {
+    display: none;
+  }
+}
+.article-02 {
+  .tips-slider__item--02 {
+    display: none;
+  }
+}
+.article-03 {
+  .tips-slider__item--03 {
+    display: none;
+  }
+}
+.article-04 {
+  .tips-slider__item--04 {
+    display: none;
+  }
+}
+.article-05 {
+  .tips-slider__item--05 {
+    display: none;
+  }
+}
+// end удаляем ссылки на себя же из слайдера

@@ -60,22 +60,7 @@ block content
 
     //end   article
 
-    //begin tips-slider
-    section.tips-slider-section
-      .tips-slider#tips-slider
-        +tips-slider__item('01', 'Kaufberatung Wichtige Tipps')
-        +tips-slider__item('02', 'Lieferung, Montage und Kundendienst bundesweit')
-        +tips-slider__item('03', 'Überblick über einmalige und fortlaufende Kosten')
-        +tips-slider__item('01', 'Kaufberatung Wichtige Tipps')
-        +tips-slider__item('02', 'Lieferung, Montage und Kundendienst bundesweit')
-        +tips-slider__item('03', 'Überblick über einmalige und fortlaufende Kosten')
-
-      .tips-slider__more
-        a(href="#") Weitere Tipps, Videos und Antworten auf Fragen
-          br
-          svg
-            use(xlink:href="assets/img/sprite.svg#arrow")
-    //end   tips-slider
+    include ../sections/tips-slider
 
   //end content
 
