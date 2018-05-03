@@ -27,6 +27,9 @@ $(function() {
   // begin card-cover
   require('./modules/card-cover')();
 
+  // begin Sort By name/popular
+  require('./modules/sortBy')();
+
   // begin Popup
   // require('./modules/popup')();
 

@@ -54,9 +54,9 @@ function pageWidget(pages) {
 // begin объявление фильтров
 // begin catalog-form__price input
 $('#catalog-form__price').slider({
-  min: 0,
-  max: 40000,
-  values: [0,40000],
+  min: 5500,
+  max: 13000,
+  values: [5500,13000],
   range: true,
   animate: true,
   stop: function(event, ui) {
@@ -75,10 +75,10 @@ $('#catalog-form__price').slider({
 
 // begin catalog-form__size input
 $('#catalog-form__size').slider({
-  min: 0,
-  max: 4,
+  min: 2,
+  max: 2.5,
   step: 0.1,
-  values: [0,4],
+  values: [2,2.5],
   range: true,
   animate: true,
   stop: function(event, ui) {
@@ -195,7 +195,7 @@ function filter() {
   // если чекбокс выключен а фильтр людей включен
   function sortCard02() {
     var finalCards = $('.catalog-item').filter(function() {
-      if ( $(this).data("peoples") === sliderPersonsVal
+      if ( $(this).data("peoples") >= sliderPersonsVal
         && $(this).data("price") >= sliderPriceMinVal
         && $(this).data("price") <= sliderPriceMaxVal
         && $(this).data("size") >= sliderSizeMinVal
@@ -222,7 +222,7 @@ function filter() {
   function sortCard04() {
     var finalCards = $('.catalog-item').filter(function() {
       if ( $(this).data("stock") === checkStock
-        && $(this).data("peoples") === sliderPersonsVal
+        && $(this).data("peoples") >= sliderPersonsVal
         && $(this).data("price") >= sliderPriceMinVal
         && $(this).data("price") <= sliderPriceMaxVal
         && $(this).data("size") >= sliderSizeMinVal
@@ -255,4 +255,7 @@ $( ".order-select--model" ).selectmenu({
 });
 // end передача выбранной модели
 // из карточки товара в форму заказа на странице order.html
+
+
+
 
