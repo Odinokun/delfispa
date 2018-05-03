@@ -186,10 +186,18 @@
   .bath-tab__bath-btn--03 {
     top: 350px;
     left: 235px;
+    transform: rotate(-90deg);
+    span {
+      transform: rotate(90deg);
+    }
   }
   .bath-tab__bath-btn--04 {
     top: 320px;
     left: 150px;
+    transform: rotate(-45deg);
+    span {
+      transform: rotate(45deg);
+    }
   }
   .bath-tab__bath-btn--05 {
     top: 240px;
@@ -215,10 +223,18 @@
   .bath-tab__bath-btn--03 {
     top: 350px;
     left: 235px;
+    transform: rotate(-90deg);
+    span {
+      transform: rotate(90deg);
+    }
   }
   .bath-tab__bath-btn--04 {
     top: 320px;
     left: 150px;
+    transform: rotate(-45deg);
+    span {
+      transform: rotate(45deg);
+    }
   }
   .bath-tab__bath-btn--05 {
     top: 240px;

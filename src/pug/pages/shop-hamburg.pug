@@ -1,0 +1,97 @@
+extends ../_template
+
+block variables
+  - var title = 'Hamburg | Delfi Spa'
+  - var pageHeaderTitle = 'Hamburg'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'Unsere Fachgeschäfte'
+  - var breadcrumbs03 = 'Hamburg'
+
+block content
+  include ../sections/aside-left
+  include ../sections/header
+
+  //begin content
+  section.main.shops
+    //begin shops-top-section
+    section.shops-top-section
+      .shops-clouds
+
+      //begin shops-header
+      header.shops-header
+        //begin breadcrumbs
+        section.breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="/") #{breadcrumbs01}
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="shops.html") #{breadcrumbs02}
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") #{breadcrumbs03}
+        //end breadcrumbs
+
+        h2.shops-header__title Hamburg
+      //end shops-header
+
+      //begin shops-map
+      section.shops-map#shops-map
+      //end   shops-map
+
+      // begin shops-map__footer
+      footer.shops-map__footer
+        h2.shops-map__footer-title Fachgeschäfte
+
+        .shops-map__city-select-wrap.custom-select__wrap.custom-select__wrap--dark
+          select.shops-map__city-select.custom-select#city-select(name='address')
+            option(value='all') Germany
+            option(value='berlin' ) Berlin
+            option(value='dusseldorf') Düsseldorf
+            option(value='frankfurt') Frankfurt-Heusenstamm
+            option(value='hamburg' selected) Hamburg
+            option(value='munchen') München
+            option(value='stuttgart') Stuttgart
+      // end shops-map__footer
+    //end   shops-top-section
+
+    //begin shops-adress
+    section.shop-card
+      .container
+        .shop-card__image
+          img(src="assets/img/shop/shop-06.jpg" alt="Hamburg")
+        .shop-card__item
+            h3.shops-adress__title Hamburg
+            .shops-adress__contact
+              svg
+                use(xlink:href="assets/img/sprite.svg#marker")
+              a(href="https://goo.gl/maps/iHq32uGbdSD2" target="_blank" rel="nofollow noopener noreferrer")
+                | Besuchen Sie uns!
+                br
+                | Horner Landstrasse 202
+                br
+                | 22111 Hamburg
+            .shops-adress__contact
+              svg
+                use(xlink:href="assets/img/sprite.svg#phone")
+              a(href="tel:04027889961") Tel.: 040-27889961
+
+            .shops-adress__schedule
+              span Öffnungszeiten:
+              span Mo – Fr von 10:00-18:00 Uhr
+              span Samstag von 10:00-14:30 Uhr
+
+            span.btn.btn--custom
+              span.btn--inner
+                a(href="https://goo.gl/maps/iHq32uGbdSD2" target="_blank" rel="nofollow noopener noreferrer") Mehr erfahren
+    //end   shops-adress
+      
+  //end content
+
+  include ../sections/footer
+
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOCsBWLmb8s4eo6cltyZG2HRu99sG3RnE")
+  include ../sections/scripts
+  script(src='assets/js/map-hamburg.js')
+
+
+
+

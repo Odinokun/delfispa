@@ -59,13 +59,17 @@ block content
             input(placeholder='PLZ, Ort')
 
           .order-form__inputs-item
-            input(placeholder='Name Company')
+            input(placeholder='Email')
             input(placeholder='Telefon')
 
 
           .order-form__inputs-item
             input(placeholder='Straße, Hausnummer')
-            input(placeholder='Email')
+            .order-select-wrap.custom-select__wrap.custom-select__wrap--light
+              select.order-select.order-select--model.custom-select
+                option(value='Nerida' selected) Nerida
+                option(value='Marbella') Marbella
+                option(value='Santorin') Santorin
 
 
           .order-form__selectbox-row
@@ -73,30 +77,35 @@ block content
               span.order-form__selectbox-text Wannenfarbe Acryl:
               .order-select-wrap.custom-select__wrap.custom-select__wrap--light
                 select.order-select.custom-select
-                  option(value='White Marble' selected) White Marble
-                  option(value='Dark Grey') Dark Grey
-                  option(value='Black') Black
-                  option(value='Dark Grey') Dark Grey
-                  option(value='Black') Black
+                  option(value='Dark Blue' selected) Dark Blue
+                  option(value='Sky Blue') Sky Blue
+                  option(value='Sky White') Sky White
+                  option(value='Green') Green
+                  option(value='Pearl Shadow') Pearl Shadow
+                  option(value='Light Blue') Light Blue
+                  option(value='Pearl White') Pearl White
+                  option(value='Glitter Silver') Glitter Silver
+                  option(value='Glitter Gold') Glitter Gold
+                  option(value='Crystal Blue') Crystal Blue
+                  option(value='Crystal Black') Crystal Black
+                  option(value='Glitter Coffee') Glitter Coffee
+                  option(value='White') White
+                  option(value='Grey') Grey
 
             .order-form__selectbox-item
               span.order-form__selectbox-text Außenverkleidung:
               .order-select-wrap.custom-select__wrap.custom-select__wrap--light
                 select.order-select.custom-select
-                  option(value='Dark Grey' selected) Dark Grey
-                  option(value='White Marble') White Marble
-                  option(value='Black') Black
-                  option(value='Dark Grey') Dark Grey
+                  option(value='Grey' selected) Grey
+                  option(value='Coffee') Coffee
                   option(value='Black') Black
 
             .order-form__selectbox-item
               span.order-form__selectbox-text Cover colors:
               .order-select-wrap.custom-select__wrap.custom-select__wrap--light
                 select.order-select.custom-select
-                  option(value='Black' selected) Black
-                  option(value='Dark Grey') Dark Grey
-                  option(value='White Marble') White Marble
-                  option(value='Dark Grey') Dark Grey
+                  option(value='Grey' selected) Grey
+                  option(value='Coffee') Coffee
                   option(value='Black') Black
 
           .order-form__checkbox-row

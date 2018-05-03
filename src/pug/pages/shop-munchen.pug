@@ -1,11 +1,11 @@
 extends ../_template
 
 block variables
-  - var title = 'Berlin | Delfi Spa'
-  - var pageHeaderTitle = 'Berlin'
+  - var title = 'München | Delfi Spa'
+  - var pageHeaderTitle = 'München'
   - var breadcrumbs01 = 'home'
   - var breadcrumbs02 = 'Unsere Fachgeschäfte'
-  - var breadcrumbs03 = 'berlin'
+  - var breadcrumbs03 = 'München'
 
 block content
   include ../sections/aside-left
@@ -30,7 +30,7 @@ block content
               a.breadcrumbs__link(href="#") #{breadcrumbs03}
         //end breadcrumbs
 
-        h2.shops-header__title Berlin
+        h2.shops-header__title München
       //end shops-header
 
       //begin shops-map
@@ -44,11 +44,11 @@ block content
         .shops-map__city-select-wrap.custom-select__wrap.custom-select__wrap--dark
           select.shops-map__city-select.custom-select#city-select(name='address')
             option(value='all') Germany
-            option(value='berlin' selected) Berlin
+            option(value='berlin' ) Berlin
             option(value='dusseldorf') Düsseldorf
             option(value='frankfurt') Frankfurt-Heusenstamm
             option(value='hamburg') Hamburg
-            option(value='munchen') München
+            option(value='munchen' selected) München
             option(value='stuttgart') Stuttgart
       // end shops-map__footer
     //end   shops-top-section
@@ -57,20 +57,20 @@ block content
     section.shop-card
       .container
         .shop-card__image
-          img(src="assets/img/shop/shop-01.jpg" alt="Berlin")
+          img(src="assets/img/shop/shop-02.jpg" alt="München")
         .shop-card__item
-            h3.shops-adress__title Berlin
+            h3.shops-adress__title München
             .shops-adress__contact
               svg
                 use(xlink:href="assets/img/sprite.svg#marker")
-              a(href="https://goo.gl/maps/CsspFLaubGy" target="_blank" rel="nofollow noopener noreferrer")
-                | Erlenstraße 1
+              a(href="https://goo.gl/maps/54jUcvYbGSR2" target="_blank" rel="nofollow noopener noreferrer")
+                | Riemer Str. 334
                 br
-                | 12167 Berlin-Steglitz
+                | 81829 München
             .shops-adress__contact
               svg
                 use(xlink:href="assets/img/sprite.svg#phone")
-              a(href="tel:03061674114") Tel.: 030-61674114
+              a(href="tel:08941353309") Tel.: 089-41353309
 
             .shops-adress__schedule
               span Öffnungszeiten:
@@ -79,7 +79,7 @@ block content
 
             span.btn.btn--custom
               span.btn--inner
-                a(href="https://goo.gl/maps/CsspFLaubGy" target="_blank" rel="nofollow noopener noreferrer") Mehr erfahren
+                a(href="https://goo.gl/maps/54jUcvYbGSR2" target="_blank" rel="nofollow noopener noreferrer") Mehr erfahren
 
     //end   shops-adress
       
@@ -89,7 +89,7 @@ block content
 
   script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOCsBWLmb8s4eo6cltyZG2HRu99sG3RnE")
   include ../sections/scripts
-  script(src='assets/js/map.js')
+  script(src='assets/js/map-munchen.js')
 
 
 

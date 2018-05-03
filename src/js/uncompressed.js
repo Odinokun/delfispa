@@ -28,8 +28,7 @@ $(document).ready(function ($) {
     'reviews',
     'review',
     'review-pdf',
-    'shops',
-    'shop-one'
+    'shops'
   ]);
 });
 
@@ -237,3 +236,23 @@ function filter() {
 // end filters sort
 
 // end catalog-filter
+
+
+// begin передача выбранной модели
+// из карточки товара в форму заказа на странице order.html
+$('.productcard-tab__basket-btn').on('click', function () {
+  var model = $('.productcard-tab__basket-btn').data('btn');
+  localStorage.setItem('selectModel', model);
+  console.log(localStorage.getItem('selectModel'));
+});
+
+$( ".order-select--model" ).selectmenu({
+  create: function( event, ui ) {
+    var model = localStorage.getItem('selectModel');
+    $('.order-select--model').val(model);
+    $(".order-select--model").selectmenu("refresh");
+  }
+});
+// end передача выбранной модели
+// из карточки товара в форму заказа на странице order.html
+

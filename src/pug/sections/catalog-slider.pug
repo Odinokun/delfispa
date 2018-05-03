@@ -22,12 +22,143 @@ mixin catalog-slider__item()
 //begin catalog-slider
 section.catalog-slider-section
   .catalog-slider#catalog-slider
-    +catalog-slider__item()
-    +catalog-slider__item()
-    +catalog-slider__item()
-    +catalog-slider__item()
-    +catalog-slider__item()
-    +catalog-slider__item()
+    //begin catalog-slider__item Nerida
+    .catalog-slider__item
+      a(href="productcard-nerida.html").catalog-slider__link
+      .catalog-slider__cover
+        button
+          svg
+            use(xlink:href="assets/img/sprite.svg#basket")
+          span buy now
+      h3.catalog-slider__title Delfi Spa - Nerida
+      .catalog-slider__img
+        img(src="assets/img/catalog-slider/nerida-01.jpg" alt="delfi-spa")
+      .catalog-slider__param
+        span.catalog-slider__param--sizes 160 x 210 x 90 cm
+        span.catalog-slider__param--persons 3 people
+      .catalog-slider__footer
+        .catalog-slider__action
+          span Aktion 5.699,- &#8364;
+        span.catalog-slider__btn
+          svg
+            use(xlink:href="assets/img/sprite.svg#plus")
+    //end catalog-slider__item Nerida
+
+    //begin catalog-slider__item Marbella
+    .catalog-slider__item
+      a(href="productcard-marbella.html").catalog-slider__link
+      .catalog-slider__cover
+        button
+          svg
+            use(xlink:href="assets/img/sprite.svg#basket")
+          span buy now
+      h3.catalog-slider__title Delfi Spa - Marbella
+      .catalog-slider__img
+        img(src="assets/img/catalog-slider/marbella-01.jpg" alt="delfi-spa")
+      .catalog-slider__param
+        span.catalog-slider__param--sizes 210 x 200 x 93 cm
+        span.catalog-slider__param--persons 5 people
+      .catalog-slider__footer
+        .catalog-slider__action
+          span Aktion 6.999,- &#8364;
+        span.catalog-slider__btn
+          svg
+            use(xlink:href="assets/img/sprite.svg#plus")
+    //end catalog-slider__item Marbella
+
+    //begin catalog-slider__item Santorin
+    .catalog-slider__item
+      a(href="productcard-santorin.html").catalog-slider__link
+      .catalog-slider__cover
+        button
+          svg
+            use(xlink:href="assets/img/sprite.svg#basket")
+          span buy now
+      h3.catalog-slider__title Delfi Spa - Santorin
+      .catalog-slider__img
+        img(src="assets/img/catalog-slider/santorin-01.jpg" alt="delfi-spa")
+      .catalog-slider__param
+        span.catalog-slider__param--sizes 230 x 230 x 92 cm
+        span.catalog-slider__param--persons 5 people
+      .catalog-slider__footer
+        .catalog-slider__action
+          span Aktion 7.499,- &#8364;
+        span.catalog-slider__btn
+          svg
+            use(xlink:href="assets/img/sprite.svg#plus")
+    //end catalog-slider__item Santorin
+
+
+      //*********************************
+      // ДУБЛИКАТ СЛАЙДОВ
+      //*********************************
+
+
+    //begin catalog-slider__item Nerida
+    .catalog-slider__item
+      a(href="productcard-nerida.html").catalog-slider__link
+      .catalog-slider__cover
+        button
+          svg
+            use(xlink:href="assets/img/sprite.svg#basket")
+          span buy now
+      h3.catalog-slider__title Delfi Spa - Nerida
+      .catalog-slider__img
+        img(src="assets/img/catalog-slider/nerida-01.jpg" alt="delfi-spa")
+      .catalog-slider__param
+        span.catalog-slider__param--sizes 160 x 210 x 90 cm
+        span.catalog-slider__param--persons 3 people
+      .catalog-slider__footer
+        .catalog-slider__action
+          span Aktion 5.699,- &#8364;
+        span.catalog-slider__btn
+          svg
+            use(xlink:href="assets/img/sprite.svg#plus")
+    //end catalog-slider__item Nerida
+
+    //begin catalog-slider__item Marbella
+    .catalog-slider__item
+      a(href="productcard-marbella.html").catalog-slider__link
+      .catalog-slider__cover
+        button
+          svg
+            use(xlink:href="assets/img/sprite.svg#basket")
+          span buy now
+      h3.catalog-slider__title Delfi Spa - Marbella
+      .catalog-slider__img
+        img(src="assets/img/catalog-slider/marbella-01.jpg" alt="delfi-spa")
+      .catalog-slider__param
+        span.catalog-slider__param--sizes 210 x 200 x 93 cm
+        span.catalog-slider__param--persons 5 people
+      .catalog-slider__footer
+        .catalog-slider__action
+          span Aktion 6.999,- &#8364;
+        span.catalog-slider__btn
+          svg
+            use(xlink:href="assets/img/sprite.svg#plus")
+    //end catalog-slider__item Marbella
+
+    //begin catalog-slider__item Santorin
+    .catalog-slider__item
+      a(href="productcard-santorin.html").catalog-slider__link
+      .catalog-slider__cover
+        button
+          svg
+            use(xlink:href="assets/img/sprite.svg#basket")
+          span buy now
+      h3.catalog-slider__title Delfi Spa - Santorin
+      .catalog-slider__img
+        img(src="assets/img/catalog-slider/santorin-01.jpg" alt="delfi-spa")
+      .catalog-slider__param
+        span.catalog-slider__param--sizes 230 x 230 x 92 cm
+        span.catalog-slider__param--persons 5 people
+      .catalog-slider__footer
+        .catalog-slider__action
+          span Aktion 7.499,- &#8364;
+        span.catalog-slider__btn
+          svg
+            use(xlink:href="assets/img/sprite.svg#plus")
+    //end catalog-slider__item Santorin
 
   .catalog-slider__more
     a(href="catalog.html")
