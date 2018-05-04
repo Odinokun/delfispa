@@ -259,3 +259,34 @@ $( ".order-select--model" ).selectmenu({
 
 
 
+// begin отправка формы на странице контактов
+$("#contact-form").submit(function() {
+  $.ajax({
+    type: "POST",
+    url: "assets/php/form.php",
+    data: $(this).serialize()
+  }).done(function() {
+    $('#contact-form')[0].reset();
+    $('.popup-success__layer').fadeIn();
+  });
+  return false;
+});
+// end   отправка формы на странице контактов
+
+// begin отправка формы на странице заказа
+$("#order-form").submit(function() {
+  $.ajax({
+    type: "POST",
+    url: "assets/php/order.php",
+    data: $(this).serialize()
+  }).done(function() {
+    $('#order-form')[0].reset();
+    $('.popup-success__layer').fadeIn();
+  });
+  return false;
+});
+// end   отправка формы на странице заказа
+
+$('.popup-sussess__close').on('click', function () {
+    $('.popup-success__layer').fadeOut();
+});

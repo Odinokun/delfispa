@@ -27,6 +27,8 @@ module.exports = function() {
         // В конце мы через appendTo запихиваем результат в контейнер.
       }).appendTo(sortContainer);
     }
+
+
     $(linkSorted).on('click', function () {
       $(linkSorted).removeClass('active');
       $(this).addClass('active');

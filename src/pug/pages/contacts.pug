@@ -54,34 +54,34 @@ block content
     section.contacts-form
       .container
         h2.contacts-form__title Kontaktanfrage Infrasun Infrarotkabinen
-        form.contacts-form__form
+        form.contacts-form__form#contact-form(name="contact-form")
           .contacts-form__checkbox-row
             label.contacts-form__label
-              input(type="checkbox")
+              input(type="checkbox" name="ausstellung")
               .contacts-form__checkbox
               span Bitte nennen Sie mir eine Ausstellung in meiner Nähe
             label.contacts-form__label
-              input(type="checkbox")
+              input(type="checkbox" name="kontakt")
               .contacts-form__checkbox
               span Bitte nehmen Sie telefonisch mit mir Kontakt auf
           .contacts-form__inputs-item
-            input(placeholder='Name, Vorname')
-            input(placeholder='Straße, Hausnummer')
-            input(placeholder='Telefon')
+            input(name="name" minlength="3" placeholder="Name, Vorname *" required)
+            input(name="strabe" placeholder="Straße, Hausnummer")
+            input(name="telefon" minlength="11" placeholder="Telefon *" required)
 
           .contacts-form__inputs-item
-            input(placeholder='Name Company')
-            input(placeholder='PLZ, Ort')
-            input(placeholder='Email')
+            input(name="firma" placeholder='Name Company')
+            input(name="plz" placeholder="PLZ, Ort")
+            input(name="email" placeholder='Email*' required)
 
           .contacts-form__inputs-item.contacts-form__inputs-item--lg
-            input(placeholder='Ich interessiere mich für folgendes Modell')
-            textarea(placeholder='Nachricht')
+            input(name="model" placeholder='Ich interessiere mich für folgendes Modell')
+            textarea(name="nachricht" placeholder='Nachricht')
 
           .contacts-form__footer
             .contacts-form__footer-checkbox
               label.contacts-form__label
-                input(type="checkbox")
+                input(type="checkbox" name="kopie")
                 .contacts-form__checkbox
                 span Eine Kopie dieser Nachricht an Ihre E-Mail-Adresse senden
 
@@ -90,11 +90,12 @@ block content
               p Ihre Anfrage bearbeiten wir üblicherweise innerhalb der nächsten 24 Stunden. Sollten Sie in diesem Zeitraum keine Nachricht von uns erhalten, ist unsere Email-Antwort möglicherweise von Ihrem Provider als "Spam" herausgefiltert worden. Bitte prüfen Sie dies. Vielen Dank für Ihre eventuelle Rückmeldung bei Nicht-Erhalt unserer Antwort.
           span.btn.btn--custom.contacts-form__btn
             span.btn--inner
-              input(type="submit" value='Senden')
+              input(type="submit" id="send-contact-form" value='Senden')
     //end   contacts-form
 
 
   //end content
 
   include ../sections/footer
+  include ../sections/popup-success
   include ../sections/scripts

@@ -29,6 +29,7 @@
   }
 }
 .top-slider__slide {
+  position: relative;
   display: flex !important;
   align-items: flex-end;
   min-height: 800px;
@@ -36,18 +37,17 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  position: relative;
   &::before {
-    content: '';
     position: absolute;
+    z-index: 1;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
-    background-color: #000;
-    z-index: 1;
+    content: '';
     opacity: .35;
+    background-color: #000;
   }
 }
 .top-slider__text-row {
@@ -56,21 +56,14 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1680px;
-  margin-bottom: 150px;
+  min-height: 270px;
+  margin-bottom: 85px;
   margin-left: auto;
 
-  @include max(1400) {
-    margin-bottom: 80px;
-  }
   @include max(1300) {
-    flex-wrap: wrap;
     align-items: flex-end;
+    flex-wrap: wrap;
   }
-//  //@include max(1024) {
-//  //  margin-bottom: 50px;
-//  //}
-//
-//
 }
 .top-slider__text-item--title {
   line-height: 1.2;
@@ -78,16 +71,11 @@
   max-width: 600px;
   margin-bottom: 40px;
   padding: 0 20px;
-
-  //@include max(1024) {
-  //  width: 100%;
-  //}
 }
 .top-slider__text-item--text {
   width: 50%;
   max-width: 500px;
   padding: 0 20px;
-
 
   @include max(1300) {
     width: calc(100% - 400px);
@@ -104,14 +92,6 @@
   height: 150px;
   text-decoration: none;
   color: #fff;
-
-  //@include max(1440) {
-  //  margin-top: 40px;
-  //  margin-left: auto;
-  //}
-  //@include max(470) {
-  //  width: 100%;
-  //}
   &:hover {
     .top-slider__next-arrow {
       background-color: #00f2fe;
@@ -133,10 +113,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  //@include max(470) {
-  //  width: 80%;
-  //}
 }
 .top-slider__next-link--sm {
   font-size: 11px;
@@ -167,6 +143,7 @@
 }
 .top-slider__link-mehr {
   margin-top: 50px;
+
   @include max(1300) {
     margin-top: 20px;
   }
@@ -182,6 +159,7 @@
   font-size: 60px;
   font-weight: 700;
   color: #fff;
+
   @include max(1600) {
     font-size: 50px;
   }
@@ -189,7 +167,6 @@
     font-size: 40px;
     margin-bottom: 0;
   }
-
 }
 .top-slider__text-item {
   p {

@@ -53,20 +53,20 @@ block content
     section.order-form
       .container
         h2.order-form__title Kontaktanfrage Infrasun Infrarotkabinen
-        form.order-form__form
+        form.order-form__form#order-form(name="order-form")
           .order-form__inputs-item
-            input(placeholder='Name, Vorname')
-            input(placeholder='PLZ, Ort')
+            input(name='name' minlength="3" placeholder="Name, Vorname *" required)
+            input(name="plz" placeholder="PLZ, Ort")
 
           .order-form__inputs-item
-            input(placeholder='Email')
-            input(placeholder='Telefon')
+            input(name="email" placeholder='Email*' required)
+            input(name="telefon" minlength="11" placeholder="Telefon *" required)
 
 
           .order-form__inputs-item
-            input(placeholder='Straße, Hausnummer')
+            input(name="strabe" placeholder="Straße, Hausnummer")
             .order-select-wrap.custom-select__wrap.custom-select__wrap--light
-              select.order-select.order-select--model.custom-select
+              select.order-select.order-select--model.custom-select(name='model')
                 option(value='Nerida' selected) Nerida
                 option(value='Marbella') Marbella
                 option(value='Santorin') Santorin
@@ -76,7 +76,7 @@ block content
             .order-form__selectbox-item
               span.order-form__selectbox-text Wannenfarbe Acryl:
               .order-select-wrap.custom-select__wrap.custom-select__wrap--light
-                select.order-select.custom-select
+                select.order-select.custom-select(name='acril')
                   option(value='Dark Blue' selected) Dark Blue
                   option(value='Sky Blue') Sky Blue
                   option(value='Sky White') Sky White
@@ -95,7 +95,7 @@ block content
             .order-form__selectbox-item
               span.order-form__selectbox-text Außenverkleidung:
               .order-select-wrap.custom-select__wrap.custom-select__wrap--light
-                select.order-select.custom-select
+                select.order-select.custom-select(name='cabinet')
                   option(value='Grey' selected) Grey
                   option(value='Coffee') Coffee
                   option(value='Black') Black
@@ -103,7 +103,7 @@ block content
             .order-form__selectbox-item
               span.order-form__selectbox-text Cover colors:
               .order-select-wrap.custom-select__wrap.custom-select__wrap--light
-                select.order-select.custom-select
+                select.order-select.custom-select(name='cover')
                   option(value='Grey' selected) Grey
                   option(value='Coffee') Coffee
                   option(value='Black') Black
@@ -112,7 +112,7 @@ block content
             h6.order-form__checkbox-row-title Zubehör:
             .order-form__checkbox-row-inn
               label.order-form__label
-                input(type="checkbox")
+                input(name='whirlpool' type="checkbox")
                 .order-form__checkbox
                 span
                   strong Abdeckung für den Whirlpool
@@ -120,7 +120,7 @@ block content
                   p + 299 €
 
               label.order-form__label
-                input(type="checkbox")
+                input(name='einstiegstreppe' type="checkbox")
                 .order-form__checkbox
                 span
                   strong Einstiegstreppe
@@ -128,7 +128,7 @@ block content
                   p +199 €
 
               label.order-form__label
-                input(type="checkbox")
+                input(name='lifter' type="checkbox")
                 .order-form__checkbox
                 span
                   strong Lifter für Abdeckung
@@ -136,7 +136,7 @@ block content
                   p +199 €
 
               label.order-form__label
-                input(type="checkbox")
+                input(name='bayrol' type="checkbox")
                 .order-form__checkbox
                 span
                   strong Starter-Paket „Bayrol Pflegeprodukte“
@@ -145,12 +145,12 @@ block content
 
 
           .order-form__textarea-item
-            textarea(placeholder='Nachricht')
+            textarea(name="nachricht" placeholder='Nachricht')
 
           .order-form__footer
             .order-form__footer-checkbox
               label.order-form__label
-                input(type="checkbox")
+                input(type="checkbox" name="kopie")
                 .order-form__checkbox
                 span Eine Kopie dieser Nachricht an Ihre E-Mail-Adresse senden
 
@@ -166,4 +166,5 @@ block content
   //end content
 
   include ../sections/footer
+  include ../sections/popup-success
   include ../sections/scripts
