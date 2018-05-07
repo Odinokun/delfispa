@@ -1,8 +1,8 @@
 <?php
 
 $email_to = "info@4-deluxe.de";
-$email_from = "delfy@4-deluxe.de";
-$email_subject = "Delfy Spa";
+$email_from = "delfi@4-deluxe.de";
+$email_subject = "Kontaktanfrage Delfi Spa Whirlpool";
 $date = new DateTime('now', new DateTimeZone('Europe/Moscow') );
 
 if(isset($_POST['email']) && isset($_POST['telefon'])) {
@@ -32,14 +32,14 @@ if(isset($_POST['email']) && isset($_POST['telefon'])) {
       return str_replace($bad,"",$string);
     }
  
-    $email_message = "Information:\n\n";
-    $email_message .= "Model: ".clean_string($model)."\n";
-    $email_message .= "Name, Worname: ".clean_string($name)."\n";
-    $email_message .= "Telefon: ".clean_string($telefon)."\n";
-    $email_message .= "Email: ".clean_string($email)."\n";
-    $email_message .= "Firma: ".clean_string($firma)."\n";
+    $email_message = "Kontaktanfrage Delfi Spa Whirlpool:\n\n";
+    $email_message .= "Name, Vorname: ".clean_string($name)."\n";
     $email_message .= "Straße, Hausnummer: ".clean_string($strabe)."\n";
     $email_message .= "PLZ, Ort: ".clean_string($plz)."\n";
+    $email_message .= "Telefon: ".clean_string($telefon)."\n";
+    $email_message .= "Email: ".clean_string($email)."\n";
+    $email_message .= "Model: ".clean_string($model)."\n";
+    $email_message .= "Firma: ".clean_string($firma)."\n";
     $email_message .= "Nachricht: ".clean_string($nachricht)."\n";
     if (isset($_POST['ausstellung'])) {
         $email_message .= "Bitte nennen Sie mir eine Ausstellung in meiner Nähe: ja\n";

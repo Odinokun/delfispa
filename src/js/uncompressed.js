@@ -1,54 +1,3 @@
-// BEGIN Меню для навигации при разработке
-//**************
-// should be commented before production
-//**************
-
-$(document).ready(function ($) {
-  pageWidget([
-    'index',
-    'agb',
-    'article-01',
-    'article-02',
-    'article-03',
-    'article-04',
-    'article-05',
-    'blog',
-    'brand',
-    'catalog',
-    'contacts',
-    'datenschutz',
-    'haftungsausschluss',
-    'impressum',
-    'faq',
-    'news',
-    'order',
-    'productcard-nerida',
-    'productcard-marbella',
-    'productcard-santorin',
-    'reviews',
-    'review',
-    'review-pdf',
-    'shops'
-  ]);
-});
-
-function pageWidget(pages) {
-  var widgetWrap = $('<div class="widget_wrap"><ul class="widget_list"></ul></div>');
-  widgetWrap.prependTo("body");
-  for (var i = 0; i < pages.length; i++) {
-    $('<li class="widget_item"><a class="widget_link" href="'
-      + pages[i]
-      + '.html'
-      + '">'
-      + pages[i]
-      + '</a></li>').appendTo('.widget_list');
-  }
-  var widgetStilization = $('<style>body {position:relative} .widget_wrap{position:fixed;top:0;left:0;z-index:19999;padding:10px 20px;background:#222;border-bottom-right-radius:10px;-webkit-transition:all .3s ease;transition:all .3s ease;-webkit-transform:translate(-100%,0);-ms-transform:translate(-100%,0);transform:translate(-100%,0)}.widget_wrap:after{content:" ";position:absolute;top:0;left:100%;width:24px;height:24px;background:#222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAAAxQTFRF////////AAAA////BQBkwgAAAAN0Uk5TxMMAjAd+zwAAACNJREFUCNdjqP///y/DfyBg+LVq1Xoo8W8/CkFYAmwA0Kg/AFcANT5fe7l4AAAAAElFTkSuQmCC) no-repeat 50% 50%;cursor:pointer}.widget_wrap:hover{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0)}.widget_item{padding:0 0 10px}.widget_link{color:#fff;text-decoration:none;font-size:15px;}.widget_link:hover{text-decoration:underline} </style>');
-  widgetStilization.prependTo(".widget_wrap");
-}
-// END Меню для навигации при разработке
-
-
 // begin catalog-filter
 
 // begin объявление фильтров
@@ -62,13 +11,11 @@ $('#catalog-form__price').slider({
   stop: function(event, ui) {
     $("input#minPriceCost").val($("#catalog-form__price").slider("values",0));
     $("input#maxPriceCost").val($("#catalog-form__price").slider("values",1));
+    filter();
   },
   slide: function(event, ui){
     $("input#minPriceCost").val($("#catalog-form__price").slider("values",0));
     $("input#maxPriceCost").val($("#catalog-form__price").slider("values",1));
-  },
-  change: function( event, ui ) {
-    filter()
   }
 });
 // end catalog-form__price input
@@ -84,13 +31,11 @@ $('#catalog-form__size').slider({
   stop: function(event, ui) {
     $("input#minSizeCost").val($("#catalog-form__size").slider("values",0));
     $("input#maxSizeCost").val($("#catalog-form__size").slider("values",1));
+    filter();
   },
   slide: function(event, ui){
     $("input#minSizeCost").val($("#catalog-form__size").slider("values",0));
     $("input#maxSizeCost").val($("#catalog-form__size").slider("values",1));
-  },
-  change: function( event, ui ) {
-    filter()
   }
 });
 // end catalog-form__price input
@@ -104,21 +49,18 @@ $('#catalog-form__persons').slider({
   animate: true,
   stop: function(event, ui) {
     $("input#maxPersonsCost").val($("#catalog-form__persons").slider("values",0));
+    filter();
   },
-  // slide: function(event, ui){
-  //   $("input#maxPersonsCost").val($("#catalog-form__persons").slider("values",0));
-  // },
   change: function( event, ui ) {
     var val = ($("input#maxPersonsCost").val());
     $('.catalog-form__persons-people').attr('data-peoplesfilter', val);
-    filter()
   }
 });
 // end catalog-form__price input
 
 // begin фильтр по клику на чекбокс
 $("#catalog-form__by-stock input").change(function () {
-    filter()
+    filter();
 });
 // end фильтр по клику на чекбокс
 
@@ -128,17 +70,16 @@ $("#catalog-form__by-stock input").change(function () {
     var sliderPrice = $('#catalog-form__price');
     var sliderSize = $('#catalog-form__size');
     var sliderPersons = $('#catalog-form__persons');
-
+    //
     var optionsPrice    = $(sliderPrice).slider( 'option' );
     var optionsSize     = $(sliderSize).slider( 'option' );
     var optionsPersons  = $(sliderPersons).slider( 'option' );
-
+    //
     sliderPrice.slider('values', [ optionsPrice.min, optionsPrice.max ]);
     sliderSize.slider('values', [ optionsSize.min, optionsSize.max ]);
     sliderPersons.slider('value', optionsPersons.min);
     $('.catalog-form__persons-people').attr('data-peoplesfilter', 0);
     $('.catalog-item').fadeIn();
-    console.log('fack');
   }
   //end обнуление фильтров
 // end объявление фильтров
@@ -240,8 +181,8 @@ function filter() {
 
 // begin передача выбранной модели
 // из карточки товара в форму заказа на странице order.html
-$('.productcard-tab__basket-btn').on('click', function () {
-  var model = $('.productcard-tab__basket-btn').data('btn');
+$('.productcard-tab__basket-btn, .catalog-item__cover-link').on('click', function () {
+  var model = $(this).data('btn');
   localStorage.setItem('selectModel', model);
   console.log(localStorage.getItem('selectModel'));
 });
