@@ -1,10 +1,51 @@
 //begin popup
-button.popup-open popup open
 .popup__layer
   .popup
-    h3.popup__title Popup title
-    form.popup__form
-      input.popup__input(type="text" placeholder="Ваше имя")
-      input.popup__input(type="text" placeholder="Ваше имя")
-      button.popup__btn Кнопуля
+    .popup-close
+      svg
+        use(xlink:href="assets/img/sprite.svg#close")
+    //begin popup-form
+    form.popup-form__form#popup-form(name="popup-form")
+
+      header.popup-form__header
+        h3.popup-form__title KatalogbestellungIch
+        h4.popup-form__subtitle interessiere mich für einen kostenlosen Produktkatalog:
+
+      .popup-form__checkbox-row
+        label.popup-form__label
+          input(type="checkbox" name="ausstellung")
+          .popup-form__checkbox
+          span Bitte nennen Sie mir eine Ausstellung in meiner Nähe
+        label.popup-form__label
+          input(type="checkbox" name="kontakt")
+          .popup-form__checkbox
+          span Bitte nehmen Sie telefonisch mit mir Kontakt auf
+      .popup-form__inputs-item
+        input(name="name" minlength="3" placeholder="Name, Vorname *" required)
+        input(name="strabe" placeholder="Straße, Hausnummer")
+        input(name="telefon" minlength="11" placeholder="Telefon *" required)
+
+      .popup-form__inputs-item
+        input(name="firma" placeholder='Name Company')
+        input(name="plz" placeholder="PLZ, Ort")
+        input(name="email" placeholder='Email*' required)
+
+      .popup-form__inputs-item.popup-form__inputs-item--lg
+        input(name="model" placeholder='Ich interessiere mich für folgendes Modell')
+        textarea(name="nachricht" placeholder='Nachricht')
+
+      .popup-form__footer
+        .popup-form__footer-checkbox
+          label.popup-form__label
+            input(type="checkbox" name="kopie")
+            .popup-form__checkbox
+            span Eine Kopie dieser Nachricht an Ihre E-Mail-Adresse senden
+
+        .popup-form__footer-text
+          p Bitte beachten Sie!
+          p Ihre Anfrage bearbeiten wir üblicherweise innerhalb der nächsten 24 Stunden. Sollten Sie in diesem Zeitraum keine Nachricht von uns erhalten, ist unsere Email-Antwort möglicherweise von Ihrem Provider als "Spam" herausgefiltert worden. Bitte prüfen Sie dies. Vielen Dank für Ihre eventuelle Rückmeldung bei Nicht-Erhalt unserer Antwort.
+      span.btn.btn--custom.popup-form__btn
+        span.btn--inner
+          input(type="submit" id="send-contact-form" value='Senden')
+    //end popup-form
 //end popup

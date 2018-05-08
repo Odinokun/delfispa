@@ -30,11 +30,8 @@
   svg {
     width: 169px;
     height: 43px;
-    fill:text;
-  }
-  img {
-    //display: block;
 
+    fill: text;
   }
 }
 
@@ -60,6 +57,28 @@
     font-size: 22px;
     font-weight: 700;
     color: $text;
+  }
+}
+.footer-btn {
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: .5s;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid $highlight;
+  background-color: $highlight;
+  &:hover {
+    color: $text;
+    border: 2px solid transparent;
+    border-image: $gradient;
+    border-image-slice: 1;
+    background-color: transparent;
   }
 }
 .footer-item__title {

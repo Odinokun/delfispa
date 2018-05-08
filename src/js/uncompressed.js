@@ -199,7 +199,6 @@ $( ".order-select--model" ).selectmenu({
 
 
 
-
 // begin отправка формы на странице контактов
 $("#contact-form").submit(function() {
   $.ajax({
@@ -222,6 +221,21 @@ $("#order-form").submit(function() {
     data: $(this).serialize()
   }).done(function() {
     $('#order-form')[0].reset();
+    $('.popup-success__layer').fadeIn();
+  });
+  return false;
+});
+// end   отправка формы на странице заказа
+
+// begin отправка формы на странице заказа
+$("#popup-form").submit(function() {
+  $.ajax({
+    type: "POST",
+    url: "assets/php/popup.php",
+    data: $(this).serialize()
+  }).done(function() {
+    $('#popup-form')[0].reset();
+    $('.popup__layer').fadeOut();
     $('.popup-success__layer').fadeIn();
   });
   return false;

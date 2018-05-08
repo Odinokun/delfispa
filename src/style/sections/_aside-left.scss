@@ -251,7 +251,7 @@
 .left-menu__item--top-menu {
   display: none;
 
-  @include max(1000) {
+  @include max(1350) {
     display: block;
   }
 }
