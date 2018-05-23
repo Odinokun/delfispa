@@ -33,6 +33,9 @@ $(function() {
   // begin Popup
   require('./modules/popup')();
 
+  // begin Custom scroll
+  require('./modules/scroll')();
+
   // begin hover on the link in slider
   // require('./modules/hoverOnTheLink')();
 

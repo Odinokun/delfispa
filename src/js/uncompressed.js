@@ -245,3 +245,14 @@ $("#popup-form").submit(function() {
 $('.popup-sussess__close').on('click', function () {
     $('.popup-success__layer').fadeOut();
 });
+
+
+//begin скрытие колонок в таблице сравнения
+$('.compare-table__col-close').on('click', function () {
+  var closeCol = $(this).data('close');
+  $('.col-' + closeCol).fadeOut();
+
+  // изменение ширины скроллбара при скрытии колонок
+  $(".compare-body__inn").getNiceScroll().resize();
+});
+//end скрытие колонок в таблице сравнения

@@ -1,0 +1,139 @@
+//begin compare header
+.compare-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 60px;
+  background-color: #f6f8fa;
+
+  @include max(700) {
+    padding: 30px ;
+  }
+  .breadcrumbs {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.compare-header__title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.15;
+  width: 100%;
+  padding-right: 20px;
+
+  @include max(1100) {
+    font-size: 50px;
+  }
+  @include max(700) {
+    font-size: 40px;
+  }
+}
+//end compare header
+
+
+.compare-body {
+  position: relative;
+  width: calc(100% - 230px);
+  margin-left: 230px;
+  @include max(1600) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.compare-body__inn {
+  overflow-x: scroll;
+  overflow-y: visible;
+  margin-left: 320px;
+  touch-action: manipulation !important;
+  @include max(700) {
+    margin-left: 0px;
+  }
+}
+.compare-table {
+  //width: 100%;
+  padding-bottom: 120px;
+  //table-layout: fixed;
+  border-collapse: collapse;
+  th,
+  td {
+    width: 320px;
+    padding: 0;
+  }
+}
+.compare-table__pic {
+  display: flex;
+  align-items: flex-end;
+  width: 320px;
+  height: 260px;
+  padding: 0 0 25px 0;
+  img {
+    display: block;
+    width: 90%;
+    max-width: 205px;
+  }
+}
+.compare-table__highlight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 320px;
+  height: 75px;
+  padding: 0 55px 0 0;
+  background-color: #4facfe;
+}
+.compare-table__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: #fcfcfc;
+}
+.compare-table__col-close {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  span {
+    font-size: 13px;
+    font-weight: 300;
+    color: #fcfcfc;
+  }
+  svg {
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+
+    fill: #fcfcfc;
+  }
+}
+.compare-table__body {
+  tr {
+    &:nth-child(2n) {
+      background-color: #f1f7f8;
+    }
+  }
+  tr td {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 10px 10px 0;
+    color: #1c1e1e;
+    &:first-child {
+      padding: 10px 10px 10px 30px;
+      color: #919494;
+    }
+  }
+}
+.compare-table__head th:first-child,
+.compare-table__body td:first-child {
+  position: absolute;
+  left: 0;
+  @include max(700) {
+    position: relative;
+  }
+}
+// чередование цвета для первых ячеек
+.compare-table__body {
+  tr:nth-child(2n) {
+    td:first-child {
+      background-color: #f1f7f8;
+    }
+  }
+}

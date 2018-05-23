@@ -10,6 +10,9 @@ module.exports = [
   // include jQuery UI
   './src/vendors/jquery-ui-1.12.1.custom/jquery-ui.min.js',
 
+  // include Custom scroll
+  './src/vendors/jquery.nicescroll.js',
+
   // include fancybox3
   './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'
 ];

@@ -3,7 +3,9 @@
   display: flex;
   align-items: flex-start;
   padding: 50px 0;
-  background-color: #fcfcfc;@include max(1400) {
+  background-color: #fcfcfc;
+
+  @include max(1400) {
     //align-items: center;
     flex-direction: column-reverse;
   }
@@ -15,13 +17,17 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  max-width: 870px;@include max(700) {
+  max-width: 870px;
+
+  @include max(700) {
     //display: block;
   }
 }
 .productcard-top__slider-thumb {
   flex: none;
-  width: 20%;@include max(700) {
+  width: 20%;
+
+  @include max(700) {
     width: 100%;
     margin-bottom: 30px;
   }
@@ -31,21 +37,27 @@
     right: 0;
     left: 0;
     margin: auto;
-    transform: rotate(90deg);@include max(700) {
+    transform: rotate(90deg);
+
+    @include max(700) {
       margin: auto 0;
       transform: rotate(0deg);
     }
   }
   .slick-prev {
     top: -35px;
-    bottom: auto;@include max(700) {
+    bottom: auto;
+
+    @include max(700) {
       top: 0;
       bottom: 0;
       left: 5px;
     }
   }
   .slick-next {
-    top: auto;@include max(700) {
+    top: auto;
+
+    @include max(700) {
       top: 0;
       right: 5px;
       bottom: 0;
@@ -55,7 +67,9 @@
   .slick-list {
     width: 90px;
     margin: 0 auto;
-    padding: 0 !important;@include max(700) {
+    padding: 0 !important;
+
+    @include max(700) {
       width: calc(100% - 50px);
     }
 
@@ -73,7 +87,9 @@
     height: 82px;
     margin-bottom: 10px;
     transition: border-color .5s;
-    border: 2px solid #d9d9d9;@include max(700) {
+    border: 2px solid #d9d9d9;
+
+    @include max(700) {
       margin: 0 5px;
     }
 
@@ -111,10 +127,14 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: .5s;
+  text-decoration: none;
+  color: #1c1e1e;
   border: none;
   outline: none;
   background-color: transparent;
   &:hover {
+    color: $highlight;
     svg {
       fill: $text;
     }
@@ -136,9 +156,12 @@
   padding: 0 30px;
 }
 .productcard-top__title {
-  font-size: 60px;@include max(700) {
+  font-size: 60px;
+
+  @include max(700) {
     font-size: 40px;
-  }@include max(470) {
+  }
+  @include max(470) {
     font-size: 30px;
   }
 }
@@ -156,7 +179,9 @@
 .productcard-top__specification {
   table {
     width: 370px;
-    margin: 30px 0;@include max(470) {
+    margin: 30px 0;
+
+    @include max(470) {
       font-size: 14px;
       width: 100%;
     }
@@ -171,7 +196,9 @@
 }
 
 .productcard-top__btns {
-  display: flex;@include max(700) {
+  display: flex;
+
+  @include max(700) {
     display: block;
   }
 }
@@ -180,14 +207,20 @@
   padding: 10px 25px;
   border-top: 1px solid #d9d9d9;
   border-right: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;@include max(700) {
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+
+  @include max(700) {
     width: 100%;
     margin-bottom: 10px;
     border: 1px solid #d9d9d9;
   }
 
   &:last-child {
-    border-right: none;@include max(700) {
+    border-right: none;
+
+    @include max(700) {
       border: 1px solid #d9d9d9;
     }
   }
@@ -233,7 +266,9 @@
 .productcard-top__parametrs-row {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;@include max(600) {
+  margin-bottom: 20px;
+
+  @include max(600) {
     flex-wrap: wrap;
   }
 }

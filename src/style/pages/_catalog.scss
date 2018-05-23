@@ -6,7 +6,7 @@
   padding: 60px;
   background-color: #fff;
 
-@include max(700) {
+  @include max(700) {
     padding: 30px ;
   }
 
@@ -19,7 +19,7 @@
     width: 60%;
     max-width: 930px;
 
-@include max(1000) {
+    @include max(1000) {
       width: 100%;
     }
   }
@@ -31,11 +31,10 @@
   margin-bottom: 20px;
   padding-right: 20px;
 
-@include max(1000) {
+  @include max(1000) {
     width: 100%;
   }
-
-@include max(700) {
+  @include max(700) {
     font-size: 40px;
     margin-bottom: 10px;
   }
@@ -46,8 +45,7 @@
   display: flex;
   padding-bottom: 100px;
   background-color: #fcfcfc;
-
-//align-items: flex-start;
+  //align-items: flex-start;
 
   @include max(700) {
     flex-wrap: wrap;
@@ -62,7 +60,7 @@
   padding: 0 0 35px 0;
   border: 1px solid #d9d9d9;
 
-@include max(700) {
+  @include max(700) {
     width: 100%;
     padding: 0 0 15px 0;
   }
@@ -72,7 +70,7 @@
   font-weight: 700;
   margin-bottom: 25px;
 
-@include max(700) {
+  @include max(700) {
     font-size: 24px;
   }
 }
@@ -80,7 +78,7 @@
   padding: 40px;
   border-bottom: 1px solid #d9d9d9;
 
-@include max(700) {
+  @include max(700) {
     padding: 20px;
   }
 
@@ -93,7 +91,7 @@
   font-weight: 300;
   margin-bottom: 20px;
 
-@include max(700) {
+  @include max(700) {
     font-size: 18px;
   }
 }
@@ -114,7 +112,7 @@
   color: #919494;
   border-right: 1px solid #d9d9d9;
   &.active {
-    color:$highlight;
+    color: $highlight;
   }
   &:last-child {
     border: none;
@@ -375,15 +373,13 @@
   border-right: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 
-@include max(1600) {
+  @include max(1600) {
     width: 33.33%;
   }
-
-@include max(1300) {
+  @include max(1300) {
     width: 50%;
   }
-
-@include max(1000) {
+  @include max(1000) {
     width: 100%;
   }
 }
@@ -433,9 +429,9 @@
     position: relative;
     cursor: pointer;
     text-align: center;
+    text-decoration: none;
     border: none;
     background-color: transparent;
-    text-decoration: none;
     &:hover {
       svg {
         fill: $text;
@@ -587,20 +583,21 @@
   flex: none;
 }
 .catalog-item__compare {
+  display: inline-block;
+  margin-right: 10px;
   border: none;
   outline: none;
   background-color: transparent;
-  &:hover {
-    svg {
-      fill: $text;
-    }
-  }
+  z-index: 7;
   svg {
     width: 26px;
     height: 19px;
     transition: .5s;
 
     fill: $highlight;
+    &:hover {
+      fill: $text;
+    }
   }
 }
 .catalog-item__more {
