@@ -324,6 +324,7 @@
 }
 .order-form__footer-checkbox {
   flex: none;
+  position: relative;
 
   @include max(1000) {
     width: 100%;
