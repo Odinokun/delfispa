@@ -3,9 +3,9 @@
 // begin объявление фильтров
 // begin catalog-form__price input
 $('#catalog-form__price').slider({
-  min: 5500,
-  max: 13000,
-  values: [5500,13000],
+  min: 5600,
+  max: 7500,
+  values: [5600,7500],
   range: true,
   animate: true,
   stop: function(event, ui) {

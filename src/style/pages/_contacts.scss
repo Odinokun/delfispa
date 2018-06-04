@@ -220,12 +220,12 @@
   }
 }
 .contacts-form__footer {
-  display: flex;
-  align-items: flex-start;
-
-  @include max(1000) {
-    flex-wrap: wrap;
-  }
+  //display: flex;
+  //align-items: flex-start;
+  //
+  //@include max(1000) {
+  //  flex-wrap: wrap;
+  //}
 }
 .contacts-form__footer-checkbox {
   position: relative;
@@ -236,13 +236,12 @@
   }
 }
 .contacts-form__footer-text {
-  margin-bottom: 30px;
-  padding-left: 50px;
-
-  @include max(1000) {
-    width: 100%;
-    padding-left: 0;
-  }
+  //margin-bottom: 30px;
+  //padding-left: 50px;
+  //@include max(1000) {
+  //  width: 100%;
+  //  padding-left: 0;
+  //}
   p {
     font-size: 13px;
     font-weight: 300;
@@ -266,11 +265,12 @@
 }
 .agree-text {
   position: absolute;
-  bottom: -60px;
+  bottom: calc(100% + 15px);
   left: 0;
   display: none;
   padding: 20px 30px;
   border: 1px solid #ed1b24;
+  background-color: #fffefe;
   span {
     font-size: 16px;
     font-weight: 700;
