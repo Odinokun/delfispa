@@ -219,14 +219,6 @@
     width: 100%;
   }
 }
-.contacts-form__footer {
-  //display: flex;
-  //align-items: flex-start;
-  //
-  //@include max(1000) {
-  //  flex-wrap: wrap;
-  //}
-}
 .contacts-form__footer-checkbox {
   position: relative;
   flex: none;
@@ -236,12 +228,6 @@
   }
 }
 .contacts-form__footer-text {
-  //margin-bottom: 30px;
-  //padding-left: 50px;
-  //@include max(1000) {
-  //  width: 100%;
-  //  padding-left: 0;
-  //}
   p {
     font-size: 13px;
     font-weight: 300;

@@ -61,6 +61,9 @@
     }
   }
 }
+
+
+// begin bath 1
 .bath-tab__item {
   display: none;
   align-items: flex-start;
@@ -85,14 +88,18 @@
     margin-top: 0;
   }
   @include max(700) {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
     max-width: 500px;
   }
-
+  @include max(600) {
+    max-width: 400px;
+  }
+  @include max(500) {
+    max-width: 300px;
+  }
+  @include max(375) {
+    max-width: 250px;
+  }
   img {
     display: block;
     width: 100%;
@@ -112,11 +119,10 @@
   border-radius: 50%;
   background-image: $gradient;
 
-  @include max(700) {
-    position: static;
-    margin: 0 10px;
+  @include max(600) {
+    width: 30px;
+    height: 30px;
   }
-
   span {
     font-size: 16px;
     font-weight: 700;
@@ -124,6 +130,10 @@
     position: relative;
     z-index: 5;
     color: #fff;
+
+    @include max(600) {
+      font-size: 14px;
+    }
   }
   &.active {
     pointer-events: none;
@@ -158,14 +168,53 @@
 .bath-tab__bath-btn--01 {
   top: 100px;
   left: 200px;
+
+  @include max(600) {
+    top: 80px;
+    left: 160px;
+  }
+  @include max(500) {
+    top: 60px;
+    left: 110px;
+  }
+  @include max(375) {
+    top: 50px;
+    left: 90px;
+  }
 }
 .bath-tab__bath-btn--02 {
   top: 170px;
   left: 300px;
+
+  @include max(600) {
+    top: 140px;
+    left: 240px;
+  }
+  @include max(500) {
+    top: 110px;
+    left: 180px;
+  }
+  @include max(375) {
+    top: 85px;
+    left: 150px;
+  }
 }
 .bath-tab__bath-btn--03 {
   top: 240px;
   left: 230px;
+
+  @include max(600) {
+    top: 200px;
+    left: 170px;
+  }
+  @include max(500) {
+    top: 150px;
+    left: 130px;
+  }
+  @include max(375) {
+    top: 120px;
+    left: 110px;
+  }
 }
 .bath-tab__body--marbella {
   .bath-tab__bath {
@@ -174,11 +223,37 @@
   .bath-tab__bath-btn--01 {
     top: 145px;
     left: 140px;
+
+    @include max(600) {
+      top: 110px;
+      left: 105px;
+    }
+    @include max(500) {
+      top: 85px;
+      left: 80px;
+    }
+    @include max(375) {
+      top: 65px;
+      left: 60px;
+    }
   }
   .bath-tab__bath-btn--02 {
     top: 260px;
     left: 330px;
     transform: rotate(90deg);
+
+    @include max(600) {
+      top: 210px;
+      left: 260px;
+    }
+    @include max(500) {
+      top: 180px;
+      left: 195px;
+    }
+    @include max(375) {
+      top: 150px;
+      left: 160px;
+    }
     span {
       transform: rotate(-90deg);
     }
@@ -187,6 +262,19 @@
     top: 350px;
     left: 235px;
     transform: rotate(-90deg);
+
+    @include max(600) {
+      top: 290px;
+      left: 190px;
+    }
+    @include max(500) {
+      top: 210px;
+      left: 140px;
+    }
+    @include max(375) {
+      top: 175px;
+      left: 115px;
+    }
     span {
       transform: rotate(90deg);
     }
@@ -195,6 +283,19 @@
     top: 320px;
     left: 150px;
     transform: rotate(-45deg);
+
+    @include max(600) {
+      top: 270px;
+      left: 115px;
+    }
+    @include max(500) {
+      top: 200px;
+      left: 85px;
+    }
+    @include max(375) {
+      top: 165px;
+      left: 65px;
+    }
     span {
       transform: rotate(45deg);
     }
@@ -202,6 +303,19 @@
   .bath-tab__bath-btn--05 {
     top: 240px;
     left: 130px;
+
+    @include max(600) {
+      top: 190px;
+      left: 100px;
+    }
+    @include max(500) {
+      top: 140px;
+      left: 70px;
+    }
+    @include max(375) {
+      top: 115px;
+      left: 50px;
+    }
   }
 }
 .bath-tab__body--santorin {
@@ -211,11 +325,37 @@
   .bath-tab__bath-btn--01 {
     top: 145px;
     left: 140px;
+
+    @include max(600) {
+      top: 120px;
+      left: 120px;
+    }
+    @include max(500) {
+      top: 85px;
+      left: 90px;
+    }
+    @include max(375) {
+      top: 65px;
+      left: 70px;
+    }
   }
   .bath-tab__bath-btn--02 {
     top: 260px;
     left: 330px;
     transform: rotate(90deg);
+
+    @include max(600) {
+      top: 230px;
+      left: 260px;
+    }
+    @include max(500) {
+      top: 170px;
+      left: 190px;
+    }
+    @include max(375) {
+      top: 140px;
+      left: 160px;
+    }
     span {
       transform: rotate(-90deg);
     }
@@ -224,6 +364,19 @@
     top: 350px;
     left: 235px;
     transform: rotate(-90deg);
+
+    @include max(600) {
+      top: 280px;
+      left: 190px;
+    }
+    @include max(500) {
+      top: 190px;
+      left: 140px;
+    }
+    @include max(375) {
+      top: 160px;
+      left: 115px;
+    }
     span {
       transform: rotate(90deg);
     }
@@ -232,6 +385,19 @@
     top: 320px;
     left: 150px;
     transform: rotate(-45deg);
+
+    @include max(600) {
+      top: 250px;
+      left: 130px;
+    }
+    @include max(500) {
+      top: 180px;
+      left: 90px;
+    }
+    @include max(375) {
+      top: 150px;
+      left: 80px;
+    }
     span {
       transform: rotate(45deg);
     }
@@ -239,6 +405,19 @@
   .bath-tab__bath-btn--05 {
     top: 240px;
     left: 130px;
+
+    @include max(600) {
+      top: 190px;
+      left: 110px;
+    }
+    @include max(500) {
+      top: 135px;
+      left: 80px;
+    }
+    @include max(375) {
+      top: 110px;
+      left: 70px;
+    }
   }
 }
 
@@ -289,8 +468,10 @@
   font-weight: 300;
   margin-bottom: 30px;
 }
+// end bath 1
 
 
+// begin bath 2
 .bath-tab__item--02 {
   justify-content: space-between;
 
@@ -309,12 +490,17 @@
     margin-top: 0;
   }
   @include max(700) {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
     max-width: 500px;
+  }
+  @include max(600) {
+    max-width: 400px;
+  }
+  @include max(500) {
+    max-width: 300px;
+  }
+  @include max(375) {
+    max-width: 250px;
   }
 
   img {
@@ -336,13 +522,13 @@
   border-radius: 50%;
   background-image: $gradient;
 
-  @include max(700) {
-    position: static;
-    margin: 0 10px;
-  }
-  @include max(425) {
+  @include max(600) {
     width: 30px;
     height: 30px;
+  }
+  @include max(500) {
+    width: 20px;
+    height: 20px;
   }
 
   svg {
@@ -350,14 +536,23 @@
     height: 20px;
 
     fill: #fff;
-    @include max(425) {
+    @include max(600) {
       width: 15px;
       height: 15px;
+    }
+    @include max(500) {
+      width: 10px;
+      height: 10px;
     }
   }
   &.active {
     background-color: #fff;
     background-image: none;
+
+    @include max(700) {
+      border: 1px solid $highlight;
+      background-color: #fff;
+    }
     svg {
       fill: $highlight;
     }
@@ -366,22 +561,86 @@
 .bath-tab__bath-02-btn--01 {
   top: 40px;
   left: 220px;
+
+  @include max(600) {
+    top: 40px;
+    left: 170px;
+  }
+  @include max(500) {
+    top: 30px;
+    left: 130px;
+  }
+  @include max(375) {
+    top: 25px;
+    left: 105px;
+  }
 }
 .bath-tab__bath-02-btn--02 {
   top: 110px;
   left: 80px;
+
+  @include max(600) {
+    top: 80px;
+    left: 60px;
+  }
+  @include max(500) {
+    top: 60px;
+    left: 40px;
+  }
+  @include max(375) {
+    top: 45px;
+  }
 }
 .bath-tab__bath-02-btn--03 {
   top: 95px;
   left: 340px;
+
+  @include max(600) {
+    top: 80px;
+    left: 260px;
+  }
+  @include max(500) {
+    top: 60px;
+    left: 200px;
+  }
+  @include max(375) {
+    top: 45px;
+    left: 160px;
+  }
 }
 .bath-tab__bath-02-btn--04 {
   top: 180px;
   left: 230px;
+
+  @include max(600) {
+    top: 150px;
+    left: 180px;
+  }
+  @include max(500) {
+    top: 115px;
+    left: 140px;
+  }
+  @include max(375) {
+    top: 95px;
+    left: 110px;
+  }
 }
 .bath-tab__bath-02-btn--05 {
   top: 235px;
   left: 220px;
+
+  @include max(600) {
+    top: 195px;
+    left: 170px;
+  }
+  @include max(500) {
+    top: 150px;
+    left: 130px;
+  }
+  @include max(375) {
+    top: 120px;
+    left: 100px;
+  }
 }
 .bath-tab__body--marbella {
   .bath-tab__bath-02 {
@@ -390,22 +649,87 @@
   .bath-tab__bath-02-btn--01 {
     top: 400px;
     left: 233px;
+
+    @include max(600) {
+      top: 320px;
+      left: 185px;
+    }
+    @include max(500) {
+      top: 245px;
+      left: 140px;
+    }
+    @include max(375) {
+      top: 195px;
+      left: 115px;
+    }
   }
   .bath-tab__bath-02-btn--02 {
     top: 135px;
     left: 80px;
+
+    @include max(600) {
+      top: 110px;
+      left: 70px;
+    }
+    @include max(500) {
+      top: 85px;
+      left: 50px;
+    }
+    @include max(375) {
+      top: 65px;
+      left: 45px;
+    }
   }
   .bath-tab__bath-02-btn--03 {
     top: 95px;
     left: 340px;
+
+    @include max(600) {
+      top: 80px;
+      left: 280px;
+    }
+    @include max(500) {
+      top: 60px;
+      left: 210px;
+    }
+    @include max(375) {
+      top: 50px;
+      left: 170px;
+    }
   }
   .bath-tab__bath-02-btn--04 {
     top: 240px;
     left: 190px;
+
+    @include max(600) {
+      top: 200px;
+      left: 150px;
+    }
+    @include max(500) {
+      top: 140px;
+      left: 115px;
+    }
+    @include max(375) {
+      top: 120px;
+      left: 95px;
+    }
   }
   .bath-tab__bath-02-btn--05 {
     top: 270px;
     left: 330px;
+
+    @include max(600) {
+      top: 250px;
+      left: 260px;
+    }
+    @include max(500) {
+      top: 180px;
+      left: 195px;
+    }
+    @include max(375) {
+      top: 150px;
+      left: 160px;
+    }
   }
 }
 .bath-tab__body--santorin {
@@ -415,22 +739,87 @@
   .bath-tab__bath-02-btn--01 {
     top: 210px;
     left: 390px;
+
+    @include max(600) {
+      top: 180px;
+      left: 300px;
+    }
+    @include max(500) {
+      top: 135px;
+      left: 225px;
+    }
+    @include max(375) {
+      top: 110px;
+      left: 190px;
+    }
   }
   .bath-tab__bath-02-btn--02 {
     top: 122px;
     left: 80px;
+
+    @include max(600) {
+      top: 100px;
+      left: 70px;
+    }
+    @include max(500) {
+      top: 80px;
+      left: 55px;
+    }
+    @include max(375) {
+      top: 63px;
+      left: 45px;
+    }
   }
   .bath-tab__bath-02-btn--03 {
     top: 140px;
     left: 320px;
+
+    @include max(600) {
+      top: 110px;
+      left: 260px;
+    }
+    @include max(500) {
+      top: 85px;
+      left: 190px;
+    }
+    @include max(375) {
+      top: 60px;
+      left: 160px;
+    }
   }
   .bath-tab__bath-02-btn--04 {
     top: 220px;
     left: 200px;
+
+    @include max(600) {
+      top: 180px;
+      left: 160px;
+    }
+    @include max(500) {
+      top: 140px;
+      left: 120px;
+    }
+    @include max(375) {
+      top: 115px;
+      left: 100px;
+    }
   }
   .bath-tab__bath-02-btn--05 {
     top: 270px;
     left: 330px;
+
+    @include max(600) {
+      top: 230px;
+      left: 260px;
+    }
+    @include max(500) {
+      top: 160px;
+      left: 200px;
+    }
+    @include max(375) {
+      top: 140px;
+      left: 160px;
+    }
   }
 }
 
@@ -465,3 +854,4 @@
   font-weight: 300;
   margin-bottom: 20px;
 }
+// end bath 2
