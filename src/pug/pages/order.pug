@@ -74,24 +74,28 @@ block content
 
 
           .order-form__selectbox-row
-            .order-form__selectbox-item
+            .order-form__selectbox-item.order-form__selectbox-item--color
               span.order-form__selectbox-text Wannenfarbe Acryl:
               .order-select-wrap.custom-select__wrap.custom-select__wrap--light
-                select.order-select.custom-select(name='acril')
-                  option(value='Dark Blue' selected) Dark Blue
-                  option(value='Sky Blue') Sky Blue
-                  option(value='Sky White') Sky White
-                  option(value='Green') Green
-                  option(value='Pearl Shadow') Pearl Shadow
-                  option(value='Light Blue') Light Blue
-                  option(value='Pearl White') Pearl White
-                  option(value='Glitter Silver') Glitter Silver
-                  option(value='Glitter Gold') Glitter Gold
-                  option(value='Crystal Blue') Crystal Blue
-                  option(value='Crystal Black') Crystal Black
-                  option(value='Glitter Coffee') Glitter Coffee
-                  option(value='White') White
-                  option(value='Grey') Grey
+                select#select-color.order-select.custom-select(name='acril')
+                  option(value="Silver White Marble" selected) Silver White Marble
+                  option(value="White Pearlescent") White Pearlescent
+                  option(value="Summer Sapphire") Summer Sapphire
+                  option(value="Midnight Opal") Midnight Opal
+                  option(value="Azure Metalescent") Azure Metalescent
+                  option(value="Gypsum") Gypsum
+                  option(value="Oceanwave") Oceanwave
+                  option(value="Sahara") Sahara
+                  option(value="White") White
+                  option(value="Mediterranean Sunset") Mediterranean Sunset
+                  option(value="Platinum Swirl") Platinum Swirl
+                  option(value="Oyster Opal") Oyster Opal
+                  option(value="Mayan Copper") Mayan Copper
+                .order-form__delivery-time
+                  svg
+                    use(xlink:href="assets/img/sprite.svg#car")
+                  span.delivery-time.delivery-time--fast 1-2 Werktage
+                  span.delivery-time.delivery-time--slow 8-12 Werktage
 
             .order-form__selectbox-item
               span.order-form__selectbox-text Außenverkleidung:
@@ -108,6 +112,7 @@ block content
                   option(value='Grey' selected) Grey
                   option(value='Coffee') Coffee
                   option(value='Black') Black
+
 
           .order-form__checkbox-row
             h6.order-form__checkbox-row-title Zubehör:

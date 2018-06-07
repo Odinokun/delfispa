@@ -184,7 +184,7 @@ function filter() {
 $('.productcard-tab__basket-btn, .catalog-item__cover-link').on('click', function () {
   var model = $(this).data('btn');
   localStorage.setItem('selectModel', model);
-  console.log(localStorage.getItem('selectModel'));
+  // console.log(localStorage.getItem('selectModel'));
 });
 
 $( ".order-select--model" ).selectmenu({
@@ -292,3 +292,27 @@ $("#popup-form").submit(function() {
 $('.popup-sussess__close').on('click', function () {
   $('.popup-success__layer').fadeOut();
 });
+
+
+// begin Изменение сроков доставки
+// в зависимости от выбранного цвета
+$(window).on('load', function () {
+  var color = $('#select-color').val();
+  $('.delivery-time').fadeOut(0);
+  if (color === 'Silver White Marble' || color === 'Oceanwave') {
+    $('.delivery-time--fast').fadeIn();
+  } else {
+    $('.delivery-time--slow').fadeIn();
+  }
+});
+$('#select-color').on('selectmenuchange', function() {
+  var color = $(this).val();
+  $('.delivery-time').fadeOut(0);
+  if (color === 'Silver White Marble' || color === 'Oceanwave') {
+    $('.delivery-time--fast').fadeIn();
+  } else {
+    $('.delivery-time--slow').fadeIn();
+  }
+});
+// end Изменение сроков доставки
+// в зависимости от выбранного цвета
