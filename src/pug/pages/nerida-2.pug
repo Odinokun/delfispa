@@ -106,7 +106,7 @@ block content
 							.productcard-top__parametrs-item
 								span Wannenfarbe Acryl:
 							.productcard-top__parametrs-item
-								.productcard-top__select-wrap.custom-select__wrap.custom-select__wrap--light
+								#select-color__wrap.productcard-top__select-wrap.custom-select__wrap.custom-select__wrap--light
 									select#select-color.productcard-top__select.custom-select
 										option(value="Silver White Marble" selected) Silver White Marble
 										option(value="White Pearlescent") White Pearlescent
@@ -121,15 +121,20 @@ block content
 										option(value="Platinum Swirl") Platinum Swirl
 										option(value="Oyster Opal") Oyster Opal
 										option(value="Mayan Copper") Mayan Copper
+							.productcard-top__parametrs-item
+								a(href="#colors-catalog").productcard-top__parametrs-item--link Mehr info
 						.productcard-top__parametrs-row
 							.productcard-top__parametrs-item
 								span Außenverkleidung:
 							.productcard-top__parametrs-item
-								.productcard-top__select-wrap.custom-select__wrap.custom-select__wrap--light
-									select.productcard-top__select.custom-select
+								#cover-color__wrap.productcard-top__select-wrap.custom-select__wrap.custom-select__wrap--light
+									select#cover-color.productcard-top__select.custom-select
 										option(value='Grey' selected) Grey
 										option(value='Coffee') Coffee
 										option(value='Black') Black
+							.productcard-top__parametrs-item
+								a(href="#covers-catalog").productcard-top__parametrs-item--link Mehr info
+
 						.productcard-top__parametrs-row
 							.productcard-top__parametrs-item
 								span Lieferzeit:
@@ -644,7 +649,7 @@ block content
 						header.specifications-tab__colors-header
 							h3.specifications-tab__colors-header-title Color swatches for hot tubs
 
-						.specifications-tab__colors-list
+						#colors-catalog.specifications-tab__colors-list
 							.specifications-tab__colors-item
 								.specifications-tab__colors-pic
 									img(src="assets/img/colors/White Pearlescent.jpg" alt="color")
@@ -714,7 +719,7 @@ block content
 						header.specifications-tab__colors-header
 							h3.specifications-tab__colors-header-title Cabinet (skirt) colors
 
-						.specifications-tab__colors-list
+						#covers-catalog.specifications-tab__colors-list
 							.specifications-tab__colors-item
 								.specifications-tab__colors-pic
 									img(src="assets/img/colors/cabinet/Grey.jpg" alt="color")
@@ -761,7 +766,20 @@ block content
 
 
 
-		include ../sections/index-banner
+		//begin index-banner
+		section.index-banner#gradient
+			.container-lg
+				.index-banner__item.index-banner__item--logo
+					img(src="assets/img/productcard-banner-logo.png" alt="Delfi Spa")
+				.index-banner__item.index-banner__item--text
+					h2.index-banner__title Hohe Qualität ohne Kompromisse
+					p.index-banner__text Die Delfi Spas Whirlpools bieten bereits Standards und Extras, die sonst nur die „Top-of-the-Line“ zu bieten hat: langbewährte und aufeinander abgestimmte Markenkomponenten, einfache Bedienung, effektive Wasserreinigung für zeitsparende Pflege und hervorragende Isolierung für geringere Betriebskosten.
+					span.btn.btn--custom.index-banner__btn
+						span.btn--inner
+							a(href="brand.html") Mehr info
+		//end   index-banner
+
+
 		include ../sections/productcard-pdf
 		include ../sections/productcard-slider
 

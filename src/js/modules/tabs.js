@@ -25,6 +25,15 @@ module.exports = function() {
       });
     // end specifications-tabs
 
+    // begin ссылка возле селектбокса в карточке товара
+    $('.productcard-top__parametrs-item--link').on('click', function () {
+      $('.specifications-tab__tab').removeClass('active');
+      $('.specifications-tab__cards').removeClass('active');
+      $('.specifications-tab__tab[data-tab="05"]').addClass('active');
+      $('.specifications-tab__cards--05').addClass('active');
+    });
+    // end ссылка возле селектбокса в карточке товара
+
     // begin aside-tabs
       $('.aside-tab__item').on('click', function () {
         var tab = $(this).data('tab');

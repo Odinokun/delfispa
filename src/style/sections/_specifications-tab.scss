@@ -289,7 +289,8 @@
 .specifications-tab__colors-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  //margin-bottom: 40px;
+  padding-top: 40px;
 }
 .specifications-tab__colors-item {
   //width: 250px;

@@ -1,69 +1,97 @@
+#gradient {
+	&.index-banner {
+		background-color: $highlight;
+		background-image: none;
+	}
+	.index-banner__title,
+	.index-banner__text {
+		color: #ffffff;
+	}
+	.btn a {
+		color: #ffffff !important;
+	}
+	.btn:before,
+	.btn:after {
+		background-color: #fff;
+	}
+	.btn .btn--inner:after,
+	.btn .btn--inner:before {
+		background-image: none;
+		background-color: #fff;
+	}
+}
+
 .index-banner {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-image: url('../img/bg-index-banner.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-image: url('../img/bg-index-banner.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 
-  @include max(1100) {
-    padding-top: 90px;
-    padding-bottom: 50px;
-  }
-  .container-lg {
-    display: flex;
-    align-items: center;
+	@include max(1100) {
+		padding-top: 90px;
+		padding-bottom: 50px;
+	}
+	.container-lg {
+		display: flex;
+		align-items: center;
 
-    @include max(1000) {
-      flex-wrap: wrap;
-    }
-  }
+		@include max(1000) {
+			flex-wrap: wrap;
+		}
+	}
 }
+
 .index-banner__item--logo {
-  width: 40%;
+	width: 40%;
 
-  @include max(1000) {
-    width: 100%;
-    padding-bottom: 30px;
-  }
-  img {
-    display: block;
-    width: 90%;
-    max-width: 340px;
-    height: auto;
-    margin: 0 auto;
-  }
+	@include max(1000) {
+		width: 100%;
+		padding-bottom: 30px;
+	}
+	img {
+		display: block;
+		width: 90%;
+		max-width: 340px;
+		height: auto;
+		margin: 0 auto;
+	}
 }
+
 .index-banner__item--text {
-  width: 60%;
+	width: 60%;
 
-  @include max(1000) {
-    width: 100%;
-    text-align: center;
-  }
+	@include max(1000) {
+		width: 100%;
+		text-align: center;
+	}
 }
+
 .index-banner__title {
-  font-size: 25px;
-  font-weight: 700;
-  margin-bottom: 30px;
+	font-size: 25px;
+	font-weight: 700;
+	margin-bottom: 30px;
 
-  @include max(1000) {
-    text-align: center;
-  }
+	@include max(1000) {
+		text-align: center;
+	}
 }
+
 .index-banner__text {
-  font-size: 17px;
-  font-weight: 300;
-  max-width: 600px;
+	font-size: 17px;
+	font-weight: 300;
+	max-width: 600px;
 
-  @include max(1000) {
-    max-width: 100%;
-  }
+	@include max(1000) {
+		max-width: 100%;
+	}
 }
-.index-banner__btn {
-  margin-top: 30px;
 
-  @include max(1100) {
-    margin-top: 10px;
-  }
+.index-banner__btn {
+	margin-top: 30px;
+
+	@include max(1100) {
+		margin-top: 10px;
+	}
 }
