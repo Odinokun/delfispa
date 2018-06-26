@@ -1,0 +1,70 @@
+extends ../_template
+
+mixin gallery-item-lg(pic)
+  //begin gallery-item
+  a(href="#").gallery-item.gallery-item--lg
+    .gallery-item__img(style="background-image: url('assets/img/gallery/gallery-" + pic + ".jpg')")
+      .gallery-item__footer
+        .gallery-item__title
+          span Kaufberatung Wichtige Tipps
+        span.gallery-item__link
+          svg
+            use(xlink:href="assets/img/sprite.svg#plus")
+  //end gallery-item
+
+mixin gallery-item-sm(pic)
+  //begin gallery-item
+  a(href="#").gallery-item.gallery-item--sm
+    .gallery-item__img(style="background-image: url('assets/img/gallery/gallery-" + pic + ".jpg')")
+      .gallery-item__footer
+        .gallery-item__title
+          span Kaufberatung Wichtige Tipps
+        span.gallery-item__link
+          svg
+            use(xlink:href="assets/img/sprite.svg#plus")
+  //end gallery-item
+
+block variables
+  - var title = 'Bildergallerie | Delfi Spa'
+  - var pageHeaderTitle = 'Bildergallerie'
+  - var breadcrumbs01 = 'home'
+  - var breadcrumbs02 = 'Bildergallerie'
+
+block content
+  include ../sections/aside-left
+  include ../sections/header
+
+  //begin content
+  section.main.gallery
+    //begin header
+    header.gallery-header
+
+      //begin breadcrumbs
+      section.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="/") #{breadcrumbs01}
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") #{breadcrumbs02}
+      //end breadcrumbs
+
+      h2.gallery-header__title Bildergallerie
+      p Viele Fragen tauchen vor der Kaufentscheidung eines Whirlpools auf. Welcher Outdoor Whirlpool ist der Richtige für mich? Wo stelle ich einen Whirlpool auf? Was kostet ein Garten- Whirlpool mit Lieferung, Inbetriebnahme und Einweisung? Finden Sie hier wertvolle Infos und Ratschläge zu den Fragen rund um den Whirlpool-Kauf, die Wasserpflege, den Service, die Stromkosten und vieles mehr.
+    //end header
+
+
+    //begin gallery-list
+    section.gallery-list
+      +gallery-item-lg('01')
+      +gallery-item-lg('02')
+      +gallery-item-lg('03')
+      +gallery-item-sm('04')
+      +gallery-item-sm('05')
+      +gallery-item-sm('06')
+      +gallery-item-sm('07')
+    //end   gallery-list
+
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts

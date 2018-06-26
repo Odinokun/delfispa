@@ -5,6 +5,8 @@ module.exports = function() {
   $(function () {
     if (document.body.clientWidth > 1024) {
       $(".compare-body__inn").niceScroll({
+        // mousescrollstep: 0,
+        // emulatetouch: true,
         cursoropacitymin: 1,
         cursorborder: "0px solid transparent",
         cursorborderradius:"8px",
