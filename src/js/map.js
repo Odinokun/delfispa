@@ -87,6 +87,7 @@ $(document).ready(function ($) {
         var city = $(".custom-select").val();
         goToCity(city);
         filterShopAdressBlock(city);
+
         return false;
       }
     });
@@ -100,10 +101,10 @@ $(document).ready(function ($) {
   // begin отслеживание выбранного города
   // в кастомном селекте и смена карты
   // при загрузке страницы
-  $(window).on("load", function() {
-    var city = $('.shops-map__city-select').val();
-    goToCity(city);
-  });
+  // $(window).on("load", function() {
+  //   var city = $('.shops-map__city-select').val();
+  //   goToCity(city);
+  // });
   // end отслеживание выбранного города
   // в кастомном селекте и смена карты
   // при загрузке страницы

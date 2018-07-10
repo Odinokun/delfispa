@@ -41,29 +41,3 @@ function initialize() {
   });
 }
 google.maps.event.addDomListener(window, "load", initialize);
-
-
-$(document).ready(function ($) {
-
-  //begin отслеживание выбранного города
-  // и смена карты/адресов
-  // в кастомном селекте
-  $(function () {
-    $(".shops-map__city-select").selectmenu({
-      change: function () {
-        var city = $(".custom-select").val();
-        if (city == 'all') {
-          document.location.href='shops.html'
-        } else {
-          document.location.href='shop-' + city + '.html'
-        }
-        return false;
-      }
-    });
-  });
-  //end отслеживание выбранного города
-  // и смена карты/адресов
-  // в кастомном селекте
-
-
-});

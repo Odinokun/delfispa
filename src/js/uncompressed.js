@@ -447,3 +447,34 @@ $("#cover-color").selectmenu({
   },
 });
 // end образцы цветов в селекте карточки
+
+
+//begin отслеживание выбранного города
+// и смена карты/адресов
+// в кастомном селекте
+$(function () {
+  $(".shops-map__city-select").selectmenu({
+    open: function () {
+      //удаление дублирующегося города
+      $('.ui-menu-item').removeClass('active-option');
+      $('.ui-state-active').parent('.ui-menu-item').addClass('active-option');
+    },
+    change: function () {
+      var city = $(".custom-select").val();
+
+      //удаление дублирующегося города
+      $('.ui-menu-item').removeClass('active-option');
+      $('.ui-state-active').parent('.ui-menu-item').addClass('active-option');
+
+      if (city == 'all') {
+        document.location.href='standorte.php'
+      } else {
+        document.location.href='standorte/' + city + '.php'
+      }
+      return false;
+    }
+  });
+});
+//end отслеживание выбранного города
+// и смена карты/адресов
+// в кастомном селекте
