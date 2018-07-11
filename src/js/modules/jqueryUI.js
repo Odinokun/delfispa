@@ -9,7 +9,8 @@ module.exports = function() {
           width:240,
           position: {
             my:"left top",
-            at:"left top+38"
+            at:"left top+38",
+            collision: 'fit none'
           }
         });
       });
@@ -22,7 +23,8 @@ module.exports = function() {
           width:240,
           position: {
             my:"left top",
-            at:"left top+38"
+            at:"left top+38",
+            collision: 'fit none'
           }
         });
       });
@@ -35,7 +37,8 @@ module.exports = function() {
           width:240,
           position: {
             my:"left top",
-            at:"left top+38"
+            at:"left top+38",
+            collision: 'fit none'
           }
         });
       });
