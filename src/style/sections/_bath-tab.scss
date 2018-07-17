@@ -1207,6 +1207,117 @@
   }
 }
 
+.bath-tab__body--lefkada {
+  .bath-tab__bath {
+    margin-top: 0;
+  }
+  .bath-tab__bath-btn--01 {
+    top: 275px;
+    left: 125px;
+    transform: rotate(-30deg);
+
+    @include max(600) {
+      top: 212px;
+      left: 110px;
+    }
+    @include max(500) {
+      top: 155px;
+      left: 80px;
+    }
+    @include max(375) {
+      top: 130px;
+      left: 60px;
+    }
+    span {
+      transform: rotate(30deg);
+    }
+  }
+  .bath-tab__bath-btn--02 {
+    top: 170px;
+    left: 130px;
+    transform: rotate(30deg);
+
+    @include max(600) {
+      top: 140px;
+      left: 105px;
+    }
+    @include max(500) {
+      top: 100px;
+      left: 75px;
+    }
+    @include max(375) {
+      top: 80px;
+      left: 55px;
+    }
+    span {
+      transform: rotate(-30deg);
+    }
+  }
+  .bath-tab__bath-btn--03 {
+    top: 130px;
+    left: 220px;
+    transform: rotate(-90deg);
+
+    @include max(600) {
+      top: 90px;
+      left: 173px;
+    }
+    @include max(500) {
+      top: 65px;
+      left: 125px;
+    }
+    @include max(375) {
+      top: 50px;
+      left: 100px;
+    }
+    span {
+      transform: rotate(90deg);
+    }
+  }
+  .bath-tab__bath-btn--04 {
+    top: 170px;
+    left: 310px;
+    transform: rotate(-30deg);
+
+    @include max(600) {
+      top: 135px;
+      left: 250px;
+    }
+    @include max(500) {
+      top: 95px;
+      left: 185px;
+    }
+    @include max(375) {
+      top: 75px;
+      left: 160px;
+    }
+    span {
+      transform: rotate(30deg);
+    }
+  }
+  .bath-tab__bath-btn--05 {
+    top: 275px;
+    left: 325px;
+    transform: rotate(30deg);
+
+    @include max(600) {
+      top: 215px;
+      left: 255px;
+    }
+    @include max(500) {
+      top: 160px;
+      left: 195px;
+    }
+    @include max(375) {
+      top: 130px;
+      left: 160px;
+    }
+    span {
+      transform: rotate(-30deg);
+    }
+  }
+}
+
 .bath-tab__zones {
   display: none;
   align-items: center;
@@ -2251,6 +2362,98 @@
     @include max(375) {
       top: 55px;
       left: 115px;
+    }
+  }
+}
+
+
+.bath-tab__body--lefkada {
+  .bath-tab__bath-02 {
+    margin-top: 0;
+  }
+  .bath-tab__bath-02-btn--01 {
+    top: 70px;
+    left: 120px;
+
+    @include max(600) {
+      top: 60px;
+      left: 100px;
+    }
+    @include max(500) {
+      top: 45px;
+      left: 75px;
+    }
+    @include max(375) {
+      top: 35px;
+      left: 63px;
+    }
+  }
+  .bath-tab__bath-02-btn--02 {
+    top: 160px;
+    left: 100px;
+
+    @include max(600) {
+      top: 125px;
+      left: 70px;
+    }
+    @include max(500) {
+      top: 95px;
+      left: 60px;
+    }
+    @include max(375) {
+      top: 80px;
+      left: 50px;
+    }
+  }
+  .bath-tab__bath-02-btn--03 {
+    top: 360px;
+    left: 225px;
+
+    @include max(600) {
+      top: 300px;
+      left: 180px;
+    }
+    @include max(500) {
+      top: 220px;
+      left: 137px;
+    }
+    @include max(375) {
+      top: 185px;
+      left: 113px;
+    }
+  }
+  .bath-tab__bath-02-btn--04 {
+    top: 190px;
+    left: 220px;
+
+    @include max(600) {
+      top: 150px;
+      left: 178px;
+    }
+    @include max(500) {
+      top: 120px;
+      left: 135px;
+    }
+    @include max(375) {
+      top: 95px;
+      left: 110px;
+    }
+  }
+  .bath-tab__bath-02-btn--05 {
+    top: 305px;
+    left: 340px;
+
+    @include max(600) {
+      top: 225px;
+      left: 270px;
+    }
+    @include max(500) {
+      top: 170px;
+      left: 210px;
+    }
+    @include max(375) {
+      top: 140px;
+      left: 170px;
     }
   }
 }
