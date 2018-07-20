@@ -66,6 +66,7 @@ p {
 a {
   transition: color .5s;
   color: $highlight;
+  outline: none !important;
   &:hover {
     text-decoration: none;
     color: $highlight-hov;
