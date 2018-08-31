@@ -3,8 +3,8 @@
 }
 .specifications-tab__tabs {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  flex-wrap: wrap;
   margin: 70px 0;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
@@ -61,8 +61,8 @@
 .specifications-tab__cards--01 {
   .container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 .specifications-tab__list {
@@ -225,8 +225,8 @@
 .specifications-tab__cards--04 {
   .container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   table {
     width: 49%;
@@ -293,10 +293,13 @@
   padding-top: 40px;
 }
 .specifications-tab__colors-item {
+  flex: none;
   //width: 250px;
   width: 20%;
-  flex: none;
+  //width: 180px;
   margin-bottom: 30px;
+  //margin-right: 60px;
+
   @include max(1100) {
     width: 25%;
   }
@@ -306,35 +309,44 @@
   @include max(700) {
     width: 50%;
   }
+  a {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    img {
+      width: 100%;
+      max-width: 180px;
+    }
+  }
 }
 .specifications-tab__colors-pic {
-  margin-bottom: 10px;
   position: relative;
   display: block;
+  margin-bottom: 10px;
   &:hover {
     svg {
       opacity: 1;
     }
   }
   svg {
-    width: 30px;
-    height: 30px;
-    fill: $highlight;
     position: absolute;
     top: 15px;
     left: 135px;
-    opacity: 0;
+    fill: $highlight;
+    width: 30px;
+    height: 30px;
     transition: opacity .5s;
+    opacity: 0;
   }
   img {
     display: block;
     max-width: 90%;
   }
-
 }
 .specifications-tab__colors-title {
   font-size: 16px;
   font-weight: 300;
+
   @include max(550) {
     font-size: 14px;
   }

@@ -90,6 +90,44 @@ block content
                 svg
                   use(xlink:href="assets/img/sprite.svg#people")
 
+
+          .catalog-form__row
+            h3.catalog-form__title Liegeplätze:
+            .catalog-form__man-filter#catalog-form__man-filter
+              .catalog-form__man-item(style="display: none;")
+                label
+                  input(type="radio" name="man-filter" value="0" checked)
+              .catalog-form__man-item
+                label
+                  input(type="radio" name="man-filter" value="2")
+                  .catalog-form__man-input
+                  span 2
+                  svg
+                    use(xlink:href="assets/img/sprite.svg#man")
+              .catalog-form__man-item
+                label
+                  input(type="radio" name="man-filter" value="3")
+                  .catalog-form__man-input
+                  span 3
+                  svg
+                    use(xlink:href="assets/img/sprite.svg#man")
+              .catalog-form__man-item
+                label
+                  input(type="radio" name="man-filter" value="4")
+                  .catalog-form__man-input
+                  span 4
+                  svg
+                    use(xlink:href="assets/img/sprite.svg#man")
+              .catalog-form__man-item
+                label
+                  input(type="radio" name="man-filter" value="5")
+                  .catalog-form__man-input
+                  span 5
+                  svg
+                    use(xlink:href="assets/img/sprite.svg#man")
+
+
+
           .catalog-form__row
             .catalog-form__reset
               //button(onclick='resetSlider();') Zurücksetzen
@@ -102,7 +140,7 @@ block content
       .catalog-list
 
         // begin Marbella card
-        .catalog-item(data-peoples='5', data-price='6999', data-size='2.1', data-stock='1', data-popular='1')
+        .catalog-item(data-lounge='2', data-peoples='5', data-price='6999', data-size='2.1', data-stock='1', data-popular='1')
           a(href="productcard-marbella.html").catalog-item__link
           .catalog-item__cover
             a(href="order.html" data-btn='Marbella').catalog-item__cover-link
@@ -113,7 +151,7 @@ block content
           h3.catalog-item__title Delfi Spa - Marbella
 
           .catalog-item__img
-            img(src="assets/img/catalog/item-01.jpg" alt="delfi spa")
+            img(src="assets/img/catalog/marbella-01.jpg" alt="delfi spa")
 
           .catalog-item__specifications
             .catalog-item__specifications--left
@@ -153,7 +191,7 @@ block content
 
 
         // begin Santorin card
-        .catalog-item(data-peoples='5', data-price='7499', data-size='2.3', data-stock='1', data-popular='3')
+        .catalog-item(data-lounge='3', data-peoples='5', data-price='7499', data-size='2.3', data-stock='1', data-popular='3')
           a(href="productcard-santorin.html").catalog-item__link
           .catalog-item__cover
             a(href="order.html" data-btn='Santorin').catalog-item__cover-link
@@ -164,7 +202,7 @@ block content
           h3.catalog-item__title Delfi Spa - Santorin
 
           .catalog-item__img
-            img(src="assets/img/catalog/item-01.jpg" alt="delfi spa")
+            img(src="assets/img/catalog/santorin-01.jpg" alt="delfi spa")
 
           .catalog-item__specifications
             .catalog-item__specifications--left
@@ -204,7 +242,7 @@ block content
 
 
         // begin Nerida card
-        .catalog-item(data-peoples='3', data-price='5699', data-size='2.1', data-stock='1', data-popular='5')
+        .catalog-item(data-lounge='4', data-peoples='3', data-price='5699', data-size='2.1', data-stock='1', data-popular='5')
           a(href="productcard-nerida.html").catalog-item__link
           .catalog-item__cover
             a(href="order.html" data-btn='Nerida').catalog-item__cover-link
@@ -215,7 +253,264 @@ block content
           h3.catalog-item__title Delfi Spa - Nerida
 
           .catalog-item__img
-            img(src="assets/img/catalog/item-01.jpg" alt="delfi spa")
+            img(src="assets/img/catalog/nerida-01.jpg" alt="delfi spa")
+
+          .catalog-item__specifications
+            .catalog-item__specifications--left
+              span.catalog-item__size 160 x 210 x 90 cm
+              span.catalog-item__injectors Massagedüsen: 69
+            .catalog-item__specifications--right
+              .catalog-item__peoples
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+
+          .catalog-item__price
+            .catalog-item__price--left
+              span.catalog-item__price-old Preis: 8.429,- €
+              span.catalog-item__price-new Aktion 5.699,- €
+            .catalog-item__price--right
+              //button.catalog-item__compare
+                svg
+                  use(xlink:href="assets/img/sprite.svg#arrows")
+              .catalog-item__more
+                svg
+                  use(xlink:href="assets/img/sprite.svg#plus")
+        // end Nerida card
+
+
+        // begin Nerida card
+        .catalog-item(data-lounge='5', data-peoples='3', data-price='5699', data-size='2.1', data-stock='1', data-popular='5')
+          a(href="productcard-nerida.html").catalog-item__link
+          .catalog-item__cover
+            a(href="order.html" data-btn='Nerida').catalog-item__cover-link
+              svg
+                use(xlink:href="assets/img/sprite.svg#basket")
+              span buy now
+
+          h3.catalog-item__title Delfi Spa - Nerida
+
+          .catalog-item__img
+            img(src="assets/img/catalog/nerida-01.jpg" alt="delfi spa")
+
+          .catalog-item__specifications
+            .catalog-item__specifications--left
+              span.catalog-item__size 160 x 210 x 90 cm
+              span.catalog-item__injectors Massagedüsen: 69
+            .catalog-item__specifications--right
+              .catalog-item__peoples
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+
+          .catalog-item__price
+            .catalog-item__price--left
+              span.catalog-item__price-old Preis: 8.429,- €
+              span.catalog-item__price-new Aktion 5.699,- €
+            .catalog-item__price--right
+              //button.catalog-item__compare
+                svg
+                  use(xlink:href="assets/img/sprite.svg#arrows")
+              .catalog-item__more
+                svg
+                  use(xlink:href="assets/img/sprite.svg#plus")
+        // end Nerida card
+
+
+
+
+        // begin Marbella card
+        .catalog-item(data-lounge='2', data-peoples='5', data-price='6999', data-size='2.1', data-stock='0', data-popular='1')
+          a(href="productcard-marbella.html").catalog-item__link
+          .catalog-item__cover
+            a(href="order.html" data-btn='Marbella').catalog-item__cover-link
+              svg
+                use(xlink:href="assets/img/sprite.svg#basket")
+              span buy now
+
+          h3.catalog-item__title Delfi Spa - Marbella
+
+          .catalog-item__img
+            img(src="assets/img/catalog/marbella-01.jpg" alt="delfi spa")
+
+          .catalog-item__specifications
+            .catalog-item__specifications--left
+              span.catalog-item__size 210 x 200 x 93 cm
+              span.catalog-item__injectors Massagedüsen: 77
+            .catalog-item__specifications--right
+              .catalog-item__peoples
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+
+          .catalog-item__price
+            .catalog-item__price--left
+              span.catalog-item__price-old Preis: 10.699,- €
+              span.catalog-item__price-new Aktion 6.999,- €
+            .catalog-item__price--right
+              //button.catalog-item__compare
+                svg
+                  use(xlink:href="assets/img/sprite.svg#arrows")
+              .catalog-item__more
+                svg
+                  use(xlink:href="assets/img/sprite.svg#plus")
+        // end Marbella card
+
+
+        // begin Santorin card
+        .catalog-item(data-lounge='3', data-peoples='5', data-price='7499', data-size='2.3', data-stock='0', data-popular='3')
+          a(href="productcard-santorin.html").catalog-item__link
+          .catalog-item__cover
+            a(href="order.html" data-btn='Santorin').catalog-item__cover-link
+              svg
+                use(xlink:href="assets/img/sprite.svg#basket")
+              span buy now
+
+          h3.catalog-item__title Delfi Spa - Santorin
+
+          .catalog-item__img
+            img(src="assets/img/catalog/santorin-01.jpg" alt="delfi spa")
+
+          .catalog-item__specifications
+            .catalog-item__specifications--left
+              span.catalog-item__size 230 x 230 x 92 cm
+              span.catalog-item__injectors Massagedüsen: 85
+            .catalog-item__specifications--right
+              .catalog-item__peoples
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+
+          .catalog-item__price
+            .catalog-item__price--left
+              span.catalog-item__price-old Preis: 12.449,- €
+              span.catalog-item__price-new Aktion 7.499,- €
+            .catalog-item__price--right
+              //button.catalog-item__compare
+                svg
+                  use(xlink:href="assets/img/sprite.svg#arrows")
+              .catalog-item__more
+                svg
+                  use(xlink:href="assets/img/sprite.svg#plus")
+        // end Santorin card
+
+
+        // begin Nerida card
+        .catalog-item(data-lounge='4', data-peoples='3', data-price='5699', data-size='2.1', data-stock='1', data-popular='5')
+          a(href="productcard-nerida.html").catalog-item__link
+          .catalog-item__cover
+            a(href="order.html" data-btn='Nerida').catalog-item__cover-link
+              svg
+                use(xlink:href="assets/img/sprite.svg#basket")
+              span buy now
+
+          h3.catalog-item__title Delfi Spa - Nerida
+
+          .catalog-item__img
+            img(src="assets/img/catalog/nerida-01.jpg" alt="delfi spa")
+
+          .catalog-item__specifications
+            .catalog-item__specifications--left
+              span.catalog-item__size 160 x 210 x 90 cm
+              span.catalog-item__injectors Massagedüsen: 69
+            .catalog-item__specifications--right
+              .catalog-item__peoples
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+                svg
+                  use(xlink:href="assets/img/sprite.svg#people")
+
+          .catalog-item__price
+            .catalog-item__price--left
+              span.catalog-item__price-old Preis: 8.429,- €
+              span.catalog-item__price-new Aktion 5.699,- €
+            .catalog-item__price--right
+              //button.catalog-item__compare
+                svg
+                  use(xlink:href="assets/img/sprite.svg#arrows")
+              .catalog-item__more
+                svg
+                  use(xlink:href="assets/img/sprite.svg#plus")
+        // end Nerida card
+
+
+        // begin Nerida card
+        .catalog-item(data-lounge='5', data-peoples='3', data-price='5699', data-size='2.1', data-stock='1', data-popular='5')
+          a(href="productcard-nerida.html").catalog-item__link
+          .catalog-item__cover
+            a(href="order.html" data-btn='Nerida').catalog-item__cover-link
+              svg
+                use(xlink:href="assets/img/sprite.svg#basket")
+              span buy now
+
+          h3.catalog-item__title Delfi Spa - Nerida
+
+          .catalog-item__img
+            img(src="assets/img/catalog/nerida-01.jpg" alt="delfi spa")
 
           .catalog-item__specifications
             .catalog-item__specifications--left

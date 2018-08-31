@@ -64,6 +64,12 @@ $("#catalog-form__by-stock input").change(function () {
 });
 // end фильтр по клику на чекбокс
 
+// begin фильтр по клику на чекбокс
+$("#catalog-form__man-filter input").change(function () {
+  filter();
+});
+// end фильтр по клику на чекбокс
+
 
 //begin обнуление фильтров
 function resetSlider() {
@@ -79,9 +85,9 @@ function resetSlider() {
   sliderSize.slider('values', [optionsSize.min, optionsSize.max]);
   sliderPersons.slider('value', optionsPersons.min);
   $('.catalog-form__persons-people').attr('data-peoplesfilter', 0);
+  $('#catalog-form__man-filter input').attr('checked',false);
   $('.catalog-item').fadeIn();
 }
-
 //end обнуление фильтров
 // end объявление фильтров
 
@@ -109,20 +115,33 @@ function filter() {
   // получаем значение фильтра кол-ва людей
   var sliderPersonsVal = $('#catalog-form__persons').slider('value');
 
+  // получаем значение фильтра кол-ва лежанок
+  var manLounge = $('.catalog-form__man-item input:checked').val();
+  
+  console.log(manLounge);
+
 
   // выбор запускаемой функции в зависимости
   // от активированных фильтров
-  if (checkStock === 0 && sliderPersonsVal === 0) {
+  if (checkStock === 0 && sliderPersonsVal === 0 && manLounge == 0) {
     sortCard01();
-  } else if (checkStock === 0 && sliderPersonsVal > 0) {
+  } else if (checkStock === 0 && sliderPersonsVal > 0 && manLounge == 0) {
     sortCard02();
-  } else if (checkStock === 1 && sliderPersonsVal === 0) {
+  } else if (checkStock === 1 && sliderPersonsVal === 0 && manLounge == 0) {
     sortCard03();
-  } else if (checkStock === 1 && sliderPersonsVal > 0) {
+  } else if (checkStock === 1 && sliderPersonsVal > 0 && manLounge == 0) {
     sortCard04();
+  } else if (checkStock === 0 && sliderPersonsVal === 0 && manLounge >= 2) {
+    sortCard05();
+  } else if (checkStock === 0 && sliderPersonsVal > 0 && manLounge >= 2) {
+    sortCard06();
+  } else if (checkStock === 1 && sliderPersonsVal === 0 && manLounge >= 2) {
+    sortCard07();
+  } else if (checkStock === 1 && sliderPersonsVal > 0 && manLounge >= 2) {
+    sortCard08();
   }
 
-  // если чекбокс и фильтр людей выключены
+  // если чекбокс выключен, фильтр людей выключен, лежанки выключены
   function sortCard01() {
     var finalCards = $('.catalog-item').filter(function () {
       if ($(this).data("price") >= sliderPriceMinVal
@@ -135,7 +154,7 @@ function filter() {
     finalCards.fadeIn();
   }
 
-  // если чекбокс выключен а фильтр людей включен
+  // если чекбокс выключен, фильтр людей включен, лежанки выключены
   function sortCard02() {
     var finalCards = $('.catalog-item').filter(function () {
       if ($(this).data("peoples") >= sliderPersonsVal
@@ -149,7 +168,7 @@ function filter() {
     finalCards.fadeIn();
   }
 
-  // если фильтр людей выключен а чекбокс включен
+  // если фильтр людей выключен, чекбокс включен, лежанки выключены
   function sortCard03() {
     var finalCards = $('.catalog-item').filter(function () {
       if ($(this).data("stock") === checkStock
@@ -163,7 +182,7 @@ function filter() {
     finalCards.fadeIn();
   }
 
-  // если фильтр людей и чекбокс включены
+  // если фильтр людей включен, чекбокс включен, лежанки выключены
   function sortCard04() {
     var finalCards = $('.catalog-item').filter(function () {
       if ($(this).data("stock") === checkStock
@@ -177,8 +196,70 @@ function filter() {
     });
     finalCards.fadeIn();
   }
-}
 
+  // если чекбокс выключен, фильтр людей выключен, лежанки включены
+  function sortCard05() {
+    var finalCards = $('.catalog-item').filter(function () {
+      if ($(this).data("price") >= sliderPriceMinVal
+          && $(this).data("price") <= sliderPriceMaxVal
+          && $(this).data("size") >= sliderSizeMinVal
+          && $(this).data("size") <= sliderSizeMaxVal
+          && $(this).data("lounge") == manLounge) {
+        return $(this);
+      }
+    });
+    finalCards.fadeIn();
+  }
+
+  // если чекбокс выключен, фильтр людей включен, лежанки включены
+  function sortCard06() {
+    var finalCards = $('.catalog-item').filter(function () {
+      if ($(this).data("peoples") >= sliderPersonsVal
+          && $(this).data("price") >= sliderPriceMinVal
+          && $(this).data("price") <= sliderPriceMaxVal
+          && $(this).data("size") >= sliderSizeMinVal
+          && $(this).data("size") <= sliderSizeMaxVal
+          && $(this).data("lounge") == manLounge) {
+        return $(this);
+      }
+    });
+    finalCards.fadeIn();
+  }
+
+  // если фильтр людей выключен, чекбокс включен, лежанки включены
+  function sortCard07() {
+    var finalCards = $('.catalog-item').filter(function () {
+      if ($(this).data("stock") === checkStock
+          && $(this).data("price") >= sliderPriceMinVal
+          && $(this).data("price") <= sliderPriceMaxVal
+          && $(this).data("size") >= sliderSizeMinVal
+          && $(this).data("size") <= sliderSizeMaxVal
+          && $(this).data("lounge") == manLounge) {
+        return $(this);
+      }
+    });
+    finalCards.fadeIn();
+  }
+
+  // если фильтр людей включен, чекбокс включен, лежанки включены
+  function sortCard08() {
+    var finalCards = $('.catalog-item').filter(function () {
+      if ($(this).data("stock") === checkStock
+          && $(this).data("peoples") >= sliderPersonsVal
+          && $(this).data("price") >= sliderPriceMinVal
+          && $(this).data("price") <= sliderPriceMaxVal
+          && $(this).data("size") >= sliderSizeMinVal
+          && $(this).data("size") <= sliderSizeMaxVal
+          && $(this).data("lounge") == manLounge) {
+        return $(this);
+      }
+    });
+    finalCards.fadeIn();
+  }
+
+  // $(manLounge).fadeIn();
+
+}
 // end filters sort
 
 // end catalog-filter
@@ -202,7 +283,6 @@ $(".order-select--model").selectmenu({
 // end передача выбранной модели
 // из карточки товара в форму заказа на странице order.html
 
-
 //begin скрытие колонок в таблице сравнения
 $('.compare-table__col-close').on('click', function () {
   var closeCol = $(this).data('close');
@@ -223,7 +303,6 @@ $('.agree-label').click(function () {
   }
 });
 // end показ/скрытие уведомления про обязательность чекбокса в форме
-
 
 // begin отправка формы на странице контактов
 $("#contact-form").submit(function () {
@@ -292,11 +371,9 @@ $("#popup-form").submit(function () {
 });
 // end отправка формы в popup
 
-
 $('.popup-sussess__close').on('click', function () {
   $('.popup-success__layer').fadeOut();
 });
-
 
 // begin Изменение сроков доставки
 // в зависимости от выбранного цвета
@@ -321,9 +398,7 @@ $('#select-color').on('selectmenuchange', function () {
 // end Изменение сроков доставки
 // в зависимости от выбранного цвета
 
-
 // begin bg-gradient in banner
-
 var colors = new Array(
     [79, 172, 254],
     [0, 242, 254],
@@ -371,9 +446,7 @@ function updateGradient() {
 
   $('#gradient').css({
     background: "-webkit-gradient(linear, left top, right top, from(" + color1 + "), to(" + color2 + "))"
-  }).css({
-    background: "-moz-linear-gradient(left, " + color1 + " 0%, " + color2 + " 100%)"
-  });
+  }).css({background: "-moz-linear-gradient(left, " + color1 + " 0%, " + color2 + " 100%)"});
 
   step += gradientSpeed;
   if (step >= 1) {

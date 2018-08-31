@@ -1,8 +1,8 @@
 //begin catalog header
 .catalog-header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 60px;
   background-color: #fff;
 
@@ -160,8 +160,8 @@
 .catalog-form__price-wrap {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
   input {
     font-size: 12px;
     font-weight: 900;
@@ -254,11 +254,10 @@
     justify-content: space-between;
     margin-top: -44px;
     svg {
+      fill: $highlight;
       width: 18px;
       height: 44px;
       cursor: pointer;
-
-      fill: $highlight;
     }
   }
 }
@@ -310,6 +309,47 @@
 }
 
 
+.catalog-form__man-filter {
+  display: flex;
+  flex-wrap: wrap;
+}
+.catalog-form__man-item {
+  width: 50%;
+  margin-bottom: 15px;
+  label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  input {
+    display: none;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1;
+    display: block;
+    color: #1c1e1e;
+  }
+  svg {
+    flex: none;
+    width: 29px;
+    height: 16px;
+    margin-left: 8px;
+  }
+}
+.catalog-form__man-input {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  border: 1px solid #d9d9d9;
+}
+.catalog-form__man-item input:checked + .catalog-form__man-input {
+  background-image: url('../img/check.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .catalog-form__reset {
   position: relative;
   padding-top: 30px;
@@ -318,10 +358,9 @@
     position: absolute;
     top: 0;
     left: 15px;
+    fill: $highlight;
     width: 50px;
     height: 50px;
-
-    fill: $highlight;
   }
   input {
     font-size: 20px;
@@ -406,9 +445,9 @@
   bottom: 0;
   left: 0;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   transition: opacity .5s;
   pointer-events: none;
   opacity: 0;
@@ -442,12 +481,11 @@
     }
   }
   svg {
+    fill: #fff;
     width: 44px;
     height: 38px;
     margin: 0 auto 20px;
     transition: fill .5s;
-
-    fill: #fff;
   }
   span {
     font-size: 14px;
@@ -475,8 +513,8 @@
 
 .catalog-item__specifications {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -498,11 +536,10 @@
   justify-content: flex-end;
   margin-top: 5px;
   svg {
+    fill: #c5e2e7;
     width: 12px;
     height: 31px;
     margin-left: 3px;
-
-    fill: #c5e2e7;
   }
 }
 
@@ -549,8 +586,8 @@
 
 .catalog-item__price {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 .catalog-item__price-old {
   font-size: 16px;
@@ -583,18 +620,17 @@
   flex: none;
 }
 .catalog-item__compare {
+  z-index: 7;
   display: inline-block;
   margin-right: 10px;
   border: none;
   outline: none;
   background-color: transparent;
-  z-index: 7;
   svg {
+    fill: $highlight;
     width: 26px;
     height: 19px;
     transition: .5s;
-
-    fill: $highlight;
     &:hover {
       fill: $text;
     }
@@ -605,17 +641,15 @@
   cursor: pointer;
   &:hover {
     svg {
-      transform: rotate(180deg);
-
       fill: $text;
+      transform: rotate(180deg);
     }
   }
   svg {
+    fill: $highlight;
     width: 20px;
     height: 20px;
     transition: .5s;
-
-    fill: $highlight;
   }
 }
 // end catalog-list
